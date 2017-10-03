@@ -1,0 +1,6 @@
+framework module Namics_Library {
+  umbrella header "Namics-Library-umbrella.h"
+
+  export *
+  module * { export * }
+}

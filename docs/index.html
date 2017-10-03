@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NamicsLib  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="NamicsLib  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NamicsLib Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NamicsLib Reference</a>
+        <img id="carat" src="img/carat.png" />
+        NamicsLib  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/NSDate(NMX).html">NSDate(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSDictionary(NMX).html">NSDictionary(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSNumber(NMX).html">NSNumber(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSString(NMX).html">NSString(NMX)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NMXLocalizationHandler.html">NMXLocalizationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='how-to-create-namics-cocoapods-locally' class='heading'>How to create namics-cocoapods locally</h1>
+
+<p>Current Version of the namics-core-library-ios-objective-c
+0.1.0</p>
+
+<ol>
+<li><p>Checkout
+pod repo add namics-cocoapods <a href="mailto:git@git.namics.com">git@git.namics.com</a>:team-mobile/mobile-ios-cocoapods.git</p></li>
+<li><p>Verify its working
+cd ~/.cocoapods/repos/namics-cocoapods
+pod repo lint .</p></li>
+</ol>
+<h1 id='documentation' class='heading'>Documentation</h1>
+<h2 id='building-documentation' class='heading'>Building Documentation</h2>
+
+<p>Documentation requires two components:</p>
+
+<ul>
+<li><a href="https://github.com/jpsim/SourceKitten">SourceKitten</a>
+&gt; brew install sourcekitten</li>
+<li><a href="https://github.com/realm/jazzy">jazzy</a>
+&gt; gem install jazzy</li>
+</ul>
+
+<p>Then navigate in terminal to the root path of the repo, where <q>.jazzy.yaml</q> is located and run the following command:</p>
+
+<blockquote>
+<p>jazzy
+You will find the updated documentation under ./docs
+or simply run:
+open ./docs/index.html</p>
+</blockquote>
+
+<p>If you added a new section in the Library, make sure to add the related section to the umbrella header file for the documentation generation. See NamicsLibHeaders.h</p>
+<h1 id='how-to-update-changes-from-the-library' class='heading'>How to update changes from the library.</h1>
+<h2 id='automatic-deployment' class='heading'>Automatic Deployment</h2>
+
+<p>You can automatically push your changes to the pod with calling
+<code>bash deploy.sh</code>
+It might require administrator rights for creating code documentation automatically, see above</p>
+<h2 id='manual-deployment' class='heading'>Manual Deployment</h2>
+
+<ol>
+<li><p>Do your changes:
+Open /Development/NMXLibrary.xcodeproj</p></li>
+<li><p>Go to the main folder from Terminal, where &lsquo;Namics-Library.podspec&rsquo; is located, e.g.:
+cd ~/Documents/namics-core-library-ios-objective-c/</p></li>
+<li><p>Validate the pod lib file in terminal:
+pod lib lint</p></li>
+<li><p>Commit and push your changes in git, note down the commit-id</p></li>
+<li><p>Modify the Namics-Library.podspec</p></li>
+<li><p>spec.version - new version</p></li>
+<li><p>spec.source - commit to the one from step (5)</p></li>
+<li><p>Update cocoapod spec:
+pod repo push namics-cocoapods Namics-Library.podspec &ndash;verbose</p></li>
+</ol>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016-present © Namics AG</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

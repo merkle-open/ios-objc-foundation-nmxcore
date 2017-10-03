@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'ios-objc-foundation-nmxcore Example' do
+    pod 'Namics-Library', :path => '../'
+end

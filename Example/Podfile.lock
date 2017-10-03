@@ -1,0 +1,16 @@
+PODS:
+  - Namics-Library (0.1.0)
+
+DEPENDENCIES:
+  - Namics-Library (from `../`)
+
+EXTERNAL SOURCES:
+  Namics-Library:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Namics-Library: 334d904b72b4045427ba10a69576d79addfff3a9
+
+PODFILE CHECKSUM: d9337a9ed7e3f937c726bfc3725f8b036f0c3301
+
+COCOAPODS: 1.2.0.beta.3

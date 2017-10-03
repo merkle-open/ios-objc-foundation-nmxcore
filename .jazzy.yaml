@@ -1,0 +1,15 @@
+min_acl: private # also document private classes, Default would be "public"
+clean: true
+objc: true
+#swift_version: 3.0
+sdk: iphonesimulator
+#sdk: iphone
+umbrella_header: Header-ios-objc-foundation-nmxcore.h
+framework_root: Development/ios-objc-foundation-nmxcore.xcodeproj
+author: Namics AG
+author_url: https://namics.com
+module: NamicsLib
+module_version: 1.0
+copyright: "2016-present © Namics AG"
+github_url: https://git.namics.com/namics/namics-core-library-ios-objective-c/
+#xcodebuild_arguments: [clean,build,-project,ios-objc-foundation-nmxcore.xcodeproj,-target,ios-objc-foundation-nmxcore,-scheme,ios-objc-foundation-nmxcore]

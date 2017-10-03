@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSDate(NMX) Category Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Extension/NSDate(NMX)" class="dashAnchor"></a>
+    <a title="NSDate(NMX) Category Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NamicsLib Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NamicsLib Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NSDate(NMX) Category Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/NSDate(NMX).html">NSDate(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSDictionary(NMX).html">NSDictionary(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSNumber(NMX).html">NSNumber(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSString(NMX).html">NSString(NMX)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NMXLocalizationHandler.html">NMXLocalizationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NSDate(NMX)</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSDate(im)offsetInMonths:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInMonths:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInMonths:">-offsetInMonths:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs a NSDate from self with a given offset in months</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInMonths</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMonths</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inMonths</span> <span class="nv">offsetInMonths</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offsetInMonths</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- Offset in months. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>returns a NSDate instance from self with a given offset. If the offset was invalid, the same date (without offset) will be returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSDate(im)offsetInDays:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInDays:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInDays:">-offsetInDays:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs a NSDate from self with a given offset in days</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInDays</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInDays</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inDays</span> <span class="nv">offsetInDays</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offsetInDays</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- Offset in days. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>returns a NSDate instance from self with a given offset in days. If the offset was invalid, the same date (without offset) will be returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSDate(im)offsetInMinutes:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInMinutes:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInMinutes:">-offsetInMinutes:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs a NSDate from self with a given offset in minutes</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInMinutes</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMinutes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inMinutes</span> <span class="nv">offsetInMinutes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offsetInMinutes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- Offset in minutes. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>returns a NSDate instance from self with a given offset in minutes. If the offset was invalid, the same date (without offset) will be returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSDate(im)offsetInSeconds:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInSeconds:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInSeconds:">-offsetInSeconds:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs a NSDate from self with a given offset in seconds</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInSeconds</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInSeconds</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inSeconds</span> <span class="nv">offsetInSeconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offsetInSeconds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- Offset in seconds. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>returns a NSDate instance from self with a given offset in seconds. If the offset was invalid, the same date (without offset) will be returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSDate(py)oneSecondBeforeEndOfDate"></a>
+                    <a name="//apple_ref/objc/Property/oneSecondBeforeEndOfDate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(py)oneSecondBeforeEndOfDate">oneSecondBeforeEndOfDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the same day, but the time is altered and is 23h 59min 59s. One second before midnight)</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">oneSecondBeforeEndOfDate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">oneSecondBeforeEndOf</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016-present © Namics AG</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,6 @@
+framework module Pods_ios_objc_foundation_nmxcore_Example {
+  umbrella header "Pods-ios-objc-foundation-nmxcore Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

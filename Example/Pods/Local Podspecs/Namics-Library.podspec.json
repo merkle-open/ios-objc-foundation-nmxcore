@@ -1,0 +1,21 @@
+{
+  "name": "Namics-Library",
+  "version": "0.1.0",
+  "summary": "Namics Library used for iOS in Objective-C. Shall take care of reusable code.",
+  "homepage": "https://inside.namics.com/display/TAMobile/iOS+-+Namics+Core+Library",
+  "authors": {
+    "Adriano Segalada": "adriano.segalada@namics.com",
+    "Tobias Baube": "tobias.baube@namics.com"
+  },
+  "source": {
+    "git": "git@git.namics.com:namics/namics-core-library-ios-objective-c.git",
+    "commit": "129a280daa472d3d15ddb9c2ceeda00aae292c72"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "license": {
+    "type": "BSD"
+  },
+  "source_files": "Development/ios-objc-foundation-nmxcore/**/*{a,h,m}"
+}

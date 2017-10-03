@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Functions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NamicsLib Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NamicsLib Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Functions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/NSDate(NMX).html">NSDate(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSDictionary(NMX).html">NSDictionary(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSNumber(NMX).html">NSNumber(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/NSString(NMX).html">NSString(NMX)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NMXLocalizationHandler.html">NMXLocalizationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Functions</h1>
+            <p>The following functions are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#"></a>
+                    <a name="//apple_ref/objc/Function/filePathForFile" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides an absolute filePath within a given bundle of a filename and its related fileExtension</p>
+
+<p>filename: <q>file</q> and fileExtension: <q>txt</q> will lead to a lookup for <q>file.txt</q></p>
+
+<p>filename: <q>file.txt</q> and fileExtension: <q>txt</q> will lead to a lookup for <q>file.txt</q></p>
+
+<p>filename: <q>file.TXT</q> and fileExtension: <q>txt</q> will lead to a lookup for <q>file.TXT</q></p>
+
+<p>filename: <q>file</q> and fileExtension: &ldquo;<q>will lead to a lookup for</q>file&rdquo;</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">filePathForFile</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">,</span>
+                                    <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">fileExtension</span><span class="p">,</span>
+                                    <span class="n">NSBundle</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">bundle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">filePathForFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>make sure this filename exists in the provided bundle. If the filename&rsquo;s path extension is not equal to the provided fileExtension, the fileExtension will be appended to retrieve the requested file. If this parameter is nil, nil will be returned</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileExtension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>defines the type of the file that is being looked up in a provided bundle. If this parameter is nil, nil will be returned</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a NSString object that represents the fullpath to a file within the provided bundle. If non was found, nil is being returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@filePathForFile#*$objc(cs)NSString#*$objc(cs)NSBundle#"></a>
+                    <a name="//apple_ref/objc/Function/filePathForFile" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@filePathForFile#*$objc(cs)NSString#*$objc(cs)NSBundle#">filePathForFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides an absolute filePath within a given bundle of a given filename</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n"><a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a></span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">,</span>
+                                    <span class="n">NSBundle</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">bundle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">filePathForFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- make sure this filename (including its path extension) exists in the provided bundle. If this parameter is nil, nil will be returned</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used </p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a NSString object that represents the fullpath to a file within the provided bundle. If non was found, nil is being returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@filePathForFile#*$objc(cs)NSString#"></a>
+                    <a name="//apple_ref/objc/Function/filePathForFile" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@filePathForFile#*$objc(cs)NSString#">filePathForFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides an absolute filePath within the mainBundle of a given filename</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n"><a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a></span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">filePathForFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- make sure this filename (including its path extension) exists in the main bundle. This method will retrieve the filePath from the mainbundle for you.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a NSString object that represents the fullpath to a file within the provided bundle. If non was found, nil is being returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016-present © Namics AG</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

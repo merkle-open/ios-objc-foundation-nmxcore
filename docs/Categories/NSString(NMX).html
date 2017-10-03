@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSString(NMX) Category Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Extension/NSString(NMX)" class="dashAnchor"></a>
+    <a title="NSString(NMX) Category Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NamicsLib Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NamicsLib Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NSString(NMX) Category Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/NSDate(NMX).html">NSDate(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSDictionary(NMX).html">NSDictionary(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSNumber(NMX).html">NSNumber(NMX)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/NSString(NMX).html">NSString(NMX)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NMXLocalizationHandler.html">NMXLocalizationHandler</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NSString(NMX)</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)isUrlFormat"></a>
+                    <a name="//apple_ref/objc/Property/isUrlFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)isUrlFormat">isUrlFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>checks, whether the string is convertible to NSURL and/or custom scheme - anything would be valid, empty string are considered being invalid</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isUrlFormat</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isUrlFormat</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)urlEncoded"></a>
+                    <a name="//apple_ref/objc/Property/urlEncoded" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)urlEncoded">urlEncoded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>escapes a string and its special characters like (<q>/</q> or <q>+</q> etc.), which would mess up in an url and escapes these, like a browser would do for example.</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">urlEncoded</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">urlEncoded</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)dateFormatISO8601"></a>
+                    <a name="//apple_ref/objc/Property/dateFormatISO8601" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)dateFormatISO8601">dateFormatISO8601</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>if string is in the following date format: <q>yyyy-MM-dd&rsquo;T'HH:mm:ssZZZZZ</q>, returns a NSDate Object</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateFormatISO8601</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">dateFormatISO8601</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)isDateFormatISO8601"></a>
+                    <a name="//apple_ref/objc/Property/isDateFormatISO8601" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)isDateFormatISO8601">isDateFormatISO8601</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns true, if string is in the following date format: <q>yyyy-MM-dd&rsquo;T'HH:mm:ssZZZZZ</q></p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isDateFormatISO8601</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isDateFormatISO8601</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)dateFormatFourDigitYearMonthDay"></a>
+                    <a name="//apple_ref/objc/Property/dateFormatFourDigitYearMonthDay" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)dateFormatFourDigitYearMonthDay">dateFormatFourDigitYearMonthDay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>if string is in the following date format: <q>yyyy-MM-dd</q>, returns a NSDate Object</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateFormatFourDigitYearMonthDay</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">dateFormatFourDigitYearMonthDay</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)isDateFormatFourDigitYearMonthDay"></a>
+                    <a name="//apple_ref/objc/Property/isDateFormatFourDigitYearMonthDay" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)isDateFormatFourDigitYearMonthDay">isDateFormatFourDigitYearMonthDay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns true, if string is in the following date format: <q>yyyy-MM-dd</q></p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isDateFormatFourDigitYearMonthDay</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isDateFormatFourDigitYearMonthDay</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)dateFormatLeadingZeroHoursMinutesSeconds"></a>
+                    <a name="//apple_ref/objc/Property/dateFormatLeadingZeroHoursMinutesSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)dateFormatLeadingZeroHoursMinutesSeconds">dateFormatLeadingZeroHoursMinutesSeconds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>if string is in the following date format: <q>HH:mm:ss</q>, returns a NSDate Object</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateFormatLeadingZeroHoursMinutesSeconds</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">dateFormatLeadingZeroHoursMinutesSeconds</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)isDateFormatLeadingZeroHoursMinutesSeconds"></a>
+                    <a name="//apple_ref/objc/Property/isDateFormatLeadingZeroHoursMinutesSeconds" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)isDateFormatLeadingZeroHoursMinutesSeconds">isDateFormatLeadingZeroHoursMinutesSeconds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns true, if string is in the following date format: <q>HH:mm:ss</q></p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isDateFormatLeadingZeroHoursMinutesSeconds</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isDateFormatLeadingZeroHoursMinutesSeconds</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)stripNonAlphanumericChars"></a>
+                    <a name="//apple_ref/objc/Property/stripNonAlphanumericChars" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)stripNonAlphanumericChars">stripNonAlphanumericChars</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a string without non alphanumeric characters</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">stripNonAlphanumericChars</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">stripNonAlphanumericChars</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSString(py)stripNonAsciiChars"></a>
+                    <a name="//apple_ref/objc/Property/stripNonAsciiChars" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSString(py)stripNonAsciiChars">stripNonAsciiChars</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a string without ASCII characters only</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">stripNonAsciiChars</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">stripNonAsciiChars</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2016-present © Namics AG</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
