@@ -1,10 +1,11 @@
 #!/bin/sh
 ## Configuration
 readmeFile="README.md"
-podspecFilename="Namics-Library"
+podspecFilename="NMXCore"
 readmePodPushHeader="Update cocoapod spec"
-readmeVersionHeader="Current Version of the namics-core-library-ios-objective-c"
-podPushCommand="pod repo push ${podspecFilename}.podspec --verbose"
+readmeVersionHeader="Current Version of the NMXCore Library"
+podPushCommand="pod trunk push ${podspecFilename}.podspec --verbose"
+version=$1
 
 ## constants & commands
 podspecFile="${podspecFilename}.podspec"
@@ -14,6 +15,11 @@ podPushCommandE=$(printf '%q' "${podPushCommand}")
 podPushCommandE=$(echo ${podPushCommandE})
 currentPodVersionCommand=$(grep ".version" Namics-Library.podspec -n | sed 's/.*"\(.*\)".*/\1/')
 currentPodCommitIDCommand=$(grep ":commit" Namics-Library.podspec -n | sed 's/.*"\(.*\)".*/\1/')
+
+if [ "$version" == "" ]
+then
+version=currentPodVersionCommand
+fi
 
 ## User output
 printf "## Starting Deployment: ${podspecFile} ##\n"
@@ -40,13 +46,14 @@ fi
 lineNumber=$(grep "${readmeVersionHeader}" ${readmeFile} -n -i | sed 's/:.*//')
 if [ "$lineNumber" == "" ]
 then
-printf "\n\nCurrent 'Version' in ${readmeFile} could not be updated. Referenced header line:\n\t${readmeVersionHeader}\nwas not found.\nIf you want the current version:\n\t${currentPodVersionCommand}\nbeing noted down, make sure to either add an appropriate abstract containing\n\t'${readmeVersionHeader}'\nor modify the variable\n\t'\$readmeVersionHeader' in 'deploy.sh'\n\n"
+printf "\n\nCurrent 'Version' in ${readmeFile} could not be updated. Referenced header line:\n\t${readmeVersionHeader}\nwas not found.\nIf you want the current version:\n\t${version}\nbeing noted down, make sure to either add an appropriate abstract containing\n\t'${readmeVersionHeader}'\nor modify the variable\n\t'\$readmeVersionHeader' in 'deploy.sh'\n\n"
 else
 readmeVersionLine=$((lineNumber+1))
-sed -i "" "${readmeVersionLine}s/.*/${currentPodVersionCommand}/" ${readmeFile}
+sed -i "" "${readmeVersionLine}s/.*/${version}/" ${readmeFile}
 fi
 
 
+## In case one had a specific commit id assigned to podspec, we will update it, too.
 # Get last commit id
 lastCommitID=$(git log --format="%H" -n 1)
 printf "## Updating Commit ID in ${podspecFile} to last id: ${lastCommitID}\n\n"
@@ -54,7 +61,7 @@ printf "## Updating Commit ID in ${podspecFile} to last id: ${lastCommitID}\n\n"
 sed -i "" "s/${currentPodCommitIDCommand}/${lastCommitID}/g" Namics-Library.podspec
 
 
-printf "## Generating Documentation with Jazzy (mightrequire sudo)\n"
+printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\\n"
 jazzy
 printf "\n"
 
@@ -73,5 +80,15 @@ done
 #In case one would also like to add new files - for docu it might be helpful...? If so, change $modifiedFiles command
 #git add -A && git commit -m "Your Message"
 
-git commit -m "Podspec and Documentation Updated"
+git commit -m "RELEASE ${$}Podspec and Documentation Updated"
 git push
+git add -A && git commit -m "Release 0.1.0"
+git tag 'v0.1.0'
+git push --tags
+git push
+
+git add -A && git commit -m "Release ${version}"
+git tag 'v${version}'
+git push --tags
+git push
+

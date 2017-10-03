@@ -7,13 +7,12 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "NMXCore"
-  s.version          = "0.1.0"
-  s.summary          = "Namics Core Library used for iOS in Objective-C. Shall take care of reusable code. "
-
-  s.homepage         = "https://github.com/namics/ios-objc-foundation-nmxcore"
+  s.name              = "NMXCore"
+  s.version           = "0.1.0"
+  s.summary           = "Namics Core Library used for iOS in Objective-C. Shall take care of reusable code. "
+  s.homepage          = "https://github.com/namics/ios-objc-foundation-nmxcore"
   s.authors           = { "Adriano Segalada" => "adriano.segalada@namics.com", "Tobias Baube" => "tobias.baube@namics.com" }
-  s.source           = { :git => "https://github.com/namics/ios-objc-foundation-nmxcore.git", :tag => "v0.1.0" }
+  s.source            = { :git => "https://github.com/namics/ios-objc-foundation-nmxcore.git", :tag => "v0.1.0" }
 
   s.ios.deployment_target = '9.0'
   s.platform              = :ios, '9.0'

@@ -1,40 +1,40 @@
 {
   "warnings": [
     {
-      "file": "/Users/tbaube/Documents/namics-core-library-ios-objective-c/Development/ios-objc-foundation-nmxcore/Extensions/NSDate+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/Extensions/NSDate+NMX.h",
       "line": 11,
       "symbol": "NSDate(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tbaube/Documents/namics-core-library-ios-objective-c/Development/ios-objc-foundation-nmxcore/Extensions/NSDictionary+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/Extensions/NSDictionary+NMX.h",
       "line": 11,
       "symbol": "NSDictionary(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tbaube/Documents/namics-core-library-ios-objective-c/Development/ios-objc-foundation-nmxcore/Extensions/NSNumber+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/Extensions/NSNumber+NMX.h",
       "line": 11,
       "symbol": "NSNumber(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tbaube/Documents/namics-core-library-ios-objective-c/Development/ios-objc-foundation-nmxcore/Extensions/NSString+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/Extensions/NSString+NMX.h",
       "line": 11,
       "symbol": "NSString(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/tbaube/Documents/namics-core-library-ios-objective-c/Development/ios-objc-foundation-nmxcore/Utilities/NMXLocalizationHandler.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/Utilities/NMXLocalizationHandler.h",
       "line": 11,
       "symbol": "NMXLocalizationHandler",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/tbaube/Documents/namics-core-library-ios-objective-c"
+  "source_directory": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore"
 }
