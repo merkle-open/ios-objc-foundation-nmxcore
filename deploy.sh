@@ -4,7 +4,7 @@ readmeFile="README.md"
 podspecFilename="Namics-Library"
 readmePodPushHeader="Update cocoapod spec"
 readmeVersionHeader="Current Version of the namics-core-library-ios-objective-c"
-podPushCommand="pod repo push namics-cocoapods ${podspecFilename}.podspec --verbose"
+podPushCommand="pod repo push ${podspecFilename}.podspec --verbose"
 
 ## constants & commands
 podspecFile="${podspecFilename}.podspec"
