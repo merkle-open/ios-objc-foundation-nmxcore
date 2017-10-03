@@ -1,17 +1,9 @@
-# How to create namics-cocoapods locally
+# ios-objc-foundation-nmxcore
 Current Version of the NMXCore Library
 0.1.0
 
-1. Checkout
-```
-pod repo add namics-cocoapods git@git.namics.com:team-mobile/mobile-ios-cocoapods.git
-```
-
-2. Verify its working
-```
-cd ~/.cocoapods/repos/namics-cocoapods
-pod repo lint .
-```
+You can find the latest documentation under
+http://namics.github.io/ios-objc-foundation-nmxcore/
 
 # Include / Import
 ## Cocoapods
@@ -26,6 +18,7 @@ https://guides.cocoapods.org/using/getting-started.html
 ```
 
 ### Cocoapods Setup
+Navigate to your.xcodeproj file in the Mac Terminal, then do:
 ```
 pod install
 ```
