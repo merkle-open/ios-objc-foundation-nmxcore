@@ -1,5 +1,5 @@
 use_frameworks!
 
 target 'ios-objc-foundation-nmxcore Example' do
-    pod 'Namics-Library', :path => '../'
+    pod 'NMXCore', :path => '../'
 end

@@ -13,6 +13,43 @@ cd ~/.cocoapods/repos/namics-cocoapods
 pod repo lint .
 ```
 
+# Include / Import
+## Cocoapods
+Navigate to the root directory of your .xcodeproj file.
+If you don't have a "podfile" created yet, open your terminal and cd to your .xcodeproj-file.
+Perform the following command. Make sure you have cocoapods installed:
+### Cocoapods installation
+Make sure to run latest cocoapods version:
+https://guides.cocoapods.org/using/getting-started.html
+```
+[sudo] gem install cocoapods
+```
+
+### Cocoapods Setup
+```
+pod install
+```
+
+### Cocoapods - Include ios-objc-foundation-nmxcore:
+Add the following line to your podfile:
+```
+pod 'NMXCore', '0.1.0'
+```
+
+A podfile could look like the following:
+```
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ProjectTarget' do
+use_frameworks!
+
+pod 'NMXCore', '0.1.0'
+
+end
+```
+
+
+
 # Documentation
 ## Building Documentation
 Documentation requires two components:
