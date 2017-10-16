@@ -13,12 +13,12 @@ modifiedFiles=$(git diff --name-only)
 # Escape special characters for sed command
 podPushCommandE=$(printf '%q' "${podPushCommand}")
 podPushCommandE=$(echo ${podPushCommandE})
-currentPodVersionCommand=$(grep ".version" Namics-Library.podspec -n | sed 's/.*"\(.*\)".*/\1/')
-currentPodCommitIDCommand=$(grep ":commit" Namics-Library.podspec -n | sed 's/.*"\(.*\)".*/\1/')
+currentPodVersionCommand=$(grep ".version" ${podspecFile} -n | sed 's/.*"\(.*\)".*/\1/')
+currentPodCommitIDCommand=$(grep ":commit" ${podspecFile} -n | sed 's/.*"\(.*\)".*/\1/')
 
 if [ "$version" == "" ]
 then
-version=currentPodVersionCommand
+version=$currentPodVersionCommand
 fi
 
 ## User output
@@ -33,6 +33,8 @@ fi
 
 printf "## Updating README.md file\n\n"
 # find line of update command headline and increase by one
+if [ "$readmeFile" != "" ]
+then
 lineNumber=$(grep "${readmePodPushHeader}" ${readmeFile} -n -i | sed 's/:.*//')
 if [ "$lineNumber" == "" ]
 then
@@ -51,15 +53,18 @@ else
 readmeVersionLine=$((lineNumber+1))
 sed -i "" "${readmeVersionLine}s/.*/${version}/" ${readmeFile}
 fi
-
+fi
 
 ## In case one had a specific commit id assigned to podspec, we will update it, too.
 # Get last commit id
 lastCommitID=$(git log --format="%H" -n 1)
 printf "## Updating Commit ID in ${podspecFile} to last id: ${lastCommitID}\n\n"
 # update commit id of .podspec
-sed -i "" "s/${currentPodCommitIDCommand}/${lastCommitID}/g" Namics-Library.podspec
+sed -i "" "s/${currentPodCommitIDCommand}/${lastCommitID}/g"  ${podspecFile}
 
+printf "## Pod is being pushed\n"
+${podPushCommand}
+printf "\n"
 
 printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\\n"
 jazzy
@@ -82,13 +87,8 @@ done
 
 git commit -m "RELEASE ${$}Podspec and Documentation Updated"
 git push
-git add -A && git commit -m "Release 0.1.0"
-git tag 'v0.1.0'
-git push --tags
-git push
-
 git add -A && git commit -m "Release ${version}"
-git tag 'v${version}'
+git tag "v${version}"
 git push --tags
 git push
 

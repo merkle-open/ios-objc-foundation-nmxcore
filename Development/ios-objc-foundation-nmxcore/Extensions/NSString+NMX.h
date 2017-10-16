@@ -102,7 +102,7 @@
  *  Returns a string without non alphanumeric characters
  *
  *  - Author:
- *  Tobias Baube
+ *  Thomas Bopst
  *
  *  - Version
  *  1.0
@@ -111,10 +111,10 @@
 
 
 /**
- *  Returns a string without ASCII characters only
+ *  Returns a string with ASCII characters only
  *
  *  - Author:
- *  Tobias Baube
+ *  Thomas Bopst
  *
  *  - Version
  *  1.0
