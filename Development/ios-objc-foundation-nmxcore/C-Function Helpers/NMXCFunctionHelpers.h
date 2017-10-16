@@ -10,5 +10,6 @@
 #define NMXCFunctionHelpers_h
 
 #import "NMXNSBundleFileHandling.h"
+#import "NMXLogging.h"
 
 #endif /* NMXCFunctionHelpers_h */
