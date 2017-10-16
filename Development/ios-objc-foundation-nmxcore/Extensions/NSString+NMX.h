@@ -111,7 +111,7 @@
 
 
 /**
- *  Returns a string with ASCII characters only
+ *  Returns a string with printable ASCII characters in range [32, 126] only
  *
  *  - Author:
  *  Thomas Bopst
