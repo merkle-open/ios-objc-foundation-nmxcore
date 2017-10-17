@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 #import "NMXCFunctionHelpers.h"
-#import "NMXCFunctionHelpers.h"
+#import "NMXUtilities.h"
 #import "NMXExtensions.h"
