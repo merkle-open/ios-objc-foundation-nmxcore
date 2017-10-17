@@ -11,6 +11,7 @@
 #endif
 
 #import "NMXCFunctionHelpers.h"
+#import "NMXLogging.h"
 #import "NMXNSBundleFileHandling.h"
 #import "NMXExtensions.h"
 #import "NSDate+NMX.h"
@@ -21,6 +22,6 @@
 #import "NMXLocalizationHandler.h"
 #import "NMXUtilities.h"
 
-FOUNDATION_EXPORT double Namics_LibraryVersionNumber;
-FOUNDATION_EXPORT const unsigned char Namics_LibraryVersionString[];
+FOUNDATION_EXPORT double NMXCoreVersionNumber;
+FOUNDATION_EXPORT const unsigned char NMXCoreVersionString[];
 

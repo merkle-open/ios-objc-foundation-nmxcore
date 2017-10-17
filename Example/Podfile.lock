@@ -1,16 +1,16 @@
 PODS:
-  - Namics-Library (0.1.0)
+  - NMXCore (0.1.0)
 
 DEPENDENCIES:
-  - Namics-Library (from `../`)
+  - NMXCore (from `../`)
 
 EXTERNAL SOURCES:
-  Namics-Library:
+  NMXCore:
     :path: ../
 
 SPEC CHECKSUMS:
-  Namics-Library: 334d904b72b4045427ba10a69576d79addfff3a9
+  NMXCore: 548746a1938ac13165d011d12dc60de4f2522af7
 
-PODFILE CHECKSUM: d9337a9ed7e3f937c726bfc3725f8b036f0c3301
+PODFILE CHECKSUM: 91ce4dcb0c33d3cc68e978ab70475fe0bc356e39
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.4.0.beta.1
