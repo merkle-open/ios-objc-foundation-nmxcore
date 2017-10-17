@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'ios-objc-foundation-nmxcore Swift Example' do
+    pod 'NMXCore', :path => '../'
+end
