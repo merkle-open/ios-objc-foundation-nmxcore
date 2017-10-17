@@ -13,6 +13,7 @@
 		219D2B641F950C3700B6B16A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219D2B631F950C3700B6B16A /* Assets.xcassets */; };
 		219D2B671F950C3700B6B16A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219D2B651F950C3700B6B16A /* LaunchScreen.storyboard */; };
 		219D2B721F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D2B711F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift */; };
+		21C0DC801F9642DD002E8871 /* NMXCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0DC7F1F9642DD002E8871 /* NMXCore.swift */; };
 		9FDA017CA3652FAC16DBF601 /* Pods_ios_objc_foundation_nmxcore_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F492A682E25DCBE9DFE4FC6D /* Pods_ios_objc_foundation_nmxcore_Swift_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		219D2B711F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_objc_foundation_nmxcore_Swift_ExampleTests.swift; sourceTree = "<group>"; };
 		219D2B731F950C3700B6B16A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C0DC771F95EA6C002E8871 /* ios-objc-foundation-nmxcore_Swift_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-objc-foundation-nmxcore_Swift_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		21C0DC7F1F9642DD002E8871 /* NMXCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NMXCore.swift; path = ../../NMXCore.swift; sourceTree = "<group>"; };
 		4767C4F633C18982DE23C9F2 /* Pods-ios-objc-foundation-nmxcore Swift Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-objc-foundation-nmxcore Swift Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-objc-foundation-nmxcore Swift Example/Pods-ios-objc-foundation-nmxcore Swift Example.debug.xcconfig"; sourceTree = "<group>"; };
 		ECA07C8BBCDB1B176A3944D7 /* Pods-ios-objc-foundation-nmxcore Swift Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-objc-foundation-nmxcore Swift Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-objc-foundation-nmxcore Swift Example/Pods-ios-objc-foundation-nmxcore Swift Example.release.xcconfig"; sourceTree = "<group>"; };
 		F492A682E25DCBE9DFE4FC6D /* Pods_ios_objc_foundation_nmxcore_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_objc_foundation_nmxcore_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 		219D2B5B1F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift Example */ = {
 			isa = PBXGroup;
 			children = (
+				21C0DC7F1F9642DD002E8871 /* NMXCore.swift */,
 				219D2B5C1F950C3700B6B16A /* AppDelegate.swift */,
 				219D2B5E1F950C3700B6B16A /* ViewController.swift */,
 				219D2B601F950C3700B6B16A /* Main.storyboard */,
@@ -284,6 +287,7 @@
 			files = (
 				219D2B5F1F950C3700B6B16A /* ViewController.swift in Sources */,
 				219D2B5D1F950C3700B6B16A /* AppDelegate.swift in Sources */,
+				21C0DC801F9642DD002E8871 /* NMXCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #endif
 
 #import "NMXCFunctionHelpers.h"
+#import "NMXLogging.h"
 #import "NMXNSBundleFileHandling.h"
 #import "NMXExtensions.h"
 #import "NSDate+NMX.h"
@@ -19,7 +20,6 @@
 #import "NSString+NMX.h"
 #import "NMXCore.h"
 #import "NMXLocalizationHandler.h"
-#import "NMXLogging.h"
 #import "NMXUtilities.h"
 
 FOUNDATION_EXPORT double NMXCoreVersionNumber;
