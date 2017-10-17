@@ -21,7 +21,7 @@ NSString* const NMXLogLevelTypeDescription[] =
 static NSString *const kStringFromatSpecifiers =
 @"%(?:\\d+\\$)?[+-]?(?:[lh]{0,2})(?:[qLztj])?(?:[ 0]|'.{1})?\\d*(?:\\.\\d+)?[@dDiuUxXoOfeEgGcCsSpaAFn]";
 
-NSString* _Nullable NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, NSString* _Nonnull format, va_list arguments)
+void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, __strong NSString* _Nonnull format, va_list arguments)
 {
     // Evaluate input parameters
     if (format != nil && [format isKindOfClass:[NSString class]])
@@ -46,10 +46,12 @@ NSString* _Nullable NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSStr
         va_copy(argList, arguments);
         
         int argCount = 0;
+        NSLog(@"%d",argCount);
         while (va_arg(argList, NSObject *))
         {
-            ++argCount;
+            argCount += 1;
         }
+        NSLog(@"--> %d",argCount);
         va_end(argList);
         NSRegularExpression *regEx = [NSRegularExpression regularExpressionWithPattern:kStringFromatSpecifiers options:0 error:nil];
         NSInteger numSpecifiers = [regEx numberOfMatchesInString:format options:0 range:NSMakeRange(0, format.length)];
@@ -73,7 +75,6 @@ NSString* _Nullable NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSStr
                                   options:0
                                     range:NSMakeRange(0, [s length])];
             //printf("%s\n", [s UTF8String]);
-            NSLog(@"%@",s);
             va_end(argList);
         }
         
@@ -85,7 +86,6 @@ NSString* _Nullable NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSStr
             || _logLevel == all)
         {
             NSLog(@"%@",s);
-            return s;
         }
         // Too bad this destroys our nice test coverage percentage, as this is not defined for testing target :-(
         #elif RELEASE
@@ -93,43 +93,43 @@ NSString* _Nullable NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSStr
             || _logLevel == all)
         {
             NSLog(@"%@",s);
-            return s;
         }
         // Too bad this destroys our nice test coverage percentage, as this is not defined for testing target :-(
         #else
         if (_logLevel == all)
         {
             NSLog(@"%@",s);
-            return s;
         }
         #endif
     }
-    return nil;
 }
 
-__attribute__((overloadable)) NSString* _Nullable NMXLog(NSString* _Nonnull format, ...)
+__attribute__((overloadable)) void NMXLog(NSString* _Nonnull format, ...)
 {
     va_list argList;
     va_start(argList, format);
-    NSString *str = NMXLogWithPrefixAndArguments(none, nil, format, argList);
+    NMXLogWithPrefixAndArguments(none, nil, format, argList);
     va_end(argList);
-    return str;
+    NSString *obj = nil;
+    NMXLogWithPrefixAndArguments(none, nil, obj, nil);
 }
 
-__attribute__((overloadable)) NSString* _Nullable NMXLog(NMXLogLevelType logLevel, NSString* _Nonnull format, ...)
+__attribute__((overloadable)) void NMXLog(NMXLogLevelType logLevel, NSString* _Nonnull format, ...)
 {
     va_list argList;
     va_start(argList, format);
-    NSString *str = NMXLogWithPrefixAndArguments(logLevel, nil, format, argList);
+    NMXLogWithPrefixAndArguments(logLevel, nil, format, argList);
     va_end(argList);
-    return str;
+    NSString *obj = nil;
+    NMXLogWithPrefixAndArguments(none, nil, obj, nil);
 }
 
-__attribute__((overloadable)) NSString* NMXLogWithPrefix(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, NSString* _Nonnull format, ...)
+__attribute__((overloadable)) void NMXLogWithPrefix(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, NSString* _Nonnull format, ...)
 {
     va_list argList;
     va_start(argList, format);
-    NSString *str = NMXLogWithPrefixAndArguments(logLevel, logPrefix, format, argList);
+    NMXLogWithPrefixAndArguments(logLevel, logPrefix, format, argList);
     va_end(argList);
-    return str;
+    NSString *obj = nil;
+    NMXLogWithPrefixAndArguments(none, nil, obj, nil);
 }

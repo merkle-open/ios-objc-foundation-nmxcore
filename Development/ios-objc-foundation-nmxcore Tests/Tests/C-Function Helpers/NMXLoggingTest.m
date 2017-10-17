@@ -12,14 +12,15 @@
 #import "NMXLogging.h"
 
 @interface NMXLoggingTest : XCTestCase
-
 @end
 
 @implementation NMXLoggingTest
 
+static int stderrSave;
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    NSLog(@"Logs go to %@",[self logFilePath]);
 }
 
 - (void)tearDown {
@@ -27,19 +28,52 @@
     [super tearDown];
 }
 
+- (NSString *)logFilePath
+{
+    NSArray *allPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [allPaths objectAtIndex:0];
+    return [documentsDirectory stringByAppendingPathComponent:@"FWTestLog.txt"];
+}
+
+- (void)startLogging
+{
+    stderrSave = dup(STDERR_FILENO);
+    freopen([[self logFilePath] cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);
+}
+
+- (void)closeLogging
+{
+    fflush(stderr);
+    dup2(stderrSave,STDERR_FILENO);
+    close(stderrSave);
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    [fileManager removeItemAtPath:[self logFilePath] error:&error];
+}
+
+
+- (BOOL)recordLogLogged:(NSString *)string
+{
+    NSString* content = [NSString stringWithContentsOfFile:[self logFilePath]
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+    return [content hasSuffix:[string stringByAppendingString:@"\n"]];
+}
+
 - (void)testNMXLogFormat_Valid
 {
-    XCTAssertNoThrow(NMXLog(nil));
-    XCTAssertNoThrow(NMXLog(@"Test test test %@ --- %@",nil,nil));
-    XCTAssertNoThrow(NMXLog(@"Test test test %@ --- %@",@"Argument1", @"Argument2"));
-    XCTAssertNoThrow(NMXLog(@"Test test test %@ --- %@",@"Argument1", @"Argument2", @"Argument not listed"));
-    XCTAssertNoThrow(NMXLog(@"Test test test %@ --- %@"));
-    XCTAssertNoThrow(NMXLog(@"Test test test %f --- %@",@(YES),@"Valid"));
-    XCTAssertNoThrow(NMXLog((NSString *)[NSData new]));
-    XCTAssertNoThrow(NMXLog(@""));
-    XCTAssertNoThrow(NMXLog(@"",@""));
+//    XCTAssertNoThrow(NMXLog(nil));
+//    XCTAssertNoThrow(NMXLog(@"Test test test %@ --- %@",nil,nil));
+//    XCTAssertNoThrow(NMXLog(@"Test test test %@ --- %@",@"Argument1", @"Argument2"));
+//    XCTAssertNoThrow(NMXLog(@"Test test test %@ --- %@",@"Argument1", @"Argument2", @"Argument not listed"));
+//    XCTAssertNoThrow(NMXLog(@"Test test test %f --- %@",@(YES),@"Valid"));
+//    XCTAssertNoThrow(NMXLog(@"Test test test %d --- %@",YES,@"Valid"));
+//    XCTAssertNoThrow(NMXLog((NSString *)[NSData new]));
+//    XCTAssertNoThrow(NMXLog(@""));
+//    XCTAssertNoThrow(NMXLog(@"",@""));
     XCTAssertNoThrow(NMXLog(@"Simple string output"));
-    XCTAssertNoThrow(NMXLog(@"", (NSString *)[NSData new]));
+    XCTAssertNoThrow(NMXLog(@"2 Placeholders. 0 Vars %@ --- %@"));
+//    XCTAssertNoThrow(NMXLog(@"", (NSString *)[NSData new]));
 }
     
 - (void)testNMXLogLogLevelFormat_invalid {
@@ -49,64 +83,97 @@
     
     for (NSNumber *obj in [NSNumber testObjectTypeParamsInvalid])
     {
-        NSLog(@"%@",obj);
-        outputString = NMXLog((NSInteger)obj, inputString);
-        XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+        [self startLogging];
+        NMXLog((NSInteger)obj, inputString);
+        BOOL isRecorded = [self recordLogLogged:expectedString];
+        [self closeLogging];
+        XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     }
     NSObject *obj = nil;
-    outputString = NMXLog((NSInteger)obj, inputString);
-    XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
-    
+    [self startLogging];
+    NMXLog((NSInteger)obj, inputString);
+    BOOL isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+
     for (NSString *obj in [NSString testObjectTypeParamsInvalid])
     {
-        NSLog(@"%@",obj);
-        outputString = NMXLog(debug, obj);
-        XCTAssertNil(outputString, @"🔴🔴 We want to log any kind of object, still we expect a string format input: %@",obj);
+        [self startLogging];
+        NMXLog((NSInteger)obj, inputString);
+        BOOL isRecorded = [self recordLogLogged:expectedString];
+        [self closeLogging];
+        XCTAssertTrue(isRecorded, @"🔴🔴 We want to log any kind of object, still we expect a string format input: %@",obj);
     }
     NSString *nullString = nil;
-    outputString = NMXLog(debug, nullString);
-    XCTAssertNil(outputString, @"🔴🔴 We want to log any kind of object, still we expect a string format input: %@",obj);
-    // nevertheless common logging if an object was "by accident" nil, should work
+    [self startLogging];
+    NMXLog(debug, nullString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertFalse(isRecorded, @"🔴🔴 We want to log any kind of object, still we expect a string format input: %@",nullString);
 }
     
 - (void)testNMXLogLogLevelLogPrefixFormat_invalid {
     NSString *inputString = @"Test";
     NSString *expectedString = @"Test";
     NSString *outputString = @"";
+    BOOL isRecorded = NO;
     
     for (NSNumber *obj in [NSNumber testObjectTypeParamsInvalid])
     {
-        outputString = NMXLogWithPrefix((NSInteger)obj, nil, inputString);
-        XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+        [self startLogging];
+        NMXLogWithPrefix((NSInteger)obj, nil, inputString);
+        isRecorded = [self recordLogLogged:expectedString];
+        [self closeLogging];
+        XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     }
     NSObject *obj = nil;
-    outputString = NMXLogWithPrefix((NSInteger)obj, nil, inputString);
-    XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+    [self startLogging];
+    NMXLogWithPrefix((NSInteger)obj, nil, inputString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     
-    outputString = NMXLogWithPrefix((NSInteger)17, nil, inputString);
-    XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+    [self startLogging];
+    NMXLogWithPrefix((NSInteger)17, nil, inputString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     
-    outputString = NMXLogWithPrefix((NSInteger)-12, nil, inputString);
-    XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+    [self startLogging];
+    NMXLogWithPrefix((NSInteger)-12, nil, inputString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     
     expectedString = [NSString stringWithFormat:@"%@%@",NMXLogLevelTypeDescription[debug], inputString];
     for (NSString *obj in [NSString testObjectTypeParamsInvalid])
     {
-        outputString = NMXLogWithPrefix(debug, obj, inputString);
-        XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+        [self startLogging];
+        NMXLogWithPrefix(debug, obj, inputString);
+        isRecorded = [self recordLogLogged:expectedString];
+        [self closeLogging];
+        XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     }
-    outputString = NMXLogWithPrefix(debug, nil, inputString);
-    XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+    [self startLogging];
+    NMXLogWithPrefix(debug, nil, inputString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     
     for (NSString *obj in [NSString testObjectTypeParamsInvalid])
     {
-        outputString = NMXLogWithPrefix(debug, nil, obj);
-        XCTAssertNil(outputString, @"🔴🔴 We want to log any kind of object, still we expect a string format input: %@",obj);
+        [self startLogging];
+        NMXLogWithPrefix(debug, nil, obj);
+        isRecorded = [self recordLogLogged:expectedString];
+        [self closeLogging];
+        XCTAssertFalse(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     }
     NSString *nullString = nil;
-    outputString = NMXLogWithPrefix(debug, nil, nullString);
-    XCTAssertNil(outputString, @"🔴🔴 We want to log any kind of object, still we expect a string format input: %@",obj);
-    // nevertheless common logging if an object was "by accident" nil, should work
+    [self startLogging];
+    NMXLogWithPrefix(debug, nil, nullString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertFalse(isRecorded, @"🔴🔴 We want to log any kind of object, still we expect a string format input: %@",obj);
 }
 
 - (void)testNMXLogLogLevelLogPrefixFormat_valid
@@ -114,27 +181,37 @@
     NSString *inputString = @"Test";
     NSString *expectedString = @"Test";
     NSString *outputString = @"";
+    BOOL isRecorded = NO;
     
     int validLevels[3] = {none,debug,all,};
     for (int i = 0; i < sizeof(validLevels)/sizeof(validLevels[0]); i++)
     {
         NMXLogLevelType level = validLevels[i];
         expectedString = [NSString stringWithFormat:@"%@%@",NMXLogLevelTypeDescription[level], inputString];
-        outputString = NMXLogWithPrefix(level, nil, inputString);
-        XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+        [self startLogging];
+        NMXLogWithPrefix(level, nil, inputString);
+        isRecorded = [self recordLogLogged:expectedString];
+        [self closeLogging];
+        XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     }
     
     NMXLogLevelType level = release;
     expectedString = [NSString stringWithFormat:@"%@%@",NMXLogLevelTypeDescription[level], inputString];
-    outputString = NMXLogWithPrefix(level, nil, inputString);
-    XCTAssertNil(outputString, @"🔴🔴 No output string expected for release only builds, as we are on debug currently");
+    [self startLogging];
+    NMXLogWithPrefix(level, nil, inputString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertFalse(isRecorded, @"🔴🔴 No output string expected for release only builds, as we are on debug currently");
     
     
     level = all;
     NSString *prefix = @"CUSTOM_PREFIX";
     expectedString = [NSString stringWithFormat:@"%@%@",prefix, inputString];
-    outputString = NMXLogWithPrefix(level, prefix, inputString);
-    XCTAssertTrue([expectedString isEqualToString:outputString], @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
+    [self startLogging];
+    NMXLogWithPrefix(level, prefix, inputString);
+    isRecorded = [self recordLogLogged:expectedString];
+    [self closeLogging];
+    XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
 }
     
 @end
