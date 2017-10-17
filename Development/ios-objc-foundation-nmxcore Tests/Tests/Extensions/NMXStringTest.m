@@ -242,4 +242,27 @@
     XCTAssertFalse([@"☃" isEqualToString:@"☃".stripNonAlphanumericChars]);
 }
 
+- (void)testStripNonAsciiChars
+{
+    // Test whether all control characters ([0, 31] and 127) and extended ASCII codes are stripped (http://www.asciitable.com/)
+    NSMutableString *printableAsciiCharacters = [NSMutableString string];
+    for (NSUInteger i = 32; i < 127; ++i)
+    {
+        [printableAsciiCharacters appendFormat:@"%c", (char)i];
+    }
+    
+    NSMutableString *allAsciCharacters = [NSMutableString string];
+    for (NSUInteger i = 0; i < 255; ++i)
+    {
+        [allAsciCharacters appendFormat:@"%c", (char)i];
+    }
+    
+    XCTAssertTrue([printableAsciiCharacters isEqualToString:allAsciCharacters.stripNonAsciiChars], "Result should not containt ASCII Characters in Range [0, 31] and 127");
+    
+    
+    // Additional test cases
+    XCTAssertTrue([@"" isEqualToString:@"☢️英".stripNonAsciiChars], "Should strip unicode character");
+    XCTAssertTrue([@"" isEqualToString:@"".stripNonAsciiChars], "Empty string should stay empty");
+}
+
 @end
