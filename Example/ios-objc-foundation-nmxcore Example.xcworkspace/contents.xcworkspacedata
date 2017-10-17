@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/tbaube/Documents/namics-core-library-ios-objective-c/Example/ios-objc-foundation-nmxcore Example.xcodeproj">
+      location = "group:ios-objc-foundation-nmxcore Example.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ios-objc-foundation-nmxcore Example.xcodeproj">
    </FileRef>
 </Workspace>
