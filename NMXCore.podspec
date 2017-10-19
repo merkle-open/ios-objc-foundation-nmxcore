@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.platform              = :ios, '9.0'
   s.license               = { :type => 'MIT' }
 
-  s.source_files = 'Development/ios-objc-foundation-nmxcore/**/*{a,h,m}'
+  s.source_files = 'Development/NMXCore/**/*{a,h,m}'
 end

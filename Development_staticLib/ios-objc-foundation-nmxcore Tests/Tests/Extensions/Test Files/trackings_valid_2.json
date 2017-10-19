@@ -1,0 +1,460 @@
+{
+    "trackings": [
+                  {
+                  "trackingType": "bottle",
+                  "timeStamp": "2016-04-01T11:30:05+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "feedType": "breastmilk",
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "31A27DAB-E338-404C-9099-22E1B3F4F40E"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-03-31T20:06:50+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 932,
+                  "lastBreast": "left",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 0,
+                  "phaseIndex": 173,
+                  "patternIndex": 167,
+                  "pumpLevel": 141,
+                  "goalTime": 144,
+                  "confirmed": true,
+                  "statusFlags": {},
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "9A6CE4F4-8672-45E3-8C00-45491ADB38F8"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-03-31T23:31:38+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 0,
+                  "lastBreast": "left",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 0,
+                  "phaseIndex": 1,
+                  "patternIndex": 0,
+                  "pumpLevel": 6,
+                  "goalTime": 0,
+                  "confirmed": true,
+                  "statusFlags": {},
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "2074597D-6ADD-42D8-880D-C8F368CD48C0"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-03-25T16:04:47+01:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 710,
+                  "lastBreast": "both",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 0,
+                  "phaseIndex": 1,
+                  "patternIndex": 95,
+                  "pumpLevel": 246,
+                  "goalTime": 32,
+                  "confirmed": true,
+                  "statusFlags": {
+                  "sessionType": 17840,
+                  "sessionAborted": false,
+                  "goalCompleted": true,
+                  "goalExtended": true,
+                  "autoLetdown": true,
+                  "leaksDetected": true
+                  },
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "03F393E1-81F7-463F-A6A7-DD3DCC0976FF"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-04-01T11:19:54+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 402,
+                  "lastBreast": "both",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 1,
+                  "phaseIndex": 209,
+                  "patternIndex": 14,
+                  "pumpLevel": 91,
+                  "goalTime": 144,
+                  "confirmed": true,
+                  "statusFlags": {},
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "339FD879-587C-4547-990A-A5E896D64F2B"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-04-01T15:30:40+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 0,
+                  "lastBreast": "left",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 0,
+                  "phaseIndex": 0,
+                  "patternIndex": 0,
+                  "pumpLevel": 9,
+                  "goalTime": 0,
+                  "confirmed": true,
+                  "statusFlags": {},
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "6B1EF80D-205E-43C7-B93D-F8574597A918"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-04-04T07:49:46+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 1037,
+                  "lastBreast": "both",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 1,
+                  "phaseIndex": 214,
+                  "patternIndex": 232,
+                  "pumpLevel": 132,
+                  "goalTime": 208,
+                  "confirmed": true,
+                  "statusFlags": {},
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "D0FF99CD-0ECD-48E1-9791-3AD43FC6D969"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-04-01T13:04:58+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 943,
+                  "lastBreast": "both",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 0,
+                  "phaseIndex": 5,
+                  "patternIndex": 173,
+                  "pumpLevel": 98,
+                  "goalTime": 176,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "3B02A290-5AD6-4C89-8160-69E80CA521AE"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-04-04T09:25:46+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 545,
+                  "lastBreast": "both",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 0,
+                  "phaseIndex": 37,
+                  "patternIndex": 77,
+                  "pumpLevel": 140,
+                  "goalTime": 208,
+                  "confirmed": true,
+                  "statusFlags": {
+                  "sessionType": 24512,
+                  "sessionAborted": false,
+                  "goalCompleted": true,
+                  "goalExtended": true,
+                  "autoLetdown": true,
+                  "leaksDetected": true
+                  },
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "7BEA6D4D-3E31-4BD8-B269-85CDC942D0C8"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "timeStamp": "2016-03-25T16:29:59+01:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 983,
+                  "lastBreast": "both",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 1,
+                  "phaseIndex": 107,
+                  "patternIndex": 165,
+                  "pumpLevel": 93,
+                  "goalTime": 32,
+                  "confirmed": true,
+                  "statusFlags": {
+                  "sessionType": 24512,
+                  "sessionAborted": false,
+                  "goalCompleted": true,
+                  "goalExtended": true,
+                  "autoLetdown": true,
+                  "leaksDetected": true
+                  },
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "F6FF9B5F-D43D-4CBF-889A-822B53269813"
+                  },
+                  {
+                  "trackingType": "pumping",
+                  "note": "Hello from St. Gallen",
+                  "timeStamp": "2016-06-10T10:37:01+02:00",
+                  "badSession": false,
+                  "quickTracking": false,
+                  "durationTotal": 185,
+                  "lastBreast": "right",
+                  "amountLeft": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountRight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "amountTotal": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "pumpId": "6AC359F9-D05E-3330-000D-6455712B5723",
+                  "recordIndex": 0,
+                  "phaseIndex": 0,
+                  "patternIndex": 0,
+                  "pumpLevel": 0,
+                  "goalTime": 0,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "52D3AC97-EFA6-40BA-BF2E-0181A047B06F"
+                  },
+                  {
+                  "trackingType": "diaper",
+                  "note": "Hola",
+                  "timeStamp": "2016-06-13T08:20:21+02:00",
+                  "quickTracking": false,
+                  "batchType": "poo",
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "CF18666A-E25B-4117-9D8D-EF360802AB71"
+                  },
+                  {
+                  "trackingType": "diaper",
+                  "timeStamp": "2016-06-13T08:20:37+02:00",
+                  "quickTracking": false,
+                  "batchType": "both",
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "E741F171-D15A-4C12-BEA5-7457EC5E98BE"
+                  },
+                  {
+                  "trackingType": "diaper",
+                  "timeStamp": "2016-06-13T08:20:44+02:00",
+                  "quickTracking": true,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "BF9223D8-81BE-4DBA-92E4-55B4D59AD9A8"
+                  },
+                  {
+                  "trackingType": "diaper",
+                  "timeStamp": "2016-06-13T08:20:49+02:00",
+                  "quickTracking": false,
+                  "batchType": "pee",
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "6649004D-D32A-45CD-AEAA-0986CE400D39"
+                  },
+                  {
+                  "trackingType": "sleep",
+                  "timeStamp": "2016-06-14T09:01:19+02:00",
+                  "quickTracking": true,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "B200C64C-2BDC-4C05-BEAD-B56C3721D6E6"
+                  },
+                  {
+                  "trackingType": "sleep",
+                  "timeStamp": "2016-06-14T09:01:23+02:00",
+                  "quickTracking": false,
+                  "durationTotal": 300,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "D6C71E8A-E5A8-402D-880C-E5A63283542D"
+                  },
+                  {
+                  "trackingType": "sleep",
+                  "note": "I can get no sleep",
+                  "timeStamp": "2016-06-14T09:01:40+02:00",
+                  "quickTracking": false,
+                  "durationTotal": 120,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "D1182BB1-FE4D-470C-AB2C-137E31762CD5"
+                  },
+                  {
+                  "trackingType": "height",
+                  "note": "Ich bin gross\n",
+                  "timeStamp": "2016-05-06T13:31:00+02:00",
+                  "quickTracking": false,
+                  "height": {
+                  "unit": "inch",
+                  "quantity": 9.0
+                  },
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "56897188-5FAB-4296-B74D-1C6EA1E9DE3C"
+                  },
+                  {
+                  "trackingType": "height",
+                  "timeStamp": "2016-06-14T13:32:19+02:00",
+                  "quickTracking": true,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "E6D3B1B5-3606-40D5-B1B8-0562885C5E8F"
+                  },
+                  {
+                  "trackingType": "weight",
+                  "timeStamp": "2016-05-17T13:32:00+02:00",
+                  "quickTracking": false,
+                  "weight": {
+                  "unit": "oz",
+                  "quantity": 0.0
+                  },
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "193828F2-2AA3-4897-96D3-2988C3F9E17B"
+                  },
+                  {
+                  "trackingType": "weight",
+                  "timeStamp": "2016-06-14T13:32:33+02:00",
+                  "quickTracking": true,
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "4BB582DA-5DA5-4C07-8443-FBB65989D9E9"
+                  },
+                  {
+                  "trackingType": "diaper",
+                  "timeStamp": "2016-06-16T18:24:12+02:00",
+                  "quickTracking": false,
+                  "batchType": "poo",
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "54A721D6-3A75-429E-B5E2-AF4D163FCF2B"
+                  },
+                  {
+                  "trackingType": "diaper",
+                  "timeStamp": "2016-06-16T18:24:20+02:00",
+                  "quickTracking": false,
+                  "batchType": "pee",
+                  "confirmed": true,
+                  "babyId": "8194AC79-6A10-49D0-8F90-8F0BE737C71F",
+                  "trackingId": "E0587088-614D-4E46-9431-6F8B8AFD672F"
+                  }
+                  ]
+}

@@ -1,5 +1,5 @@
 PODS:
-  - NMXCore (0.1.0)
+  - NMXCore (0.2.1)
 
 DEPENDENCIES:
   - NMXCore (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  NMXCore: 548746a1938ac13165d011d12dc60de4f2522af7
+  NMXCore: 76706800da819a9bb7eb0eaa0de6bea8d72612e9
 
 PODFILE CHECKSUM: 91ce4dcb0c33d3cc68e978ab70475fe0bc356e39
 
