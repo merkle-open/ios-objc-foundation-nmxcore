@@ -116,4 +116,4 @@ spec.source - tag to the one from step (5)
 ```
 
 7. Update cocoapod spec:
-`pod trunk push NMXCore.podspec`
+pod trunk push NMXCore.podspec --verbose
