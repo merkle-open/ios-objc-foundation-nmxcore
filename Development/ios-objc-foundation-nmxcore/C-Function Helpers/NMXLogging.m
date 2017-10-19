@@ -46,12 +46,10 @@ void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable 
         va_copy(argList, arguments);
         
         int argCount = 0;
-        NSLog(@"%d",argCount);
         while (va_arg(argList, NSObject *))
         {
             argCount += 1;
         }
-        NSLog(@"--> %d",argCount);
         va_end(argList);
         NSRegularExpression *regEx = [NSRegularExpression regularExpressionWithPattern:kStringFromatSpecifiers options:0 error:nil];
         NSInteger numSpecifiers = [regEx numberOfMatchesInString:format options:0 range:NSMakeRange(0, format.length)];
@@ -60,8 +58,8 @@ void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable 
         if (numSpecifiers > argCount)
         {
             // Perform format string argument substitution, reinstate %% escapes, then print
-            s = [[NSMutableString alloc] initWithFormat:@"Error occured when logging: amount of arguments does not for to the defined format. Callstack:\n%@\n", [NSThread callStackSymbols]];
-            printf("%s\n", [s UTF8String]);
+            //s = [[NSMutableString alloc] initWithFormat:@"Error occured when logging: amount of arguments does not for to the defined format. Callstack:\n%@\n", [NSThread callStackSymbols]];
+            //printf("%s\n", [s UTF8String]);
             s = [[NSMutableString alloc] initWithString:format];
         }
         else
