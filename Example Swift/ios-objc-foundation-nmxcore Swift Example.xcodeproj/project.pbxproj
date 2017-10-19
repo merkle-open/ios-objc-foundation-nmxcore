@@ -12,20 +12,9 @@
 		219D2B621F950C3700B6B16A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219D2B601F950C3700B6B16A /* Main.storyboard */; };
 		219D2B641F950C3700B6B16A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219D2B631F950C3700B6B16A /* Assets.xcassets */; };
 		219D2B671F950C3700B6B16A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219D2B651F950C3700B6B16A /* LaunchScreen.storyboard */; };
-		219D2B721F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D2B711F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift */; };
 		21C0DC801F9642DD002E8871 /* NMXCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0DC7F1F9642DD002E8871 /* NMXCore.swift */; };
 		9FDA017CA3652FAC16DBF601 /* Pods_ios_objc_foundation_nmxcore_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F492A682E25DCBE9DFE4FC6D /* Pods_ios_objc_foundation_nmxcore_Swift_Example.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		219D2B6E1F950C3700B6B16A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 219D2B511F950C3700B6B16A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 219D2B581F950C3700B6B16A;
-			remoteInfo = "ios-objc-foundation-nmxcore Swift Example";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		219D2B591F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-objc-foundation-nmxcore Swift Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,9 +24,6 @@
 		219D2B631F950C3700B6B16A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		219D2B661F950C3700B6B16A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		219D2B681F950C3700B6B16A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		219D2B6D1F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-objc-foundation-nmxcore Swift ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		219D2B711F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_objc_foundation_nmxcore_Swift_ExampleTests.swift; sourceTree = "<group>"; };
-		219D2B731F950C3700B6B16A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C0DC771F95EA6C002E8871 /* ios-objc-foundation-nmxcore_Swift_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-objc-foundation-nmxcore_Swift_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		21C0DC7F1F9642DD002E8871 /* NMXCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NMXCore.swift; path = ../../NMXCore.swift; sourceTree = "<group>"; };
 		4767C4F633C18982DE23C9F2 /* Pods-ios-objc-foundation-nmxcore Swift Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-objc-foundation-nmxcore Swift Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-objc-foundation-nmxcore Swift Example/Pods-ios-objc-foundation-nmxcore Swift Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,13 +40,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		219D2B6A1F950C3700B6B16A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				219D2B5B1F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift Example */,
-				219D2B701F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift ExampleTests */,
 				219D2B5A1F950C3700B6B16A /* Products */,
 				F4B12B533A7966D7A07A21F8 /* Pods */,
 				670065835032A4FEE52915A4 /* Frameworks */,
@@ -79,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				219D2B591F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift Example.app */,
-				219D2B6D1F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,15 +74,6 @@
 				21C0DC771F95EA6C002E8871 /* ios-objc-foundation-nmxcore_Swift_Example-Bridging-Header.h */,
 			);
 			path = "ios-objc-foundation-nmxcore Swift Example";
-			sourceTree = "<group>";
-		};
-		219D2B701F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift ExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				219D2B711F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift */,
-				219D2B731F950C3700B6B16A /* Info.plist */,
-			);
-			path = "ios-objc-foundation-nmxcore Swift ExampleTests";
 			sourceTree = "<group>";
 		};
 		670065835032A4FEE52915A4 /* Frameworks */ = {
@@ -148,24 +116,6 @@
 			productReference = 219D2B591F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		219D2B6C1F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 219D2B791F950C3700B6B16A /* Build configuration list for PBXNativeTarget "ios-objc-foundation-nmxcore Swift ExampleTests" */;
-			buildPhases = (
-				219D2B691F950C3700B6B16A /* Sources */,
-				219D2B6A1F950C3700B6B16A /* Frameworks */,
-				219D2B6B1F950C3700B6B16A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				219D2B6F1F950C3700B6B16A /* PBXTargetDependency */,
-			);
-			name = "ios-objc-foundation-nmxcore Swift ExampleTests";
-			productName = "ios-objc-foundation-nmxcore Swift ExampleTests";
-			productReference = 219D2B6D1F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,11 +129,6 @@
 					219D2B581F950C3700B6B16A = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-					};
-					219D2B6C1F950C3700B6B16A = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 219D2B581F950C3700B6B16A;
 					};
 				};
 			};
@@ -201,7 +146,6 @@
 			projectRoot = "";
 			targets = (
 				219D2B581F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift Example */,
-				219D2B6C1F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -214,13 +158,6 @@
 				219D2B671F950C3700B6B16A /* LaunchScreen.storyboard in Resources */,
 				219D2B641F950C3700B6B16A /* Assets.xcassets in Resources */,
 				219D2B621F950C3700B6B16A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		219D2B6B1F950C3700B6B16A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,23 +228,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		219D2B691F950C3700B6B16A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				219D2B721F950C3700B6B16A /* ios_objc_foundation_nmxcore_Swift_ExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		219D2B6F1F950C3700B6B16A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 219D2B581F950C3700B6B16A /* ios-objc-foundation-nmxcore Swift Example */;
-			targetProxy = 219D2B6E1F950C3700B6B16A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		219D2B601F950C3700B6B16A /* Main.storyboard */ = {
@@ -468,40 +389,6 @@
 			};
 			name = Release;
 		};
-		219D2B7A1F950C3700B6B16A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B2L5F7GSL7;
-				INFOPLIST_FILE = "ios-objc-foundation-nmxcore Swift ExampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.namics.example.ios-objc-foundation-nmxcore-Swift-ExampleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-objc-foundation-nmxcore Swift Example.app/ios-objc-foundation-nmxcore Swift Example";
-			};
-			name = Debug;
-		};
-		219D2B7B1F950C3700B6B16A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B2L5F7GSL7;
-				INFOPLIST_FILE = "ios-objc-foundation-nmxcore Swift ExampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.namics.example.ios-objc-foundation-nmxcore-Swift-ExampleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-objc-foundation-nmxcore Swift Example.app/ios-objc-foundation-nmxcore Swift Example";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -519,15 +406,6 @@
 			buildConfigurations = (
 				219D2B771F950C3700B6B16A /* Debug */,
 				219D2B781F950C3700B6B16A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		219D2B791F950C3700B6B16A /* Build configuration list for PBXNativeTarget "ios-objc-foundation-nmxcore Swift ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				219D2B7A1F950C3700B6B16A /* Debug */,
-				219D2B7B1F950C3700B6B16A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
