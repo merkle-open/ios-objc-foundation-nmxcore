@@ -1,6 +1,48 @@
 {
   "warnings": [
     {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.h",
+      "line": 20,
+      "symbol": "NMXLogLevelType.none",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.h",
+      "line": 21,
+      "symbol": "NMXLogLevelType.debug",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.h",
+      "line": 22,
+      "symbol": "NMXLogLevelType.release",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.h",
+      "line": 23,
+      "symbol": "NMXLogLevelType.all",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.h",
+      "line": 25,
+      "symbol": "NMXLogLevelTypeDescription",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.h",
+      "line": 27,
+      "symbol": "NMXLogWithPrefixAndArguments",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/ios-objc-foundation-nmxcore/Extensions/NSDate+NMX.h",
       "line": 11,
       "symbol": "NSDate(NMX)",

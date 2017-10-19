@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.documentation_url = 'https://namics.github.io/ios-objc-foundation-nmxcore/'
   s.homepage          = "https://github.com/namics/ios-objc-foundation-nmxcore"
   s.authors           = { "Adriano Segalada" => "adriano.segalada@namics.com", "Tobias Baube" => "tobias.baube@namics.com" }
-  s.source            = { :git => "https://github.com/namics/ios-objc-foundation-nmxcore.git", :tag => "v0.1.0" }
+  s.source            = { :git => "https://github.com/namics/ios-objc-foundation-nmxcore.git", :tag => "v0.2.0" }
 
   s.ios.deployment_target = '9.0'
   s.platform              = :ios, '9.0'

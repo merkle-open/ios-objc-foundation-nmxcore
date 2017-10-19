@@ -13,7 +13,7 @@
     <a title="NamicsLib  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NamicsLib Docs</a> (86% documented)</p>
+        <p><a href="index.html">NamicsLib Docs</a> (77% documented)</p>
         <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -53,8 +53,36 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NMXLogLevelTypeDescription">NMXLogLevelTypeDescription</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLog#$@E@NMXLogLevelType#*$objc(cs)NSString.#">NMXLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLogWithPrefix#$@E@NMXLogLevelType#*$objc(cs)NSString#S1_.#">NMXLogWithPrefix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLogWithPrefixAndArguments">NMXLogWithPrefixAndArguments</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#">filePathForFile</a>
               </li>
@@ -72,20 +100,46 @@
         <section>
           <section class="section">
             
-            <h1 id='how-to-create-namics-cocoapods-locally' class='heading'>How to create namics-cocoapods locally</h1>
+            <h1 id='ios-objc-foundation-nmxcore' class='heading'>ios-objc-foundation-nmxcore</h1>
 
 <p>Current Version of the NMXCore Library
 0.1.0</p>
 
-<ol>
-<li><p>Checkout</p>
-<pre class="highlight plaintext"><code>pod repo add namics-cocoapods git@git.namics.com:team-mobile/mobile-ios-cocoapods.git
-</code></pre></li>
-<li><p>Verify its working</p>
-<pre class="highlight plaintext"><code>cd ~/.cocoapods/repos/namics-cocoapods
-pod repo lint .
-</code></pre></li>
-</ol>
+<p>You can find the latest documentation under
+<a href="http://namics.github.io/ios-objc-foundation-nmxcore/">http://namics.github.io/ios-objc-foundation-nmxcore/</a></p>
+<h1 id='include-import' class='heading'>Include / Import</h1>
+<h2 id='cocoapods' class='heading'>Cocoapods</h2>
+
+<p>Navigate to the root directory of your .xcodeproj file.
+If you don&rsquo;t have a <q>podfile</q> created yet, open your terminal and cd to your .xcodeproj-file.
+Perform the following command. Make sure you have cocoapods installed:</p>
+<h3 id='cocoapods-installation' class='heading'>Cocoapods installation</h3>
+
+<p>Make sure to run latest cocoapods version:
+<a href="https://guides.cocoapods.org/using/getting-started.html">https://guides.cocoapods.org/using/getting-started.html</a></p>
+<pre class="highlight plaintext"><code>[sudo] gem install cocoapods
+</code></pre>
+<h3 id='cocoapods-setup' class='heading'>Cocoapods Setup</h3>
+
+<p>Navigate to your.xcodeproj file in the Mac Terminal, then do:</p>
+<pre class="highlight plaintext"><code>pod install
+</code></pre>
+<h3 id='cocoapods-include-ios-objc-foundation-nmxcore' class='heading'>Cocoapods - Include ios-objc-foundation-nmxcore:</h3>
+
+<p>Add the following line to your podfile:</p>
+<pre class="highlight plaintext"><code>pod 'NMXCore', '0.1.0'
+</code></pre>
+
+<p>A podfile could look like the following:</p>
+<pre class="highlight plaintext"><code>source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ProjectTarget' do
+use_frameworks!
+
+pod 'NMXCore', '0.1.0'
+
+end
+</code></pre>
 <h1 id='documentation' class='heading'>Documentation</h1>
 <h2 id='building-documentation' class='heading'>Building Documentation</h2>
 
@@ -153,7 +207,7 @@ git push
 spec.source - tag to the one from step (5)
 </code></pre></li>
 <li><p>Update cocoapod spec:
-<code>pod trunk push NMXCore.podspec</code></p></li>
+pod trunk push NMXCore.podspec &ndash;verbose</p></li>
 </ol>
 
           </section>

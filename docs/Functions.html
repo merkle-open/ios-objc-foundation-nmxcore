@@ -13,7 +13,7 @@
     <a title="Functions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NamicsLib Docs</a> (86% documented)</p>
+        <p><a href="index.html">NamicsLib Docs</a> (77% documented)</p>
         <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -53,8 +53,36 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NMXLogLevelTypeDescription">NMXLogLevelTypeDescription</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLog#$@E@NMXLogLevelType#*$objc(cs)NSString.#">NMXLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLogWithPrefix#$@E@NMXLogLevelType#*$objc(cs)NSString#S1_.#">NMXLogWithPrefix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@NMXLogWithPrefixAndArguments">NMXLogWithPrefixAndArguments</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#">filePathForFile</a>
               </li>
@@ -76,6 +104,255 @@
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@NMXLogWithPrefixAndArguments"></a>
+                    <a name="//apple_ref/objc/Function/NMXLogWithPrefixAndArguments" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@NMXLogWithPrefixAndArguments">NMXLogWithPrefixAndArguments</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@NMXLog#*$objc(cs)NSString.#"></a>
+                    <a name="//apple_ref/objc/Function/NMXLog" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>See
+<a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="kt">void</span> <span class="n">NMXLog</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the string formatted message with parameters that shall be logged. Common String format specifiers are being used: <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@NMXLog#$@E@NMXLogLevelType#*$objc(cs)NSString.#"></a>
+                    <a name="//apple_ref/objc/Function/NMXLog" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@NMXLog#$@E@NMXLogLevelType#*$objc(cs)NSString.#">NMXLog</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>See
+<a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="kt">void</span> <span class="n"><a href="Functions.html#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a></span><span class="p">(</span><span class="n"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span> <span class="n">logLevel</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional parameters, which provides the visiblity range of the log function. Default parameter, if nil is provided, is <q>NMXLogLevels.None</q>. E.g. <q>Only visible in Debug builds</q>. If you want to provide a custom logging for a build type defined on your own (e.g. <q>AdHoc</q>), please use the <q>NMXLogLevels.All</q> logLevel inside of your own predefined precompiler macro if statement</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the string formatted message with parameters that shall be logged. Common String format specifiers are being used: <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@NMXLogWithPrefix#$@E@NMXLogLevelType#*$objc(cs)NSString#S1_.#"></a>
+                    <a name="//apple_ref/objc/Function/NMXLogWithPrefix" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@NMXLogWithPrefix#$@E@NMXLogLevelType#*$objc(cs)NSString#S1_.#">NMXLogWithPrefix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>See
+<a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="kt">void</span> <span class="n">NMXLogWithPrefix</span><span class="p">(</span><span class="n"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span> <span class="n">logLevel</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">logPrefix</span><span class="p">,</span>
+                      <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional parameters, which provides the visiblity range of the log function. Default parameter, if nil is provided, is <q>NMXLogLevels.None</q>. E.g. <q>Only visible in Debug builds</q>. If you want to provide a custom logging for a build type defined on your own (e.g. <q>AdHoc</q>), please use the <q>NMXLogLevels.All</q> logLevel inside of your own predefined precompiler macro if statement</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logPrefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>by default (when you set the logPrefix to nil) the log prefixes are defined by the provided loglevel (NMXLogLevels). If you want them to differ from the default ones, you can set these explicitely.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the string formatted message with parameters that shall be logged. Common String format specifiers are being used: <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
