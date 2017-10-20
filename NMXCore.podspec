@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint ios-objc-foundation-nmxcore.podspec' to ensure this is a
+# Be sure to run `pod lib lint NMXCore.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -19,5 +19,7 @@ Pod::Spec.new do |s|
   s.platform              = :ios, '9.0'
   s.license               = { :type => 'MIT' }
 
-  s.source_files = 'Development/NMXCore/**/*{a,h,m}'
+  s.source_files 		= 'Development/NMXCore/**/*{a,h,m}'
+  s.public_header_files = 'Development/NMXCore/**/*h'
+  s.requires_arc		= true
 end
