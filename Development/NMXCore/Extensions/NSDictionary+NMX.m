@@ -6,7 +6,7 @@
 //  Copyright © 2017 Namics AG. All rights reserved.
 //
 
-#import "NSDictionary+NMX.h"
+//#import "NSDictionary+NMX.h"
 #import "NMXNSBundleFileHandling.h"
 
 @implementation NSDictionary (NMX)

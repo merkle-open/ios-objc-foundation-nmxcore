@@ -30,7 +30,7 @@
  *  @param bundle - specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used
  *  @return a NSString object that represents the fullpath to a file within the provided bundle. If non was found, nil is being returned.
  */
-__attribute__((overloadable)) NSString* _Nullable filePathForFile(NSString* _Nonnull fileName, NSString *_Nullable fileExtension, NSBundle* _Nullable bundle);
+__attribute__((overloadable)) extern NSString* _Nullable filePathForFile(NSString* _Nonnull fileName, NSString *_Nullable fileExtension, NSBundle* _Nullable bundle);
 
 /**
  *  Provides an absolute filePath within a given bundle of a given filename
@@ -45,7 +45,7 @@ __attribute__((overloadable)) NSString* _Nullable filePathForFile(NSString* _Non
  *  @param bundle - specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used 
  *  @return a NSString object that represents the fullpath to a file within the provided bundle. If non was found, nil is being returned.
  */
-__attribute__((overloadable)) NSString* _Nullable filePathForFile(NSString* _Nonnull fileName, NSBundle* _Nullable bundle);
+__attribute__((overloadable)) extern NSString* _Nullable filePathForFile(NSString* _Nonnull fileName, NSBundle* _Nullable bundle);
 
 /**
  *  Provides an absolute filePath within the mainBundle of a given filename
@@ -59,5 +59,5 @@ __attribute__((overloadable)) NSString* _Nullable filePathForFile(NSString* _Non
  *  @param fileName - make sure this filename (including its path extension) exists in the main bundle. This method will retrieve the filePath from the mainbundle for you.
  *  @return a NSString object that represents the fullpath to a file within the provided bundle. If non was found, nil is being returned.
  */
-__attribute__((overloadable)) NSString* _Nullable filePathForFile(NSString* _Nonnull fileName);
+__attribute__((overloadable)) extern NSString* _Nullable filePathForFile(NSString* _Nonnull fileName);
 

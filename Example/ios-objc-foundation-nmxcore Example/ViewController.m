@@ -29,6 +29,18 @@
     NSLog(@"-- NSNumber isPositiveOrZero --");
     NSLog(@"Check if number is positive:           0 - %@",[@(0) isPositive]?@"YES":@"NO");
     NSLog(@"Check if number is positive | zero:    0 - %@",[@(0) isPositiveOrZero]?@"YES":@"NO");
+    
+    NSLog(@"Once again with our NMX-Log Function");
+    
+    NMXLog(@" ");
+    NMXLog(@"-- NSNumber isPositive --");
+    NMXLog(@"Check if number is positive:  123 - %@",[@(123) isPositive]?@"YES":@"NO");
+    NMXLog(@"Check if number is positive: -123 - %@",[@(-123) isPositive]?@"YES":@"NO");
+    
+    NMXLog(@" ");
+    NMXLog(@"-- NSNumber isPositiveOrZero --");
+    NMXLog(@"Check if number is positive:           0 - %@",[@(0) isPositive]?@"YES":@"NO");
+    NMXLog(@"Check if number is positive | zero:    0 - %@",[@(0) isPositiveOrZero]?@"YES":@"NO");
 }
 
 - (void)didReceiveMemoryWarning {

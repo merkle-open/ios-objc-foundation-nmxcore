@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2164DEC41F98FB290081CFDD /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
-		2164DF201F98FBBD0081CFDD /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE61F98FB5A0081CFDD /* NMXLogging.m */; };
 		2164DF211F98FBBD0081CFDD /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
 		2164DF221F98FBBD0081CFDD /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED71F98FB590081CFDD /* NSDate+NMX.m */; };
 		2164DF231F98FBBD0081CFDD /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED91F98FB590081CFDD /* NSDictionary+NMX.m */; };
@@ -51,7 +50,6 @@
 		21D32F9A1FA1CAA000479607 /* NMXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEBD1F98FB290081CFDD /* NMXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32F9B1FA1CAA000479607 /* NMXCFunctionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE41F98FB5A0081CFDD /* NMXCFunctionHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32F9C1FA1CAA000479607 /* NMXLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE51F98FB5A0081CFDD /* NMXLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21D32F9D1FA1CAA000479607 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE61F98FB5A0081CFDD /* NMXLogging.m */; };
 		21D32F9E1FA1CAA000479607 /* NMXNSBundleFileHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE71F98FB5A0081CFDD /* NMXNSBundleFileHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32F9F1FA1CAA000479607 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
 		21D32FA01FA1CAA000479607 /* NMXExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DED51F98FB590081CFDD /* NMXExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +66,8 @@
 		21D32FAB1FA1CAA000479607 /* NMXUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE11F98FB590081CFDD /* NMXUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32FAC1FA1CE2100479607 /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
 		21D32FAD1FA1CE2100479607 /* NMXCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21D32FB11FA1E79700479607 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32FB01FA1E76400479607 /* NMXLogging.m */; };
+		21D32FB31FA1E81200479607 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32FB01FA1E76400479607 /* NMXLogging.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +121,6 @@
 		2164DEE11F98FB590081CFDD /* NMXUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXUtilities.h; sourceTree = "<group>"; };
 		2164DEE41F98FB5A0081CFDD /* NMXCFunctionHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXCFunctionHelpers.h; sourceTree = "<group>"; };
 		2164DEE51F98FB5A0081CFDD /* NMXLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXLogging.h; sourceTree = "<group>"; };
-		2164DEE61F98FB5A0081CFDD /* NMXLogging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXLogging.m; sourceTree = "<group>"; };
 		2164DEE71F98FB5A0081CFDD /* NMXNSBundleFileHandling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXNSBundleFileHandling.h; sourceTree = "<group>"; };
 		2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXNSBundleFileHandling.m; sourceTree = "<group>"; };
 		2164DEEA1F98FB980081CFDD /* NMXTestDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXTestDataSource.h; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		21D32F791FA1C03700479607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21D32F7B1FA1C03700479607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D32F7C1FA1C03700479607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21D32FB01FA1E76400479607 /* NMXLogging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXLogging.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,7 +276,7 @@
 			children = (
 				2164DEE41F98FB5A0081CFDD /* NMXCFunctionHelpers.h */,
 				2164DEE51F98FB5A0081CFDD /* NMXLogging.h */,
-				2164DEE61F98FB5A0081CFDD /* NMXLogging.m */,
+				21D32FB01FA1E76400479607 /* NMXLogging.m */,
 				2164DEE71F98FB5A0081CFDD /* NMXNSBundleFileHandling.h */,
 				2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */,
 			);
@@ -575,11 +575,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21D32F9D1FA1CAA000479607 /* NMXLogging.m in Sources */,
 				21D32F9F1FA1CAA000479607 /* NMXNSBundleFileHandling.m in Sources */,
 				21D32FA41FA1CAA000479607 /* NSDictionary+NMX.m in Sources */,
 				21D32FA81FA1CAA000479607 /* NSString+NMX.m in Sources */,
 				21D32FA61FA1CAA000479607 /* NSNumber+NMX.m in Sources */,
+				21D32FB31FA1E81200479607 /* NMXLogging.m in Sources */,
 				21D32FAA1FA1CAA000479607 /* NMXLocalizationHandler.m in Sources */,
 				21D32FA21FA1CAA000479607 /* NSDate+NMX.m in Sources */,
 			);
@@ -591,7 +591,6 @@
 			files = (
 				2164DF281F98FBC60081CFDD /* NSBundle+NMXTest.m in Sources */,
 				2164DF2E1F98FBC60081CFDD /* NMXLoggingTest.m in Sources */,
-				2164DF201F98FBBD0081CFDD /* NMXLogging.m in Sources */,
 				2164DF2D1F98FBC60081CFDD /* NMXBundleFileHandlingTest.m in Sources */,
 				2164DF331F98FBC60081CFDD /* NMXLocalizationHandlerIntegrationTest.m in Sources */,
 				2164DF321F98FBC60081CFDD /* NMXStringTest.m in Sources */,
@@ -601,6 +600,7 @@
 				2164DF2B1F98FBC60081CFDD /* NSNumber+NMXTest.m in Sources */,
 				2164DF271F98FBC60081CFDD /* NMXTestDataSource.m in Sources */,
 				2164DF301F98FBC60081CFDD /* NMXDictionaryTest.m in Sources */,
+				21D32FB11FA1E79700479607 /* NMXLogging.m in Sources */,
 				2164DF311F98FBC60081CFDD /* NMXNumberTest.m in Sources */,
 				2164DF2F1F98FBC60081CFDD /* NMXDateTest.m in Sources */,
 				2164DF241F98FBBD0081CFDD /* NSNumber+NMX.m in Sources */,
