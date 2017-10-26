@@ -87,7 +87,9 @@ It might require administrator rights for creating code documentation automatica
 
 ## Manual Deployment
 1. Do your changes:
-Open /Development/NMXLibrary.xcodeproj
+Open /Development/NMXCore.xcodeproj
+
+2. Select The dynamic Framework target `NMXCore` and Archive the Library
 
 2. Go to the main folder from Terminal, where 'NMXCore.podspec' is located, e.g.:
 ```
@@ -95,10 +97,14 @@ cd ~/Documents/ios-objc-foundation-nmxcore/
 ```
 
 3. Validate the pod lib file in terminal:
-`pod lib lint`
+`pod lib lint NMXCore.podspec`
+`pod lib lint NMXCoreDylib.podspec`
 
 4. Validate the specification in terminal:
-`pod spec lint`
+```
+pod spec lint NMXCore.podspec
+pod spec lint NMXCoreDylib.podspec
+```
 
 5. Commit and push your changes in git, note down the tag id (important: the v-Prefix for tags!)
 ```

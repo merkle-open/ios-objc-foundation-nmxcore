@@ -36,13 +36,57 @@
 		2164DF411F98FD130081CFDD /* default_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF181F98FB980081CFDD /* default_en.plist */; };
 		21A1127E1FA2108300C1CD83 /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A1127C1FA2107E00C1CD83 /* NMXCore.framework */; };
 		21A112811FA210A200C1CD83 /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
+		21A112B81FA2314F00C1CD83 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32FB01FA1E76400479607 /* NMXLogging.m */; };
+		21A112B91FA2314F00C1CD83 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
+		21A112BA1FA2314F00C1CD83 /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED71F98FB590081CFDD /* NSDate+NMX.m */; };
+		21A112BB1FA2314F00C1CD83 /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED91F98FB590081CFDD /* NSDictionary+NMX.m */; };
+		21A112BC1FA2314F00C1CD83 /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDB1F98FB590081CFDD /* NSNumber+NMX.m */; };
+		21A112BD1FA2314F00C1CD83 /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDD1F98FB590081CFDD /* NSString+NMX.m */; };
+		21A112BE1FA2314F00C1CD83 /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE01F98FB590081CFDD /* NMXLocalizationHandler.m */; };
+		21A112C61FA2322C00C1CD83 /* NMXCoreTestsStatic.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A112C51FA2322C00C1CD83 /* NMXCoreTestsStatic.m */; };
+		21A112C81FA2322C00C1CD83 /* libNMXCoreStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A112AF1FA22FBA00C1CD83 /* libNMXCoreStatic.a */; };
+		21A112CE1FA2324200C1CD83 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32FB01FA1E76400479607 /* NMXLogging.m */; };
+		21A112CF1FA2324200C1CD83 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
+		21A112D01FA2324200C1CD83 /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED71F98FB590081CFDD /* NSDate+NMX.m */; };
+		21A112D11FA2324200C1CD83 /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED91F98FB590081CFDD /* NSDictionary+NMX.m */; };
+		21A112D21FA2324200C1CD83 /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDB1F98FB590081CFDD /* NSNumber+NMX.m */; };
+		21A112D31FA2324200C1CD83 /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDD1F98FB590081CFDD /* NSString+NMX.m */; };
+		21A112D41FA2324200C1CD83 /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE01F98FB590081CFDD /* NMXLocalizationHandler.m */; };
+		21A112D51FA2325300C1CD83 /* NMXTestDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEEB1F98FB980081CFDD /* NMXTestDataSource.m */; };
+		21A112D61FA2325300C1CD83 /* NSBundle+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEED1F98FB980081CFDD /* NSBundle+NMXTest.m */; };
+		21A112D71FA2325300C1CD83 /* NSDate+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEEF1F98FB980081CFDD /* NSDate+NMXTest.m */; };
+		21A112D81FA2325300C1CD83 /* NSDictionary+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEF11F98FB980081CFDD /* NSDictionary+NMXTest.m */; };
+		21A112D91FA2325300C1CD83 /* NSNumber+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEF31F98FB980081CFDD /* NSNumber+NMXTest.m */; };
+		21A112DA1FA2325300C1CD83 /* NSString+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEF51F98FB980081CFDD /* NSString+NMXTest.m */; };
+		21A112DB1FA2325D00C1CD83 /* NMXBundleFileHandlingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEF81F98FB980081CFDD /* NMXBundleFileHandlingTest.m */; };
+		21A112DC1FA2325D00C1CD83 /* NMXLoggingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEF91F98FB980081CFDD /* NMXLoggingTest.m */; };
+		21A112DD1FA2325D00C1CD83 /* NoPathExtension in Resources */ = {isa = PBXBuildFile; fileRef = 2164DEFB1F98FB980081CFDD /* NoPathExtension */; };
+		21A112DE1FA2325D00C1CD83 /* NMXDateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEFD1F98FB980081CFDD /* NMXDateTest.m */; };
+		21A112DF1FA2325D00C1CD83 /* NMXDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEFE1F98FB980081CFDD /* NMXDictionaryTest.m */; };
+		21A112E01FA2325D00C1CD83 /* NMXNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEFF1F98FB980081CFDD /* NMXNumberTest.m */; };
+		21A112E11FA2325D00C1CD83 /* NMXStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DF001F98FB980081CFDD /* NMXStringTest.m */; };
+		21A112E21FA2325D00C1CD83 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF021F98FB980081CFDD /* empty.json */; };
+		21A112E31FA2325D00C1CD83 /* image.PNG.json in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF031F98FB980081CFDD /* image.PNG.json */; };
+		21A112E41FA2325D00C1CD83 /* trackings_valid_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF041F98FB980081CFDD /* trackings_valid_1.json */; };
+		21A112E51FA2325D00C1CD83 /* trackings_valid_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF051F98FB980081CFDD /* trackings_valid_2.json */; };
+		21A112E61FA2326A00C1CD83 /* NMXLocalizationHandlerIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DF0F1F98FB980081CFDD /* NMXLocalizationHandlerIntegrationTest.m */; };
+		21A112E71FA2326A00C1CD83 /* NMXLocalizationHandlerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DF101F98FB980081CFDD /* NMXLocalizationHandlerTest.m */; };
+		21A112E81FA2326A00C1CD83 /* default-2_de.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF121F98FB980081CFDD /* default-2_de.plist */; };
+		21A112E91FA2326A00C1CD83 /* default-2_en-GB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF131F98FB980081CFDD /* default-2_en-GB.plist */; };
+		21A112EA1FA2326A00C1CD83 /* default-2_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF141F98FB980081CFDD /* default-2_en.plist */; };
+		21A112EB1FA2326A00C1CD83 /* default-2_fr.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF151F98FB980081CFDD /* default-2_fr.plist */; };
+		21A112EC1FA2326A00C1CD83 /* default_de.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF161F98FB980081CFDD /* default_de.plist */; };
+		21A112ED1FA2326A00C1CD83 /* default_en-GB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF171F98FB980081CFDD /* default_en-GB.plist */; };
+		21A112EE1FA2326A00C1CD83 /* default_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF181F98FB980081CFDD /* default_en.plist */; };
+		21A112EF1FA2326F00C1CD83 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF071F98FB980081CFDD /* File.strings */; };
+		21A112F21FA2350F00C1CD83 /* NMXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 21A112F01FA234FE00C1CD83 /* NMXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21A112F31FA2363F00C1CD83 /* NMXCFunctionHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2164DEE41F98FB5A0081CFDD /* NMXCFunctionHelpers.h */; };
 		21D32F6F1FA1C03700479607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F6E1FA1C03700479607 /* AppDelegate.m */; };
 		21D32F721FA1C03700479607 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F711FA1C03700479607 /* ViewController.m */; };
 		21D32F751FA1C03700479607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D32F731FA1C03700479607 /* Main.storyboard */; };
 		21D32F771FA1C03700479607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D32F761FA1C03700479607 /* Assets.xcassets */; };
 		21D32F7A1FA1C03700479607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D32F781FA1C03700479607 /* LaunchScreen.storyboard */; };
 		21D32F7D1FA1C03700479607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F7C1FA1C03700479607 /* main.m */; };
-		21D32F9A1FA1CAA000479607 /* NMXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEBD1F98FB290081CFDD /* NMXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32F9B1FA1CAA000479607 /* NMXCFunctionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE41F98FB5A0081CFDD /* NMXCFunctionHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32F9C1FA1CAA000479607 /* NMXLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE51F98FB5A0081CFDD /* NMXLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32F9E1FA1CAA000479607 /* NMXNSBundleFileHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE71F98FB5A0081CFDD /* NMXNSBundleFileHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,6 +116,13 @@
 			remoteGlobalIDString = 2164DEB91F98FB290081CFDD;
 			remoteInfo = NMXCore;
 		};
+		21A112C91FA2322C00C1CD83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2164DEB11F98FB290081CFDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21A112AE1FA22FBA00C1CD83;
+			remoteInfo = NMXCoreStatic;
+		};
 		21D32FAE1FA1CE2100479607 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2164DEB11F98FB290081CFDD /* Project object */;
@@ -82,6 +133,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		21A112AD1FA22FBA00C1CD83 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				21A112F31FA2363F00C1CD83 /* NMXCFunctionHelpers.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D32F8C1FA1C92300479607 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,7 +158,6 @@
 
 /* Begin PBXFileReference section */
 		2164DEBA1F98FB290081CFDD /* NMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2164DEBD1F98FB290081CFDD /* NMXCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXCore.h; sourceTree = "<group>"; };
 		2164DEBE1F98FB290081CFDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2164DEC31F98FB290081CFDD /* NMXCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NMXCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2164DECA1F98FB290081CFDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +217,12 @@
 		2164DF171F98FB980081CFDD /* default_en-GB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default_en-GB.plist"; sourceTree = "<group>"; };
 		2164DF181F98FB980081CFDD /* default_en.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_en.plist; sourceTree = "<group>"; };
 		21A1127C1FA2107E00C1CD83 /* NMXCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMXCore.framework; sourceTree = "<group>"; };
+		21A112AF1FA22FBA00C1CD83 /* libNMXCoreStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNMXCoreStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A112C31FA2322C00C1CD83 /* NMXCoreTestsStatic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NMXCoreTestsStatic.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A112C51FA2322C00C1CD83 /* NMXCoreTestsStatic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXCoreTestsStatic.m; sourceTree = "<group>"; };
+		21A112C71FA2322C00C1CD83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A112F01FA234FE00C1CD83 /* NMXCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXCore.h; sourceTree = SOURCE_ROOT; };
+		21A112F11FA2350A00C1CD83 /* NMXCoreStatic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXCoreStatic.h; sourceTree = "<group>"; };
 		21D32F6B1FA1C03700479607 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D32F6D1FA1C03700479607 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21D32F6E1FA1C03700479607 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +253,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21A112AC1FA22FBA00C1CD83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A112C01FA2322C00C1CD83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A112C81FA2322C00C1CD83 /* libNMXCoreStatic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D32F681FA1C03700479607 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +285,7 @@
 				2164DEBC1F98FB290081CFDD /* NMXCore */,
 				2164DEC71F98FB290081CFDD /* NMXCoreTests */,
 				21D32F6C1FA1C03700479607 /* Demo */,
+				21A112C41FA2322C00C1CD83 /* NMXCoreTestsStatic */,
 				2164DEBB1F98FB290081CFDD /* Products */,
 				21D32F861FA1C24500479607 /* Frameworks */,
 			);
@@ -215,6 +297,8 @@
 				2164DEBA1F98FB290081CFDD /* NMXCore.framework */,
 				2164DEC31F98FB290081CFDD /* NMXCoreTests.xctest */,
 				21D32F6B1FA1C03700479607 /* Demo.app */,
+				21A112AF1FA22FBA00C1CD83 /* libNMXCoreStatic.a */,
+				21A112C31FA2322C00C1CD83 /* NMXCoreTestsStatic.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,7 +306,8 @@
 		2164DEBC1F98FB290081CFDD /* NMXCore */ = {
 			isa = PBXGroup;
 			children = (
-				2164DEBD1F98FB290081CFDD /* NMXCore.h */,
+				21A112F01FA234FE00C1CD83 /* NMXCore.h */,
+				21A112F11FA2350A00C1CD83 /* NMXCoreStatic.h */,
 				2164DEE31F98FB5A0081CFDD /* C-Function Helpers */,
 				2164DED41F98FB590081CFDD /* Extensions */,
 				2164DEDE1F98FB590081CFDD /* Utilities */,
@@ -375,6 +460,15 @@
 			path = "Test Files";
 			sourceTree = "<group>";
 		};
+		21A112C41FA2322C00C1CD83 /* NMXCoreTestsStatic */ = {
+			isa = PBXGroup;
+			children = (
+				21A112C51FA2322C00C1CD83 /* NMXCoreTestsStatic.m */,
+				21A112C71FA2322C00C1CD83 /* Info.plist */,
+			);
+			path = NMXCoreTestsStatic;
+			sourceTree = "<group>";
+		};
 		21D32F6C1FA1C03700479607 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,12 +504,12 @@
 				21D32FA11FA1CAA000479607 /* NSDate+NMX.h in Headers */,
 				21D32FA91FA1CAA000479607 /* NMXLocalizationHandler.h in Headers */,
 				21D32FA01FA1CAA000479607 /* NMXExtensions.h in Headers */,
+				21A112F21FA2350F00C1CD83 /* NMXCore.h in Headers */,
 				21D32F9C1FA1CAA000479607 /* NMXLogging.h in Headers */,
 				21D32FA51FA1CAA000479607 /* NSNumber+NMX.h in Headers */,
 				21D32FAB1FA1CAA000479607 /* NMXUtilities.h in Headers */,
 				21D32F9E1FA1CAA000479607 /* NMXNSBundleFileHandling.h in Headers */,
 				21D32FA31FA1CAA000479607 /* NSDictionary+NMX.h in Headers */,
-				21D32F9A1FA1CAA000479607 /* NMXCore.h in Headers */,
 				21D32FA71FA1CAA000479607 /* NSString+NMX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +553,41 @@
 			productReference = 2164DEC31F98FB290081CFDD /* NMXCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		21A112AE1FA22FBA00C1CD83 /* NMXCoreStatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A112B71FA22FBA00C1CD83 /* Build configuration list for PBXNativeTarget "NMXCoreStatic" */;
+			buildPhases = (
+				21A112AB1FA22FBA00C1CD83 /* Sources */,
+				21A112AC1FA22FBA00C1CD83 /* Frameworks */,
+				21A112AD1FA22FBA00C1CD83 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NMXCoreStatic;
+			productName = NMXCoreStatic;
+			productReference = 21A112AF1FA22FBA00C1CD83 /* libNMXCoreStatic.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		21A112C21FA2322C00C1CD83 /* NMXCoreTestsStatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A112CB1FA2322C00C1CD83 /* Build configuration list for PBXNativeTarget "NMXCoreTestsStatic" */;
+			buildPhases = (
+				21A112BF1FA2322C00C1CD83 /* Sources */,
+				21A112C01FA2322C00C1CD83 /* Frameworks */,
+				21A112C11FA2322C00C1CD83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21A112CA1FA2322C00C1CD83 /* PBXTargetDependency */,
+			);
+			name = NMXCoreTestsStatic;
+			productName = NMXCoreTestsStatic;
+			productReference = 21A112C31FA2322C00C1CD83 /* NMXCoreTestsStatic.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		21D32F6A1FA1C03700479607 /* Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21D32F7E1FA1C03700479607 /* Build configuration list for PBXNativeTarget "Demo" */;
@@ -496,6 +625,14 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
+					21A112AE1FA22FBA00C1CD83 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					21A112C21FA2322C00C1CD83 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					21D32F6A1FA1C03700479607 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -522,6 +659,8 @@
 			targets = (
 				2164DEB91F98FB290081CFDD /* NMXCore */,
 				2164DEC21F98FB290081CFDD /* NMXCoreTests */,
+				21A112AE1FA22FBA00C1CD83 /* NMXCoreStatic */,
+				21A112C21FA2322C00C1CD83 /* NMXCoreTestsStatic */,
 				21D32F6A1FA1C03700479607 /* Demo */,
 			);
 		};
@@ -552,6 +691,26 @@
 				2164DF391F98FD060081CFDD /* trackings_valid_2.json in Resources */,
 				2164DF401F98FD130081CFDD /* default_en-GB.plist in Resources */,
 				2164DF3E1F98FD130081CFDD /* default-2_fr.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A112C11FA2322C00C1CD83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A112EB1FA2326A00C1CD83 /* default-2_fr.plist in Resources */,
+				21A112EC1FA2326A00C1CD83 /* default_de.plist in Resources */,
+				21A112DD1FA2325D00C1CD83 /* NoPathExtension in Resources */,
+				21A112ED1FA2326A00C1CD83 /* default_en-GB.plist in Resources */,
+				21A112E31FA2325D00C1CD83 /* image.PNG.json in Resources */,
+				21A112EE1FA2326A00C1CD83 /* default_en.plist in Resources */,
+				21A112EA1FA2326A00C1CD83 /* default-2_en.plist in Resources */,
+				21A112E91FA2326A00C1CD83 /* default-2_en-GB.plist in Resources */,
+				21A112E21FA2325D00C1CD83 /* empty.json in Resources */,
+				21A112E41FA2325D00C1CD83 /* trackings_valid_1.json in Resources */,
+				21A112EF1FA2326F00C1CD83 /* File.strings in Resources */,
+				21A112E81FA2326A00C1CD83 /* default-2_de.plist in Resources */,
+				21A112E51FA2325D00C1CD83 /* trackings_valid_2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +762,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21A112AB1FA22FBA00C1CD83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A112BA1FA2314F00C1CD83 /* NSDate+NMX.m in Sources */,
+				21A112B81FA2314F00C1CD83 /* NMXLogging.m in Sources */,
+				21A112BC1FA2314F00C1CD83 /* NSNumber+NMX.m in Sources */,
+				21A112BB1FA2314F00C1CD83 /* NSDictionary+NMX.m in Sources */,
+				21A112BE1FA2314F00C1CD83 /* NMXLocalizationHandler.m in Sources */,
+				21A112B91FA2314F00C1CD83 /* NMXNSBundleFileHandling.m in Sources */,
+				21A112BD1FA2314F00C1CD83 /* NSString+NMX.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A112BF1FA2322C00C1CD83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A112D61FA2325300C1CD83 /* NSBundle+NMXTest.m in Sources */,
+				21A112D91FA2325300C1CD83 /* NSNumber+NMXTest.m in Sources */,
+				21A112D01FA2324200C1CD83 /* NSDate+NMX.m in Sources */,
+				21A112DB1FA2325D00C1CD83 /* NMXBundleFileHandlingTest.m in Sources */,
+				21A112D51FA2325300C1CD83 /* NMXTestDataSource.m in Sources */,
+				21A112E01FA2325D00C1CD83 /* NMXNumberTest.m in Sources */,
+				21A112DC1FA2325D00C1CD83 /* NMXLoggingTest.m in Sources */,
+				21A112C61FA2322C00C1CD83 /* NMXCoreTestsStatic.m in Sources */,
+				21A112DA1FA2325300C1CD83 /* NSString+NMXTest.m in Sources */,
+				21A112CE1FA2324200C1CD83 /* NMXLogging.m in Sources */,
+				21A112D21FA2324200C1CD83 /* NSNumber+NMX.m in Sources */,
+				21A112D81FA2325300C1CD83 /* NSDictionary+NMXTest.m in Sources */,
+				21A112E11FA2325D00C1CD83 /* NMXStringTest.m in Sources */,
+				21A112D11FA2324200C1CD83 /* NSDictionary+NMX.m in Sources */,
+				21A112D41FA2324200C1CD83 /* NMXLocalizationHandler.m in Sources */,
+				21A112E71FA2326A00C1CD83 /* NMXLocalizationHandlerTest.m in Sources */,
+				21A112DF1FA2325D00C1CD83 /* NMXDictionaryTest.m in Sources */,
+				21A112CF1FA2324200C1CD83 /* NMXNSBundleFileHandling.m in Sources */,
+				21A112DE1FA2325D00C1CD83 /* NMXDateTest.m in Sources */,
+				21A112D71FA2325300C1CD83 /* NSDate+NMXTest.m in Sources */,
+				21A112D31FA2324200C1CD83 /* NSString+NMX.m in Sources */,
+				21A112E61FA2326A00C1CD83 /* NMXLocalizationHandlerIntegrationTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D32F671FA1C03700479607 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -620,6 +822,11 @@
 			isa = PBXTargetDependency;
 			target = 2164DEB91F98FB290081CFDD /* NMXCore */;
 			targetProxy = 21A1127F1FA2109500C1CD83 /* PBXContainerItemProxy */;
+		};
+		21A112CA1FA2322C00C1CD83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21A112AE1FA22FBA00C1CD83 /* NMXCoreStatic */;
+			targetProxy = 21A112C91FA2322C00C1CD83 /* PBXContainerItemProxy */;
 		};
 		21D32FAF1FA1CE2100479607 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -854,6 +1061,77 @@
 			};
 			name = Release;
 		};
+		21A112B51FA22FBA00C1CD83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "";
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "${inherited} @executable_path/Frameworks @load_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		21A112B61FA22FBA00C1CD83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "";
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "${inherited} @executable_path/Frameworks @load_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
+		21A112CC1FA2322C00C1CD83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				INFOPLIST_FILE = NMXCoreTestsStatic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.namics.NMXCoreTestsStatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21A112CD1FA2322C00C1CD83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				INFOPLIST_FILE = NMXCoreTestsStatic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.namics.NMXCoreTestsStatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		21D32F7F1FA1C03700479607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -916,6 +1194,24 @@
 			buildConfigurations = (
 				2164DED21F98FB290081CFDD /* Debug */,
 				2164DED31F98FB290081CFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21A112B71FA22FBA00C1CD83 /* Build configuration list for PBXNativeTarget "NMXCoreStatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A112B51FA22FBA00C1CD83 /* Debug */,
+				21A112B61FA22FBA00C1CD83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21A112CB1FA2322C00C1CD83 /* Build configuration list for PBXNativeTarget "NMXCoreTestsStatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A112CC1FA2322C00C1CD83 /* Debug */,
+				21A112CD1FA2322C00C1CD83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

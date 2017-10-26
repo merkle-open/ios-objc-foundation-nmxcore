@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.platform              = :ios, '9.0'
   s.license               = { :type => 'MIT' }
 
-  s.ios.vendored_frameworks = 'Development/NMXCore/**/*.{h,m}'
+  s.source_files = 'Development/NMXCore/**/*.{h,m}'
   s.requires_arc		= true
 end

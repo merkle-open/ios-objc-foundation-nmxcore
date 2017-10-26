@@ -1,0 +1,729 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		219D2B4F1F94B82600B6B16A /* NMXLoggingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D2B4E1F94B82600B6B16A /* NMXLoggingTest.m */; };
+		21C0DC7D1F95F7E7002E8871 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C0DC7C1F95F7E7002E8871 /* NMXLogging.m */; };
+		21C0DC7E1F95F7E7002E8871 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C0DC7C1F95F7E7002E8871 /* NMXLogging.m */; };
+		21CE760F1D23AFD4000EF2BC /* libios-objc-foundation-nmxcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CE75F21D23AF82000EF2BC /* libios-objc-foundation-nmxcore.a */; };
+		21DB565B1F823057003D5879 /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB565A1F823057003D5879 /* NMXLocalizationHandler.m */; };
+		21DB565F1F823060003D5879 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB565C1F823060003D5879 /* NMXNSBundleFileHandling.m */; };
+		21DB566A1F823070003D5879 /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56611F82306F003D5879 /* NSString+NMX.m */; };
+		21DB566C1F823070003D5879 /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56661F82306F003D5879 /* NSDictionary+NMX.m */; };
+		21DB566E1F823070003D5879 /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56681F823070003D5879 /* NSNumber+NMX.m */; };
+		21DB56701F823070003D5879 /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56691F823070003D5879 /* NSDate+NMX.m */; };
+		21DB56A81F8231F9003D5879 /* NMXTestDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56751F8230C0003D5879 /* NMXTestDataSource.m */; };
+		21DB56A91F8231F9003D5879 /* NSBundle+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB567D1F8230C1003D5879 /* NSBundle+NMXTest.m */; };
+		21DB56AA1F8231F9003D5879 /* NSDate+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56741F8230C0003D5879 /* NSDate+NMXTest.m */; };
+		21DB56AB1F8231F9003D5879 /* NSDictionary+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56771F8230C0003D5879 /* NSDictionary+NMXTest.m */; };
+		21DB56AC1F8231F9003D5879 /* NSNumber+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56781F8230C0003D5879 /* NSNumber+NMXTest.m */; };
+		21DB56AD1F8231F9003D5879 /* NSString+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56791F8230C0003D5879 /* NSString+NMXTest.m */; };
+		21DB56AE1F8231F9003D5879 /* NMXBundleFileHandlingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB568F1F8230F1003D5879 /* NMXBundleFileHandlingTest.m */; };
+		21DB56AF1F8231F9003D5879 /* NMXDateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56941F8230F1003D5879 /* NMXDateTest.m */; };
+		21DB56B01F8231F9003D5879 /* NMXDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56991F8230F1003D5879 /* NMXDictionaryTest.m */; };
+		21DB56B11F8231F9003D5879 /* NMXNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB569A1F8230F1003D5879 /* NMXNumberTest.m */; };
+		21DB56B21F8231F9003D5879 /* NMXStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB569B1F8230F1003D5879 /* NMXStringTest.m */; };
+		21DB56B31F8231F9003D5879 /* NMXLocalizationHandlerIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56A51F8230F1003D5879 /* NMXLocalizationHandlerIntegrationTest.m */; };
+		21DB56B41F8231F9003D5879 /* NMXLocalizationHandlerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56A61F8230F1003D5879 /* NMXLocalizationHandlerTest.m */; };
+		21DB56B51F823206003D5879 /* NoPathExtension in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56911F8230F1003D5879 /* NoPathExtension */; };
+		21DB56B61F82321A003D5879 /* image.PNG.json in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56931F8230F1003D5879 /* image.PNG.json */; };
+		21DB56B71F82321A003D5879 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56961F8230F1003D5879 /* empty.json */; };
+		21DB56B81F82321A003D5879 /* trackings_valid_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56971F8230F1003D5879 /* trackings_valid_1.json */; };
+		21DB56B91F82321A003D5879 /* trackings_valid_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56981F8230F1003D5879 /* trackings_valid_2.json */; };
+		21DB56BA1F823222003D5879 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21DB569D1F8230F1003D5879 /* File.strings */; };
+		21DB56BB1F823279003D5879 /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB565A1F823057003D5879 /* NMXLocalizationHandler.m */; };
+		21DB56BC1F823279003D5879 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB565C1F823060003D5879 /* NMXNSBundleFileHandling.m */; };
+		21DB56BD1F823279003D5879 /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56691F823070003D5879 /* NSDate+NMX.m */; };
+		21DB56BE1F823279003D5879 /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56661F82306F003D5879 /* NSDictionary+NMX.m */; };
+		21DB56BF1F823279003D5879 /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56681F823070003D5879 /* NSNumber+NMX.m */; };
+		21DB56C01F823279003D5879 /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB56611F82306F003D5879 /* NSString+NMX.m */; };
+		21DB56C91F823673003D5879 /* default-2_de.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56C21F82365D003D5879 /* default-2_de.plist */; };
+		21DB56CA1F823673003D5879 /* default-2_en-GB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56C31F82365D003D5879 /* default-2_en-GB.plist */; };
+		21DB56CB1F823673003D5879 /* default-2_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56C41F82365D003D5879 /* default-2_en.plist */; };
+		21DB56CC1F823673003D5879 /* default-2_fr.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56C51F82365D003D5879 /* default-2_fr.plist */; };
+		21DB56CD1F823673003D5879 /* default_de.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56C61F82365D003D5879 /* default_de.plist */; };
+		21DB56CE1F823673003D5879 /* default_en-GB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56C71F82365D003D5879 /* default_en-GB.plist */; };
+		21DB56CF1F823673003D5879 /* default_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21DB56C81F82365D003D5879 /* default_en.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21CE76101D23AFD4000EF2BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21CE75EA1D23AF82000EF2BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21CE75F11D23AF82000EF2BC;
+			remoteInfo = "Namics Library";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21CE75F01D23AF82000EF2BC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		210528951D78479100C54676 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ios-objc-foundation-nmxcore Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
+		219D2B4E1F94B82600B6B16A /* NMXLoggingTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXLoggingTest.m; sourceTree = "<group>"; };
+		21C0DC7B1F95F7E7002E8871 /* NMXLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXLogging.h; path = "ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.h"; sourceTree = "<group>"; };
+		21C0DC7C1F95F7E7002E8871 /* NMXLogging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NMXLogging.m; path = "ios-objc-foundation-nmxcore/C-Function Helpers/NMXLogging.m"; sourceTree = "<group>"; };
+		21CE75F21D23AF82000EF2BC /* libios-objc-foundation-nmxcore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libios-objc-foundation-nmxcore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21CE760A1D23AFD4000EF2BC /* ios-objc-foundation-nmxcore.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-objc-foundation-nmxcore.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DB56581F823057003D5879 /* NMXUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXUtilities.h; path = "ios-objc-foundation-nmxcore/Utilities/NMXUtilities.h"; sourceTree = SOURCE_ROOT; };
+		21DB56591F823057003D5879 /* NMXLocalizationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXLocalizationHandler.h; path = "ios-objc-foundation-nmxcore/Utilities/NMXLocalizationHandler.h"; sourceTree = SOURCE_ROOT; };
+		21DB565A1F823057003D5879 /* NMXLocalizationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NMXLocalizationHandler.m; path = "ios-objc-foundation-nmxcore/Utilities/NMXLocalizationHandler.m"; sourceTree = SOURCE_ROOT; };
+		21DB565C1F823060003D5879 /* NMXNSBundleFileHandling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NMXNSBundleFileHandling.m; path = "ios-objc-foundation-nmxcore/C-Function Helpers/NMXNSBundleFileHandling.m"; sourceTree = SOURCE_ROOT; };
+		21DB565D1F823060003D5879 /* NMXCFunctionHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXCFunctionHelpers.h; path = "ios-objc-foundation-nmxcore/C-Function Helpers/NMXCFunctionHelpers.h"; sourceTree = SOURCE_ROOT; };
+		21DB565E1F823060003D5879 /* NMXNSBundleFileHandling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXNSBundleFileHandling.h; path = "ios-objc-foundation-nmxcore/C-Function Helpers/NMXNSBundleFileHandling.h"; sourceTree = SOURCE_ROOT; };
+		21DB56611F82306F003D5879 /* NSString+NMX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+NMX.m"; path = "ios-objc-foundation-nmxcore/Extensions/NSString+NMX.m"; sourceTree = SOURCE_ROOT; };
+		21DB56621F82306F003D5879 /* NSDate+NMX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDate+NMX.h"; path = "ios-objc-foundation-nmxcore/Extensions/NSDate+NMX.h"; sourceTree = SOURCE_ROOT; };
+		21DB56631F82306F003D5879 /* NMXExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXExtensions.h; path = "ios-objc-foundation-nmxcore/Extensions/NMXExtensions.h"; sourceTree = SOURCE_ROOT; };
+		21DB56641F82306F003D5879 /* NSString+NMX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+NMX.h"; path = "ios-objc-foundation-nmxcore/Extensions/NSString+NMX.h"; sourceTree = SOURCE_ROOT; };
+		21DB56651F82306F003D5879 /* NSDictionary+NMX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+NMX.h"; path = "ios-objc-foundation-nmxcore/Extensions/NSDictionary+NMX.h"; sourceTree = SOURCE_ROOT; };
+		21DB56661F82306F003D5879 /* NSDictionary+NMX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+NMX.m"; path = "ios-objc-foundation-nmxcore/Extensions/NSDictionary+NMX.m"; sourceTree = SOURCE_ROOT; };
+		21DB56671F823070003D5879 /* NSNumber+NMX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSNumber+NMX.h"; path = "ios-objc-foundation-nmxcore/Extensions/NSNumber+NMX.h"; sourceTree = SOURCE_ROOT; };
+		21DB56681F823070003D5879 /* NSNumber+NMX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+NMX.m"; path = "ios-objc-foundation-nmxcore/Extensions/NSNumber+NMX.m"; sourceTree = SOURCE_ROOT; };
+		21DB56691F823070003D5879 /* NSDate+NMX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NMX.m"; path = "ios-objc-foundation-nmxcore/Extensions/NSDate+NMX.m"; sourceTree = SOURCE_ROOT; };
+		21DB56721F823079003D5879 /* NMXCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXCore.h; path = "ios-objc-foundation-nmxcore/NMXCore.h"; sourceTree = SOURCE_ROOT; };
+		21DB56741F8230C0003D5879 /* NSDate+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDate+NMXTest.m"; path = "Class Extensions/NSDate+NMXTest.m"; sourceTree = "<group>"; };
+		21DB56751F8230C0003D5879 /* NMXTestDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NMXTestDataSource.m; path = "Class Extensions/NMXTestDataSource.m"; sourceTree = "<group>"; };
+		21DB56761F8230C0003D5879 /* NSDictionary+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+NMXTest.h"; path = "Class Extensions/NSDictionary+NMXTest.h"; sourceTree = "<group>"; };
+		21DB56771F8230C0003D5879 /* NSDictionary+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+NMXTest.m"; path = "Class Extensions/NSDictionary+NMXTest.m"; sourceTree = "<group>"; };
+		21DB56781F8230C0003D5879 /* NSNumber+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+NMXTest.m"; path = "Class Extensions/NSNumber+NMXTest.m"; sourceTree = "<group>"; };
+		21DB56791F8230C0003D5879 /* NSString+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+NMXTest.m"; path = "Class Extensions/NSString+NMXTest.m"; sourceTree = "<group>"; };
+		21DB567A1F8230C0003D5879 /* NSDate+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDate+NMXTest.h"; path = "Class Extensions/NSDate+NMXTest.h"; sourceTree = "<group>"; };
+		21DB567B1F8230C1003D5879 /* NSBundle+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSBundle+NMXTest.h"; path = "Class Extensions/NSBundle+NMXTest.h"; sourceTree = "<group>"; };
+		21DB567C1F8230C1003D5879 /* NMXTestDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NMXTestDataSource.h; path = "Class Extensions/NMXTestDataSource.h"; sourceTree = "<group>"; };
+		21DB567D1F8230C1003D5879 /* NSBundle+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+NMXTest.m"; path = "Class Extensions/NSBundle+NMXTest.m"; sourceTree = "<group>"; };
+		21DB567E1F8230C1003D5879 /* NSNumber+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSNumber+NMXTest.h"; path = "Class Extensions/NSNumber+NMXTest.h"; sourceTree = "<group>"; };
+		21DB567F1F8230C1003D5879 /* NSString+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+NMXTest.h"; path = "Class Extensions/NSString+NMXTest.h"; sourceTree = "<group>"; };
+		21DB56811F8230F1003D5879 /* NMXTestDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXTestDataSource.h; sourceTree = "<group>"; };
+		21DB56821F8230F1003D5879 /* NMXTestDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXTestDataSource.m; sourceTree = "<group>"; };
+		21DB56831F8230F1003D5879 /* NSBundle+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+NMXTest.h"; sourceTree = "<group>"; };
+		21DB56841F8230F1003D5879 /* NSBundle+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+NMXTest.m"; sourceTree = "<group>"; };
+		21DB56851F8230F1003D5879 /* NSDate+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NMXTest.h"; sourceTree = "<group>"; };
+		21DB56861F8230F1003D5879 /* NSDate+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NMXTest.m"; sourceTree = "<group>"; };
+		21DB56871F8230F1003D5879 /* NSDictionary+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NMXTest.h"; sourceTree = "<group>"; };
+		21DB56881F8230F1003D5879 /* NSDictionary+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NMXTest.m"; sourceTree = "<group>"; };
+		21DB56891F8230F1003D5879 /* NSNumber+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NMXTest.h"; sourceTree = "<group>"; };
+		21DB568A1F8230F1003D5879 /* NSNumber+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+NMXTest.m"; sourceTree = "<group>"; };
+		21DB568B1F8230F1003D5879 /* NSString+NMXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NMXTest.h"; sourceTree = "<group>"; };
+		21DB568C1F8230F1003D5879 /* NSString+NMXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+NMXTest.m"; sourceTree = "<group>"; };
+		21DB568F1F8230F1003D5879 /* NMXBundleFileHandlingTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXBundleFileHandlingTest.m; sourceTree = "<group>"; };
+		21DB56911F8230F1003D5879 /* NoPathExtension */ = {isa = PBXFileReference; lastKnownFileType = text; path = NoPathExtension; sourceTree = "<group>"; };
+		21DB56931F8230F1003D5879 /* image.PNG.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = image.PNG.json; sourceTree = "<group>"; };
+		21DB56941F8230F1003D5879 /* NMXDateTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXDateTest.m; sourceTree = "<group>"; };
+		21DB56961F8230F1003D5879 /* empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
+		21DB56971F8230F1003D5879 /* trackings_valid_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = trackings_valid_1.json; sourceTree = "<group>"; };
+		21DB56981F8230F1003D5879 /* trackings_valid_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = trackings_valid_2.json; sourceTree = "<group>"; };
+		21DB56991F8230F1003D5879 /* NMXDictionaryTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXDictionaryTest.m; sourceTree = "<group>"; };
+		21DB569A1F8230F1003D5879 /* NMXNumberTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXNumberTest.m; sourceTree = "<group>"; };
+		21DB569B1F8230F1003D5879 /* NMXStringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXStringTest.m; sourceTree = "<group>"; };
+		21DB569E1F8230F1003D5879 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/File.strings; sourceTree = "<group>"; };
+		21DB569F1F8230F1003D5879 /* en-ER */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-ER"; path = "en-ER.lproj/File.strings"; sourceTree = "<group>"; };
+		21DB56A01F8230F1003D5879 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/File.strings"; sourceTree = "<group>"; };
+		21DB56A11F8230F1003D5879 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/File.strings; sourceTree = "<group>"; };
+		21DB56A21F8230F1003D5879 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/File.strings"; sourceTree = "<group>"; };
+		21DB56A31F8230F1003D5879 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/File.strings; sourceTree = "<group>"; };
+		21DB56A41F8230F1003D5879 /* NMXLocalizationHandler+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NMXLocalizationHandler+Test.h"; sourceTree = "<group>"; };
+		21DB56A51F8230F1003D5879 /* NMXLocalizationHandlerIntegrationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXLocalizationHandlerIntegrationTest.m; sourceTree = "<group>"; };
+		21DB56A61F8230F1003D5879 /* NMXLocalizationHandlerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXLocalizationHandlerTest.m; sourceTree = "<group>"; };
+		21DB56C21F82365D003D5879 /* default-2_de.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default-2_de.plist"; sourceTree = "<group>"; };
+		21DB56C31F82365D003D5879 /* default-2_en-GB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default-2_en-GB.plist"; sourceTree = "<group>"; };
+		21DB56C41F82365D003D5879 /* default-2_en.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default-2_en.plist"; sourceTree = "<group>"; };
+		21DB56C51F82365D003D5879 /* default-2_fr.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default-2_fr.plist"; sourceTree = "<group>"; };
+		21DB56C61F82365D003D5879 /* default_de.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_de.plist; sourceTree = "<group>"; };
+		21DB56C71F82365D003D5879 /* default_en-GB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default_en-GB.plist"; sourceTree = "<group>"; };
+		21DB56C81F82365D003D5879 /* default_en.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_en.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21CE75EF1D23AF82000EF2BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21CE76071D23AFD4000EF2BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21CE760F1D23AFD4000EF2BC /* libios-objc-foundation-nmxcore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		210528871D78478A00C54676 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56631F82306F003D5879 /* NMXExtensions.h */,
+				21DB56621F82306F003D5879 /* NSDate+NMX.h */,
+				21DB56691F823070003D5879 /* NSDate+NMX.m */,
+				21DB56651F82306F003D5879 /* NSDictionary+NMX.h */,
+				21DB56661F82306F003D5879 /* NSDictionary+NMX.m */,
+				21DB56671F823070003D5879 /* NSNumber+NMX.h */,
+				21DB56681F823070003D5879 /* NSNumber+NMX.m */,
+				21DB56641F82306F003D5879 /* NSString+NMX.h */,
+				21DB56611F82306F003D5879 /* NSString+NMX.m */,
+			);
+			name = Extensions;
+			path = "ios-objc-foundation-nmxcore/Extensions";
+			sourceTree = SOURCE_ROOT;
+		};
+		21A1C3F91E9F534000306835 /* C-Function Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21DB565D1F823060003D5879 /* NMXCFunctionHelpers.h */,
+				21DB565E1F823060003D5879 /* NMXNSBundleFileHandling.h */,
+				21DB565C1F823060003D5879 /* NMXNSBundleFileHandling.m */,
+				21C0DC7B1F95F7E7002E8871 /* NMXLogging.h */,
+				21C0DC7C1F95F7E7002E8871 /* NMXLogging.m */,
+			);
+			name = "C-Function Helpers";
+			sourceTree = "<group>";
+		};
+		21A1C4061E9F575D00306835 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56801F8230F1003D5879 /* Class Extensions */,
+				21DB568D1F8230F1003D5879 /* Tests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		21A1C4071E9F577700306835 /* Class Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21DB567C1F8230C1003D5879 /* NMXTestDataSource.h */,
+				21DB56751F8230C0003D5879 /* NMXTestDataSource.m */,
+				21DB567B1F8230C1003D5879 /* NSBundle+NMXTest.h */,
+				21DB567D1F8230C1003D5879 /* NSBundle+NMXTest.m */,
+				21DB567A1F8230C0003D5879 /* NSDate+NMXTest.h */,
+				21DB56741F8230C0003D5879 /* NSDate+NMXTest.m */,
+				21DB56761F8230C0003D5879 /* NSDictionary+NMXTest.h */,
+				21DB56771F8230C0003D5879 /* NSDictionary+NMXTest.m */,
+				21DB567E1F8230C1003D5879 /* NSNumber+NMXTest.h */,
+				21DB56781F8230C0003D5879 /* NSNumber+NMXTest.m */,
+				21DB567F1F8230C1003D5879 /* NSString+NMXTest.h */,
+				21DB56791F8230C0003D5879 /* NSString+NMXTest.m */,
+			);
+			name = "Class Extensions";
+			sourceTree = "<group>";
+		};
+		21CE75E91D23AF82000EF2BC = {
+			isa = PBXGroup;
+			children = (
+				21CE75F41D23AF82000EF2BC /* ios-objc-foundation-nmxcore */,
+				21CE760B1D23AFD4000EF2BC /* ios-objc-foundation-nmxcore Tests */,
+				21CE75F31D23AF82000EF2BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21CE75F31D23AF82000EF2BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21CE75F21D23AF82000EF2BC /* libios-objc-foundation-nmxcore.a */,
+				21CE760A1D23AFD4000EF2BC /* ios-objc-foundation-nmxcore.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21CE75F41D23AF82000EF2BC /* ios-objc-foundation-nmxcore */ = {
+			isa = PBXGroup;
+			children = (
+				21DBEC2E1EA63F7D00A8D7E7 /* Utilities */,
+				21A1C3F91E9F534000306835 /* C-Function Helpers */,
+				210528871D78478A00C54676 /* Extensions */,
+				21DB56721F823079003D5879 /* NMXCore.h */,
+			);
+			name = "ios-objc-foundation-nmxcore";
+			sourceTree = "<group>";
+		};
+		21CE760B1D23AFD4000EF2BC /* ios-objc-foundation-nmxcore Tests */ = {
+			isa = PBXGroup;
+			children = (
+				21A1C4071E9F577700306835 /* Class Extensions */,
+				21A1C4061E9F575D00306835 /* Tests */,
+				210528951D78479100C54676 /* Info.plist */,
+			);
+			path = "ios-objc-foundation-nmxcore Tests";
+			sourceTree = "<group>";
+		};
+		21DB56801F8230F1003D5879 /* Class Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56811F8230F1003D5879 /* NMXTestDataSource.h */,
+				21DB56821F8230F1003D5879 /* NMXTestDataSource.m */,
+				21DB56831F8230F1003D5879 /* NSBundle+NMXTest.h */,
+				21DB56841F8230F1003D5879 /* NSBundle+NMXTest.m */,
+				21DB56851F8230F1003D5879 /* NSDate+NMXTest.h */,
+				21DB56861F8230F1003D5879 /* NSDate+NMXTest.m */,
+				21DB56871F8230F1003D5879 /* NSDictionary+NMXTest.h */,
+				21DB56881F8230F1003D5879 /* NSDictionary+NMXTest.m */,
+				21DB56891F8230F1003D5879 /* NSNumber+NMXTest.h */,
+				21DB568A1F8230F1003D5879 /* NSNumber+NMXTest.m */,
+				21DB568B1F8230F1003D5879 /* NSString+NMXTest.h */,
+				21DB568C1F8230F1003D5879 /* NSString+NMXTest.m */,
+			);
+			path = "Class Extensions";
+			sourceTree = "<group>";
+		};
+		21DB568D1F8230F1003D5879 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				21DB568E1F8230F1003D5879 /* C-Function Helpers */,
+				21DB56921F8230F1003D5879 /* Extensions */,
+				21DB569C1F8230F1003D5879 /* Utilities */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		21DB568E1F8230F1003D5879 /* C-Function Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56901F8230F1003D5879 /* Test Files */,
+				21DB568F1F8230F1003D5879 /* NMXBundleFileHandlingTest.m */,
+				219D2B4E1F94B82600B6B16A /* NMXLoggingTest.m */,
+			);
+			path = "C-Function Helpers";
+			sourceTree = "<group>";
+		};
+		21DB56901F8230F1003D5879 /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56911F8230F1003D5879 /* NoPathExtension */,
+			);
+			path = "Test Files";
+			sourceTree = "<group>";
+		};
+		21DB56921F8230F1003D5879 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56951F8230F1003D5879 /* Test Files */,
+				21DB56941F8230F1003D5879 /* NMXDateTest.m */,
+				21DB56991F8230F1003D5879 /* NMXDictionaryTest.m */,
+				21DB569A1F8230F1003D5879 /* NMXNumberTest.m */,
+				21DB569B1F8230F1003D5879 /* NMXStringTest.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		21DB56951F8230F1003D5879 /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56931F8230F1003D5879 /* image.PNG.json */,
+				21DB56961F8230F1003D5879 /* empty.json */,
+				21DB56971F8230F1003D5879 /* trackings_valid_1.json */,
+				21DB56981F8230F1003D5879 /* trackings_valid_2.json */,
+			);
+			path = "Test Files";
+			sourceTree = "<group>";
+		};
+		21DB569C1F8230F1003D5879 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56C11F82365D003D5879 /* Test Files */,
+				21DB569D1F8230F1003D5879 /* File.strings */,
+				21DB56A41F8230F1003D5879 /* NMXLocalizationHandler+Test.h */,
+				21DB56A51F8230F1003D5879 /* NMXLocalizationHandlerIntegrationTest.m */,
+				21DB56A61F8230F1003D5879 /* NMXLocalizationHandlerTest.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		21DB56C11F82365D003D5879 /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56C21F82365D003D5879 /* default-2_de.plist */,
+				21DB56C31F82365D003D5879 /* default-2_en-GB.plist */,
+				21DB56C41F82365D003D5879 /* default-2_en.plist */,
+				21DB56C51F82365D003D5879 /* default-2_fr.plist */,
+				21DB56C61F82365D003D5879 /* default_de.plist */,
+				21DB56C71F82365D003D5879 /* default_en-GB.plist */,
+				21DB56C81F82365D003D5879 /* default_en.plist */,
+			);
+			path = "Test Files";
+			sourceTree = "<group>";
+		};
+		21DBEC2E1EA63F7D00A8D7E7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				21DB56591F823057003D5879 /* NMXLocalizationHandler.h */,
+				21DB565A1F823057003D5879 /* NMXLocalizationHandler.m */,
+				21DB56581F823057003D5879 /* NMXUtilities.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21CE75F11D23AF82000EF2BC /* ios-objc-foundation-nmxcore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21CE75FB1D23AF82000EF2BC /* Build configuration list for PBXNativeTarget "ios-objc-foundation-nmxcore" */;
+			buildPhases = (
+				21CE75EE1D23AF82000EF2BC /* Sources */,
+				21CE75EF1D23AF82000EF2BC /* Frameworks */,
+				21CE75F01D23AF82000EF2BC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-objc-foundation-nmxcore";
+			productName = "Namics Library";
+			productReference = 21CE75F21D23AF82000EF2BC /* libios-objc-foundation-nmxcore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		21CE76091D23AFD4000EF2BC /* ios-objc-foundation-nmxcore Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21CE76121D23AFD4000EF2BC /* Build configuration list for PBXNativeTarget "ios-objc-foundation-nmxcore Tests" */;
+			buildPhases = (
+				21CE76061D23AFD4000EF2BC /* Sources */,
+				21CE76071D23AFD4000EF2BC /* Frameworks */,
+				21CE76081D23AFD4000EF2BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21CE76111D23AFD4000EF2BC /* PBXTargetDependency */,
+			);
+			name = "ios-objc-foundation-nmxcore Tests";
+			productName = "Namics Library Tests";
+			productReference = 21CE760A1D23AFD4000EF2BC /* ios-objc-foundation-nmxcore.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21CE75EA1D23AF82000EF2BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "";
+				KnownAssetTags = (
+					New,
+				);
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Namics AG";
+				TargetAttributes = {
+					21CE75F11D23AF82000EF2BC = {
+						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0900;
+					};
+					21CE76091D23AFD4000EF2BC = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = B2L5F7GSL7;
+					};
+				};
+			};
+			buildConfigurationList = 21CE75ED1D23AF82000EF2BC /* Build configuration list for PBXProject "ios-objc-foundation-nmxcore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+				fr,
+				"es-MX",
+				"en-ER",
+				"en-GB",
+			);
+			mainGroup = 21CE75E91D23AF82000EF2BC;
+			productRefGroup = 21CE75F31D23AF82000EF2BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21CE75F11D23AF82000EF2BC /* ios-objc-foundation-nmxcore */,
+				21CE76091D23AFD4000EF2BC /* ios-objc-foundation-nmxcore Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21CE76081D23AFD4000EF2BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DB56B61F82321A003D5879 /* image.PNG.json in Resources */,
+				21DB56B71F82321A003D5879 /* empty.json in Resources */,
+				21DB56CF1F823673003D5879 /* default_en.plist in Resources */,
+				21DB56CB1F823673003D5879 /* default-2_en.plist in Resources */,
+				21DB56CD1F823673003D5879 /* default_de.plist in Resources */,
+				21DB56BA1F823222003D5879 /* File.strings in Resources */,
+				21DB56CA1F823673003D5879 /* default-2_en-GB.plist in Resources */,
+				21DB56C91F823673003D5879 /* default-2_de.plist in Resources */,
+				21DB56B51F823206003D5879 /* NoPathExtension in Resources */,
+				21DB56B81F82321A003D5879 /* trackings_valid_1.json in Resources */,
+				21DB56B91F82321A003D5879 /* trackings_valid_2.json in Resources */,
+				21DB56CE1F823673003D5879 /* default_en-GB.plist in Resources */,
+				21DB56CC1F823673003D5879 /* default-2_fr.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21CE75EE1D23AF82000EF2BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DB565B1F823057003D5879 /* NMXLocalizationHandler.m in Sources */,
+				21DB566A1F823070003D5879 /* NSString+NMX.m in Sources */,
+				21DB56701F823070003D5879 /* NSDate+NMX.m in Sources */,
+				21DB566C1F823070003D5879 /* NSDictionary+NMX.m in Sources */,
+				21C0DC7E1F95F7E7002E8871 /* NMXLogging.m in Sources */,
+				21DB566E1F823070003D5879 /* NSNumber+NMX.m in Sources */,
+				21DB565F1F823060003D5879 /* NMXNSBundleFileHandling.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21CE76061D23AFD4000EF2BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DB56B21F8231F9003D5879 /* NMXStringTest.m in Sources */,
+				21DB56A91F8231F9003D5879 /* NSBundle+NMXTest.m in Sources */,
+				21DB56AF1F8231F9003D5879 /* NMXDateTest.m in Sources */,
+				21DB56BF1F823279003D5879 /* NSNumber+NMX.m in Sources */,
+				21DB56AA1F8231F9003D5879 /* NSDate+NMXTest.m in Sources */,
+				21DB56BD1F823279003D5879 /* NSDate+NMX.m in Sources */,
+				21DB56AE1F8231F9003D5879 /* NMXBundleFileHandlingTest.m in Sources */,
+				21DB56BB1F823279003D5879 /* NMXLocalizationHandler.m in Sources */,
+				21DB56B11F8231F9003D5879 /* NMXNumberTest.m in Sources */,
+				21DB56B01F8231F9003D5879 /* NMXDictionaryTest.m in Sources */,
+				21DB56AB1F8231F9003D5879 /* NSDictionary+NMXTest.m in Sources */,
+				21C0DC7D1F95F7E7002E8871 /* NMXLogging.m in Sources */,
+				21DB56B41F8231F9003D5879 /* NMXLocalizationHandlerTest.m in Sources */,
+				21DB56B31F8231F9003D5879 /* NMXLocalizationHandlerIntegrationTest.m in Sources */,
+				21DB56BC1F823279003D5879 /* NMXNSBundleFileHandling.m in Sources */,
+				21DB56A81F8231F9003D5879 /* NMXTestDataSource.m in Sources */,
+				21DB56AC1F8231F9003D5879 /* NSNumber+NMXTest.m in Sources */,
+				21DB56AD1F8231F9003D5879 /* NSString+NMXTest.m in Sources */,
+				21DB56C01F823279003D5879 /* NSString+NMX.m in Sources */,
+				219D2B4F1F94B82600B6B16A /* NMXLoggingTest.m in Sources */,
+				21DB56BE1F823279003D5879 /* NSDictionary+NMX.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21CE76111D23AFD4000EF2BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21CE75F11D23AF82000EF2BC /* ios-objc-foundation-nmxcore */;
+			targetProxy = 21CE76101D23AFD4000EF2BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21DB569D1F8230F1003D5879 /* File.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21DB569E1F8230F1003D5879 /* de */,
+				21DB569F1F8230F1003D5879 /* en-ER */,
+				21DB56A01F8230F1003D5879 /* en-GB */,
+				21DB56A11F8230F1003D5879 /* en */,
+				21DB56A21F8230F1003D5879 /* es-MX */,
+				21DB56A31F8230F1003D5879 /* fr */,
+			);
+			name = File.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21CE75F91D23AF82000EF2BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		21CE75FA1D23AF82000EF2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21CE75FC1D23AF82000EF2BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "ios-objc-foundation-nmxcore";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		21CE75FD1D23AF82000EF2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "ios-objc-foundation-nmxcore";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		21CE76131D23AFD4000EF2BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				INFOPLIST_FILE = "$(SRCROOT)/$(PROJECT_NAME) Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.namics.library.Namics-Library-Tests";
+				PRODUCT_NAME = "ios-objc-foundation-nmxcore";
+			};
+			name = Debug;
+		};
+		21CE76141D23AFD4000EF2BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				INFOPLIST_FILE = "$(SRCROOT)/$(PROJECT_NAME) Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.namics.library.Namics-Library-Tests";
+				PRODUCT_NAME = "ios-objc-foundation-nmxcore";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21CE75ED1D23AF82000EF2BC /* Build configuration list for PBXProject "ios-objc-foundation-nmxcore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21CE75F91D23AF82000EF2BC /* Debug */,
+				21CE75FA1D23AF82000EF2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21CE75FB1D23AF82000EF2BC /* Build configuration list for PBXNativeTarget "ios-objc-foundation-nmxcore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21CE75FC1D23AF82000EF2BC /* Debug */,
+				21CE75FD1D23AF82000EF2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21CE76121D23AFD4000EF2BC /* Build configuration list for PBXNativeTarget "ios-objc-foundation-nmxcore Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21CE76131D23AFD4000EF2BC /* Debug */,
+				21CE76141D23AFD4000EF2BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21CE75EA1D23AF82000EF2BC /* Project object */;
+}
