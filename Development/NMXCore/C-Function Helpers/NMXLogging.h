@@ -57,7 +57,7 @@ extern void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nu
  *
  *  @param format the string formatted message with parameters that shall be logged. Common String format specifiers are being used: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
  */
-__attribute__((overloadable))extern void NMXLog(NSString* _Nonnull format, ...);
+extern __attribute__((overloadable))void NMXLog(NSString* _Nonnull format, ...);
 
 /**
  *  Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific
@@ -74,7 +74,7 @@ __attribute__((overloadable))extern void NMXLog(NSString* _Nonnull format, ...);
  *  @param logLevel optional parameters, which provides the visiblity range of the log function. Default parameter, if nil is provided, is "NMXLogLevels.None". E.g. "Only visible in Debug builds". If you want to provide a custom logging for a build type defined on your own (e.g. "AdHoc"), please use the "NMXLogLevels.All" logLevel inside of your own predefined precompiler macro if statement
  *  @param format the string formatted message with parameters that shall be logged. Common String format specifiers are being used: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
  */
-__attribute__((overloadable))extern void NMXLog(NMXLogLevelType logLevel, NSString* _Nonnull format, ...);
+extern __attribute__((overloadable))void NMXLog(NMXLogLevelType logLevel, NSString* _Nonnull format, ...);
 
 /**
  *  Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific Prefix

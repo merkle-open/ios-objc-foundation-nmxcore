@@ -117,7 +117,7 @@ static int stderrSave;
     NSString *expectedString = @"Test";
     NSString *outputString = @"";
     BOOL isRecorded = NO;
-    
+
     for (NSNumber *obj in [NSNumber testObjectTypeParamsInvalid])
     {
         [self startLogging];
@@ -132,19 +132,19 @@ static int stderrSave;
     isRecorded = [self recordLogLogged:expectedString];
     [self closeLogging];
     XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
-    
+
     [self startLogging];
     NMXLogWithPrefix((NSInteger)17, nil, inputString);
     isRecorded = [self recordLogLogged:expectedString];
     [self closeLogging];
     XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
-    
+
     [self startLogging];
     NMXLogWithPrefix((NSInteger)-12, nil, inputString);
     isRecorded = [self recordLogLogged:expectedString];
     [self closeLogging];
     XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
-    
+
     expectedString = [NSString stringWithFormat:@"%@%@",NMXLogLevelTypeDescription[debug], inputString];
     for (NSString *obj in [NSString testObjectTypeParamsInvalid])
     {
@@ -159,7 +159,7 @@ static int stderrSave;
     isRecorded = [self recordLogLogged:expectedString];
     [self closeLogging];
     XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
-    
+
     for (NSString *obj in [NSString testObjectTypeParamsInvalid])
     {
         [self startLogging];
@@ -182,7 +182,7 @@ static int stderrSave;
     NSString *expectedString = @"Test";
     NSString *outputString = @"";
     BOOL isRecorded = NO;
-    
+
     int validLevels[3] = {none,debug,all,};
     for (int i = 0; i < sizeof(validLevels)/sizeof(validLevels[0]); i++)
     {
@@ -194,7 +194,7 @@ static int stderrSave;
         [self closeLogging];
         XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
     }
-    
+
     NMXLogLevelType level = release;
     expectedString = [NSString stringWithFormat:@"%@%@",NMXLogLevelTypeDescription[level], inputString];
     [self startLogging];
@@ -202,8 +202,8 @@ static int stderrSave;
     isRecorded = [self recordLogLogged:expectedString];
     [self closeLogging];
     XCTAssertFalse(isRecorded, @"🔴🔴 No output string expected for release only builds, as we are on debug currently");
-    
-    
+
+
     level = all;
     NSString *prefix = @"CUSTOM_PREFIX";
     expectedString = [NSString stringWithFormat:@"%@%@",prefix, inputString];
@@ -213,5 +213,5 @@ static int stderrSave;
     [self closeLogging];
     XCTAssertTrue(isRecorded, @"🔴🔴 Outputstring differs from expected outputstring:\nInput:    %@\nOutput:   %@\nExpected: %@",inputString, outputString, expectedString);
 }
-    
+
 @end

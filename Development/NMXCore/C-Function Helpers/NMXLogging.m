@@ -68,10 +68,6 @@ void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable 
             va_copy(argList, arguments);
             
             s = [[NSMutableString alloc] initWithFormat:format arguments:argList];
-            [s replaceOccurrencesOfString:@"%%"
-                               withString:@"%%%%"
-                                  options:0
-                                    range:NSMakeRange(0, [s length])];
             //printf("%s\n", [s UTF8String]);
             va_end(argList);
         }
@@ -122,7 +118,7 @@ __attribute__((overloadable)) void NMXLog(NMXLogLevelType logLevel, NSString* _N
     NMXLogWithPrefixAndArguments(none, nil, obj, nil);
 }
 
-__attribute__((overloadable)) void NMXLogWithPrefix(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, NSString* _Nonnull format, ...)
+void NMXLogWithPrefix(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, NSString* _Nonnull format, ...)
 {
     va_list argList;
     va_start(argList, format);

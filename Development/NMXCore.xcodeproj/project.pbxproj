@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2164DEC41F98FB290081CFDD /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
-		2164DF211F98FBBD0081CFDD /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
-		2164DF221F98FBBD0081CFDD /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED71F98FB590081CFDD /* NSDate+NMX.m */; };
-		2164DF231F98FBBD0081CFDD /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED91F98FB590081CFDD /* NSDictionary+NMX.m */; };
-		2164DF241F98FBBD0081CFDD /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDB1F98FB590081CFDD /* NSNumber+NMX.m */; };
-		2164DF251F98FBBD0081CFDD /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDD1F98FB590081CFDD /* NSString+NMX.m */; };
-		2164DF261F98FBBD0081CFDD /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE01F98FB590081CFDD /* NMXLocalizationHandler.m */; };
 		2164DF271F98FBC60081CFDD /* NMXTestDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEEB1F98FB980081CFDD /* NMXTestDataSource.m */; };
 		2164DF281F98FBC60081CFDD /* NSBundle+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEED1F98FB980081CFDD /* NSBundle+NMXTest.m */; };
 		2164DF291F98FBC60081CFDD /* NSDate+NMXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEEF1F98FB980081CFDD /* NSDate+NMXTest.m */; };
@@ -41,6 +34,8 @@
 		2164DF3F1F98FD130081CFDD /* default_de.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF161F98FB980081CFDD /* default_de.plist */; };
 		2164DF401F98FD130081CFDD /* default_en-GB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF171F98FB980081CFDD /* default_en-GB.plist */; };
 		2164DF411F98FD130081CFDD /* default_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF181F98FB980081CFDD /* default_en.plist */; };
+		21A1127E1FA2108300C1CD83 /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A1127C1FA2107E00C1CD83 /* NMXCore.framework */; };
+		21A112811FA210A200C1CD83 /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
 		21D32F6F1FA1C03700479607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F6E1FA1C03700479607 /* AppDelegate.m */; };
 		21D32F721FA1C03700479607 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F711FA1C03700479607 /* ViewController.m */; };
 		21D32F751FA1C03700479607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D32F731FA1C03700479607 /* Main.storyboard */; };
@@ -66,12 +61,11 @@
 		21D32FAB1FA1CAA000479607 /* NMXUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE11F98FB590081CFDD /* NMXUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D32FAC1FA1CE2100479607 /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
 		21D32FAD1FA1CE2100479607 /* NMXCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		21D32FB11FA1E79700479607 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32FB01FA1E76400479607 /* NMXLogging.m */; };
 		21D32FB31FA1E81200479607 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32FB01FA1E76400479607 /* NMXLogging.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2164DEC51F98FB290081CFDD /* PBXContainerItemProxy */ = {
+		21A1127F1FA2109500C1CD83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2164DEB11F98FB290081CFDD /* Project object */;
 			proxyType = 1;
@@ -162,6 +156,7 @@
 		2164DF161F98FB980081CFDD /* default_de.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_de.plist; sourceTree = "<group>"; };
 		2164DF171F98FB980081CFDD /* default_en-GB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default_en-GB.plist"; sourceTree = "<group>"; };
 		2164DF181F98FB980081CFDD /* default_en.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_en.plist; sourceTree = "<group>"; };
+		21A1127C1FA2107E00C1CD83 /* NMXCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMXCore.framework; sourceTree = "<group>"; };
 		21D32F6B1FA1C03700479607 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D32F6D1FA1C03700479607 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21D32F6E1FA1C03700479607 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,7 +182,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2164DEC41F98FB290081CFDD /* NMXCore.framework in Frameworks */,
+				21A1127E1FA2108300C1CD83 /* NMXCore.framework in Frameworks */,
+				21A112811FA210A200C1CD83 /* NMXCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +394,7 @@
 		21D32F861FA1C24500479607 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21A1127C1FA2107E00C1CD83 /* NMXCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -455,7 +452,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2164DEC61F98FB290081CFDD /* PBXTargetDependency */,
+				21A112801FA2109500C1CD83 /* PBXTargetDependency */,
 			);
 			name = NMXCoreTests;
 			productName = NMXCoreTests;
@@ -594,21 +591,14 @@
 				2164DF2D1F98FBC60081CFDD /* NMXBundleFileHandlingTest.m in Sources */,
 				2164DF331F98FBC60081CFDD /* NMXLocalizationHandlerIntegrationTest.m in Sources */,
 				2164DF321F98FBC60081CFDD /* NMXStringTest.m in Sources */,
-				2164DF211F98FBBD0081CFDD /* NMXNSBundleFileHandling.m in Sources */,
-				2164DF231F98FBBD0081CFDD /* NSDictionary+NMX.m in Sources */,
-				2164DF251F98FBBD0081CFDD /* NSString+NMX.m in Sources */,
 				2164DF2B1F98FBC60081CFDD /* NSNumber+NMXTest.m in Sources */,
 				2164DF271F98FBC60081CFDD /* NMXTestDataSource.m in Sources */,
 				2164DF301F98FBC60081CFDD /* NMXDictionaryTest.m in Sources */,
-				21D32FB11FA1E79700479607 /* NMXLogging.m in Sources */,
 				2164DF311F98FBC60081CFDD /* NMXNumberTest.m in Sources */,
 				2164DF2F1F98FBC60081CFDD /* NMXDateTest.m in Sources */,
-				2164DF241F98FBBD0081CFDD /* NSNumber+NMX.m in Sources */,
-				2164DF261F98FBBD0081CFDD /* NMXLocalizationHandler.m in Sources */,
 				2164DF2C1F98FBC60081CFDD /* NSString+NMXTest.m in Sources */,
 				2164DF341F98FBC60081CFDD /* NMXLocalizationHandlerTest.m in Sources */,
 				2164DF291F98FBC60081CFDD /* NSDate+NMXTest.m in Sources */,
-				2164DF221F98FBBD0081CFDD /* NSDate+NMX.m in Sources */,
 				2164DF2A1F98FBC60081CFDD /* NSDictionary+NMXTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,10 +616,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2164DEC61F98FB290081CFDD /* PBXTargetDependency */ = {
+		21A112801FA2109500C1CD83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2164DEB91F98FB290081CFDD /* NMXCore */;
-			targetProxy = 2164DEC51F98FB290081CFDD /* PBXContainerItemProxy */;
+			targetProxy = 21A1127F1FA2109500C1CD83 /* PBXContainerItemProxy */;
 		};
 		21D32FAF1FA1CE2100479607 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -831,6 +821,10 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = NMXCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -846,6 +840,10 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = NMXCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
