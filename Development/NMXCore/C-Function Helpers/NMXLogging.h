@@ -12,8 +12,11 @@
  *  Example enum description
  *
  *  - None: Will not set a prefix and only be visible in Debug builds
+ *
  *  - Debug: Will use "DEBUG" prefix and only be visible in Debug builds
+ *
  *  - Release: Will use "RELEASE" prefix and only visible in Release builds
+ *
  *  - All: Will use "All" prefix and is visible in any builds
  */
 typedef NS_ENUM(NSInteger, NMXLogLevelType) {
@@ -26,6 +29,12 @@ extern NSString * _Nonnull const NMXLogLevelTypeDescription[];
 
 /**
  *  Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific Prefix
+ *
+ *  - Important: In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according _Preprocessor Macros_ or *Other Swift Flags* in your build target!
+ *      You will need to define: `DEBUG = 1` or `RELEASE = 1`
+ *
+ *  - Precondition: format may not be nil
+ *
  *
  *  - Author:
  *  Tobias Baube
@@ -46,6 +55,11 @@ extern void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nu
 /**
  *  Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific
  *
+ *  - Important: In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according _Preprocessor Macros_ or *Other Swift Flags* in your build target!
+ *      You will need to define: `DEBUG = 1` or `RELEASE = 1`
+ *
+ *  - Precondition: format may not be nil
+ *
  *  - Author:
  *  Tobias Baube
  *
@@ -61,6 +75,11 @@ extern __attribute__((overloadable))void NMXLog(NSString* _Nonnull format, ...);
 
 /**
  *  Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific
+ *
+ *  - Important: In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according _Preprocessor Macros_ or *Other Swift Flags* in your build target!
+ *      You will need to define: `DEBUG = 1` or `RELEASE = 1`
+ *
+ *  - Precondition: format may not be nil
  *
  *  - Author:
  *  Tobias Baube
@@ -79,14 +98,16 @@ extern __attribute__((overloadable))void NMXLog(NMXLogLevelType logLevel, NSStri
 /**
  *  Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific Prefix
  *
- *  - Author:
- *  Tobias Baube
+ *  - Important: In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according _Preprocessor Macros_ or *Other Swift Flags* in your build target!
+ *      You will need to define: `DEBUG = 1` or `RELEASE = 1`
  *
- *  - Version
- *  1.0
+ *  - Precondition: format may not be nil
  *
- *  - See
- *  https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
+ *  - Author: Tobias Baube
+ *
+ *  - Version: 1.0
+ *
+ *  - See: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
  *
  *  @param logLevel optional parameters, which provides the visiblity range of the log function. Default parameter, if nil is provided, is "NMXLogLevels.None". E.g. "Only visible in Debug builds". If you want to provide a custom logging for a build type defined on your own (e.g. "AdHoc"), please use the "NMXLogLevels.All" logLevel inside of your own predefined precompiler macro if statement
  *  @param logPrefix by default (when you set the logPrefix to nil) the log prefixes are defined by the provided loglevel (NMXLogLevels). If you want them to differ from the default ones, you can set these explicitely.

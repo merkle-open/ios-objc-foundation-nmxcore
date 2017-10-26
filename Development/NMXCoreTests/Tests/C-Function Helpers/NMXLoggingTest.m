@@ -204,6 +204,7 @@ static int stderrSave;
     XCTAssertFalse(isRecorded, @"🔴🔴 No output string expected for release only builds, as we are on debug currently");
 
 
+    
     level = all;
     NSString *prefix = @"CUSTOM_PREFIX";
     expectedString = [NSString stringWithFormat:@"%@%@",prefix, inputString];

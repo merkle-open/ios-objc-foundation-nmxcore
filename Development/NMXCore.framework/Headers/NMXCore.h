@@ -17,15 +17,7 @@ FOUNDATION_EXPORT const unsigned char NMXCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <NMXCore/PublicHeader.h>
 
-//#import "NMXCFunctionHelpers.h"
-//#import "NMXUtilities.h"
-//#import "NMXExtensions.h"
-
 #import <NMXCore/NMXCFunctionHelpers.h>
 #import <NMXCore/NMXUtilities.h>
 #import <NMXCore/NMXExtensions.h>
-
-
-//#import <NMXCore/NMXNSBundleFileHandling.h>
-//#import <NMXCore/NMXLogging.h>
 

@@ -13,11 +13,11 @@
 /**
  *  Constructs an NSDictionary from a given json filename in the given bundle
  *
- *  - Author:
- *  Tobias Baube
+ *  - Precondition: fileName may not be nil
  *
- *  - Version
- *  1.0
+ *  - Author: Tobias Baube
+ *
+ *  - Version: 1.0
  *
  *  @param fileName - make sure this filename exists in the provided bundle (filename can also be provided without extension: "filename.plist" and "filename". If provided without extension, "plist" will be appended for the initialization. If this parameter is nil, nil will be returned
  *  @param bundle - specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used
@@ -28,11 +28,11 @@
 /**
  *  Constructs an NSDictionary from a given json filename in the given bundle
  *
- *  - Author:
- *  Tobias Baube
+ *  - Precondition: fileName may not be nil
  *
- *  - Version
- *  1.0
+ *  - Author: Tobias Baube
+ *
+ *  - Version: 1.0
  *
  *  @param fileName - make sure this filename exists in the provided bundle (filename can also be provided without extension: "filename.json" and "filename". If provided without extension, "json" will be appended for the initialization. If this parameter is nil, nil will be returned
  *  @param bundle - specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used

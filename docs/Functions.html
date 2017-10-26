@@ -13,7 +13,7 @@
     <a title="Functions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NamicsLib Docs</a> (77% documented)</p>
+        <p><a href="index.html">NamicsLib Docs</a> (79% documented)</p>
         <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -78,7 +78,7 @@
                 <a href="Functions.html#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/c:@F@NMXLogWithPrefix#$@E@NMXLogLevelType#*$objc(cs)NSString#S1_.#">NMXLogWithPrefix</a>
+                <a href="Functions.html#/c:@F@NMXLogWithPrefix">NMXLogWithPrefix</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/c:@F@NMXLogWithPrefixAndArguments">NMXLogWithPrefixAndArguments</a>
@@ -119,26 +119,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific Prefix</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according <em>Preprocessor Macros</em> or <em>Other Swift Flags</em> in your build target!
+  You will need to define: <code>DEBUG = 1</code> or <code>RELEASE = 1</code></p>
 
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@F@NMXLog#*$objc(cs)NSString.#"></a>
-                    <a name="//apple_ref/objc/Function/NMXLog" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific</p>
+</div>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    <p>format may not be nil</p>
+
+</div>
 <div class="aside aside-author">
     <p class="aside-title">Author</p>
     <p>Tobias Baube</p>
@@ -162,7 +154,125 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="kt">void</span> <span class="n">NMXLog</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="kt">void</span> <span class="n">NMXLogWithPrefixAndArguments</span><span class="p">(</span><span class="n"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span> <span class="n">logLevel</span><span class="p">,</span>
+                                         <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">logPrefix</span><span class="p">,</span>
+                                         <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span>
+                                         <span class="kt">va_list</span> <span class="n">arguments</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="kt">NMXLogWithPrefixAndArguments</span><span class="p">(</span><span class="n">_</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">logPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">arguments</span><span class="p">:</span> <span class="kt">CVaListPointer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional parameters, which provides the visiblity range of the log function. Default parameter, if nil is provided, is <q>NMXLogLevels.None</q>. E.g. <q>Only visible in Debug builds</q>. If you want to provide a custom logging for a build type defined on your own (e.g. <q>AdHoc</q>), please use the <q>NMXLogLevels.All</q> logLevel inside of your own predefined precompiler macro if statement</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logPrefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>by default (when you set the logPrefix to nil) the log prefixes are defined by the provided loglevel (NMXLogLevels). If you want them to differ from the default ones, you can set these explicitely.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the string formatted message with parameters that shall be logged. Common String format specifiers are being used: <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>arguments</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>given arguments that shall be printed in placeholders.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@NMXLog#*$objc(cs)NSString.#"></a>
+                    <a name="//apple_ref/objc/Function/NMXLog" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according <em>Preprocessor Macros</em> or <em>Other Swift Flags</em> in your build target!
+  You will need to define: <code>DEBUG = 1</code> or <code>RELEASE = 1</code></p>
+
+</div>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    <p>format may not be nil</p>
+
+</div>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Tobias Baube</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>Version
+1.0</p>
+
+</div>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>See
+<a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="kt">void</span> <span class="n">NMXLog</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
 
                         </div>
                       </div>
@@ -202,6 +312,17 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according <em>Preprocessor Macros</em> or <em>Other Swift Flags</em> in your build target!
+  You will need to define: <code>DEBUG = 1</code> or <code>RELEASE = 1</code></p>
+
+</div>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    <p>format may not be nil</p>
+
+</div>
 <div class="aside aside-author">
     <p class="aside-title">Author</p>
     <p>Tobias Baube</p>
@@ -225,7 +346,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="kt">void</span> <span class="n"><a href="Functions.html#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a></span><span class="p">(</span><span class="n"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span> <span class="n">logLevel</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="kt">void</span> <span class="n"><a href="Functions.html#/c:@F@NMXLog#*$objc(cs)NSString.#">NMXLog</a></span><span class="p">(</span><span class="n"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span> <span class="n">logLevel</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
 
                         </div>
                       </div>
@@ -266,9 +387,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@F@NMXLogWithPrefix#$@E@NMXLogLevelType#*$objc(cs)NSString#S1_.#"></a>
+                    <a name="/c:@F@NMXLogWithPrefix"></a>
                     <a name="//apple_ref/objc/Function/NMXLogWithPrefix" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@F@NMXLogWithPrefix#$@E@NMXLogLevelType#*$objc(cs)NSString#S1_.#">NMXLogWithPrefix</a>
+                    <a class="token" href="#/c:@F@NMXLogWithPrefix">NMXLogWithPrefix</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -276,7 +397,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific</p>
+                        <p>Wrapper function to support Logging-Functionality. You could also define a NMXLogLevel, if you want the log also being logged with a specific Prefix</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>In order to make the NMXLogLevelType work properly for (debug, release), make sure you have declared the according <em>Preprocessor Macros</em> or <em>Other Swift Flags</em> in your build target!
+  You will need to define: <code>DEBUG = 1</code> or <code>RELEASE = 1</code></p>
+
+</div>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    <p>format may not be nil</p>
+
+</div>
 <div class="aside aside-author">
     <p class="aside-title">Author</p>
     <p>Tobias Baube</p>
@@ -284,14 +416,12 @@
 </div>
 <div class="aside aside-version">
     <p class="aside-title">Version</p>
-    <p>Version
-1.0</p>
+    <p>1.0</p>
 
 </div>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>See
-<a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
+    <p><a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html">https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html</a></p>
 
 </div>
 
@@ -300,8 +430,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="kt">void</span> <span class="n">NMXLogWithPrefix</span><span class="p">(</span><span class="n"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span> <span class="n">logLevel</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">logPrefix</span><span class="p">,</span>
-                      <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="kt">void</span> <span class="n">NMXLogWithPrefix</span><span class="p">(</span><span class="n"><a href="Enums/NMXLogLevelType.html">NMXLogLevelType</a></span> <span class="n">logLevel</span><span class="p">,</span>
+                             <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">logPrefix</span><span class="p">,</span>
+                             <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">format</span><span class="p">,</span> <span class="p">...)</span></code></pre>
 
                         </div>
                       </div>
@@ -384,8 +515,7 @@
 </div>
 <div class="aside aside-version">
     <p class="aside-title">Version</p>
-    <p>Version
-1.0</p>
+    <p>1.0</p>
 
 </div>
 
@@ -394,9 +524,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">filePathForFile</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">,</span>
-                                    <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">fileExtension</span><span class="p">,</span>
-                                    <span class="n">NSBundle</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">bundle</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">filePathForFile</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">,</span>
+                                           <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">fileExtension</span><span class="p">,</span>
+                                           <span class="n">NSBundle</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">bundle</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -476,8 +606,7 @@
 </div>
 <div class="aside aside-version">
     <p class="aside-title">Version</p>
-    <p>Version
-1.0</p>
+    <p>1.0</p>
 
 </div>
 
@@ -486,8 +615,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n"><a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a></span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">,</span>
-                                    <span class="n">NSBundle</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">bundle</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n"><a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a></span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">,</span>
+                                           <span class="n">NSBundle</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">bundle</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -555,8 +684,7 @@
 </div>
 <div class="aside aside-version">
     <p class="aside-title">Version</p>
-    <p>Version
-1.0</p>
+    <p>1.0</p>
 
 </div>
 
@@ -565,7 +693,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n"><a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a></span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n"><a href="Functions.html#/c:@F@filePathForFile#*$objc(cs)NSString#S0_#*$objc(cs)NSBundle#">filePathForFile</a></span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileName</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">

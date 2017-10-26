@@ -11,24 +11,20 @@
 @interface NSNumber (NMX)
 
 /**
-*  true, if object > 0
-*
-*  - Author:
-*  Adriano Segalada
-*
-*  - Version
-*  1.0
-*/
+ *  true, if object > 0
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ */
 @property (readonly) BOOL isPositive;
 
 /**
  *  true, if object >= 0
  *
- *  - Author:
- *  Adriano Segalada
+ *  - Author: Adriano Segalada
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  */
 @property (readonly) BOOL isPositiveOrZero;
 

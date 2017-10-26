@@ -13,11 +13,9 @@
 /**
  *  Constructs a NSDate from self with a given offset in months
  *
- *  - Author:
- *  Adriano Segalada
+ *  - Author: Adriano Segalada
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @param offsetInMonths - Offset in months. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
  *  @return returns a NSDate instance from self with a given offset. If the offset was invalid, the same date (without offset) will be returned.
@@ -27,11 +25,9 @@
 /**
  *  Constructs a NSDate from self with a given offset in days
  *
- *  - Author:
- *  Adriano Segalada
+ *  - Author: Adriano Segalada
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @param offsetInDays - Offset in days. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
  *  @return returns a NSDate instance from self with a given offset in days. If the offset was invalid, the same date (without offset) will be returned.
@@ -41,11 +37,9 @@
 /**
  *  Constructs a NSDate from self with a given offset in minutes
  *
- *  - Author:
- *  Adriano Segalada
+ *  - Author: Adriano Segalada
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @param offsetInMinutes - Offset in minutes. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
  *  @return returns a NSDate instance from self with a given offset in minutes. If the offset was invalid, the same date (without offset) will be returned.
@@ -55,11 +49,9 @@
 /**
  *  Constructs a NSDate from self with a given offset in seconds
  *
- *  - Author:
- *  Adriano Segalada
+ *  - Author: Adriano Segalada
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @param offsetInSeconds - Offset in seconds. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
  *  @return returns a NSDate instance from self with a given offset in seconds. If the offset was invalid, the same date (without offset) will be returned.
@@ -69,11 +61,9 @@
 /**
  *  Returns the same day, but the time is altered and is 23h 59min 59s. One second before midnight)
  *
- *  - Author:
- *  Adriano Segalada
+ *  - Author: Adriano Segalada
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  */
 @property (readonly) NSDate *oneSecondBeforeEndOfDate;

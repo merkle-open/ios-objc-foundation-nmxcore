@@ -17,22 +17,18 @@
  *
  *  if you set the availabeLanguages, the current language will be updated. In case it was no longer in the provided availableLanguages array, it will be changed to a new best fitting value!
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  */
 @property (strong, nonatomic, null_resettable) NSArray<NSString *> *availableLanguages;
 
 /**
  *  set this value, in case you don't want the user's preferred Languages to be fallback, if the desiredLanguage is NOT provided in the availabe language file. If this property is set to "nil", the default fallback will be a user's preferred Language Setting `[NSLocale preferredLanguages].firstObject`. If you want to force the LocalizationHandler to provide one of YOUR languages, set this value.
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  */
 @property (strong, nonatomic, null_resettable) NSString *fallbackLanguage;
 
@@ -53,11 +49,9 @@
  *
  *  The value is NOT stored somewhere. In case you want to persist it throughout multiple runtimes of your app, make sure to store it somewhere and then SET this property on app start
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  */
 @property (strong, nonatomic, null_resettable) NSString *language;
 
@@ -71,11 +65,9 @@
  *  
  *  After setting this property, make sure to update your current localization
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  */
 @property (strong, nonatomic, null_resettable) NSString *localizationFilePrefix;
 
@@ -84,11 +76,9 @@
  *
  *  In case there was already an instance (as NMXLocaliationHandler implements the Singleton-Pattern), the existing instance will be used and its localizationFilePrefix updated.
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @param localizationFilePrefix defines the prefix for localized files. E.g. "language_" for "language_en.plist". If `localizationFilePrefix` was "nil", the default prefix is used: NMXDefaultLocalizationFilePrefix = @"default_";
  *  @return After setting this property, make sure to update your current localization
@@ -110,11 +100,9 @@
 /**
  *  returns a shared instance of NMXLocalizationHandler
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @return shared NMXLocalizationHandler
  */
@@ -123,11 +111,9 @@
 /**
  *  returns a dictionary with localized keys and the mapped localized value for the current language
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @return returns a dictionary with localized keys and the mapped localized value for the current language
  */
@@ -142,11 +128,9 @@
  *
  *  In case the Language AND Dialect do not fit to a specific Localization (e.g. en-GB is not en-US), the function maps en-GB to en-US, as only the language ("en") (not the dialect "GB" vs. "US") will be considered in that case.
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @return NSString that maps to the best Locale from the Main Bundle. In case the Language AND Dialect do not fit to a specific Localization (e.g. en-GB is not en-US), the function maps en-GB to en-US, as only the language (not the dialect) will be considered in that case.
  *
@@ -157,11 +141,9 @@
 /**
  *  This function shall be used to setup/reset the entire NMXLocalizationHandler instance. You can set all required properties in one and don't have to set each property on its own.
  *
- *  - Author:
- *  Tobias Baube
+ *  - Author: Tobias Baube
  *
- *  - Version
- *  1.0
+ *  - Version: 1.0
  *
  *  @param filePrefix nullable, we expect localization files having a file prefix. If you got none, set this parameter to an empty string "". Providing nil will reset the filePrefix to its default: NMXDefaultLocalizationFilePrefix = @"default_";
  *  @param availableLanguages nullable, List of languages, one does want to support
