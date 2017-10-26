@@ -76,25 +76,22 @@ void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable 
         
         #if DEBUG
         if (   _logLevel == none
-            || _logLevel == debug
-            || _logLevel == all)
+            || _logLevel == debug)
         {
             NSLog(@"%@",s);
         }
         // Too bad this destroys our nice test coverage percentage, as this is not defined for testing target :-(
         #elif RELEASE
-        if (   _logLevel == release
-            || _logLevel == all)
-        {
-            NSLog(@"%@",s);
-        }
-        // Too bad this destroys our nice test coverage percentage, as this is not defined for testing target :-(
-        #else
-        if (_logLevel == all)
+        if (   _logLevel == release)
         {
             NSLog(@"%@",s);
         }
         #endif
+        
+        if (_logLevel == all)
+        {
+            NSLog(@"%@",s);
+        }
     }
 }
 

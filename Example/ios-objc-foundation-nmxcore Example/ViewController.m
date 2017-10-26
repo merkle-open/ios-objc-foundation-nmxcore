@@ -41,6 +41,10 @@
     NMXLog(@"-- NSNumber isPositiveOrZero --");
     NMXLog(@"Check if number is positive:           0 - %@",[@(0) isPositive]?@"YES":@"NO");
     NMXLog(@"Check if number is positive | zero:    0 - %@",[@(0) isPositiveOrZero]?@"YES":@"NO");
+    
+    NMXLog(debug, @"This is a Debug log only visible for Debugs");
+    NMXLog(release, @"This would be a log only visible for Releases");
+    NMXLog(all, @"This will be logged no matter whats");
 }
 
 - (void)didReceiveMemoryWarning {
