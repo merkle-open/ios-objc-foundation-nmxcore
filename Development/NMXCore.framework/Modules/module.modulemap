@@ -1,0 +1,6 @@
+framework module NMXCore {
+  umbrella header "NMXCore.h"
+
+  export *
+  module * { export * }
+}

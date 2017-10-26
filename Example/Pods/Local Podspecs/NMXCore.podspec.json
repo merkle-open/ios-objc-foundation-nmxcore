@@ -1,6 +1,6 @@
 {
   "name": "NMXCore",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "summary": "Namics Core Library used for iOS in Objective-C. Shall take care of reusable code.",
   "documentation_url": "https://namics.github.io/ios-objc-foundation-nmxcore/",
   "homepage": "https://github.com/namics/ios-objc-foundation-nmxcore",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/namics/ios-objc-foundation-nmxcore.git",
-    "tag": "v0.2.1"
+    "tag": "v0.3.0"
   },
   "platforms": {
     "ios": "9.0"
@@ -18,5 +18,8 @@
   "license": {
     "type": "MIT"
   },
-  "source_files": "Development/NMXCore/**/*{a,h,m}"
+  "ios": {
+    "vendored_frameworks": "Development/NMXCore.framework"
+  },
+  "requires_arc": true
 }

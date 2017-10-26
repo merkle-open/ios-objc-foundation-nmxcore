@@ -7,97 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D75344276BEBD714D3BC3760F176808 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8740F558B533EB0A95E7A5502BB6F /* NMXNSBundleFileHandling.m */; };
-		1CBB827F38DDB0787B2048E695B70838 /* Pods-ios-objc-foundation-nmxcore Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8E681C86366B5361589A4B23B81C68 /* Pods-ios-objc-foundation-nmxcore Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2075E53C41519889E11C865C0F7156C9 /* NMXNSBundleFileHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D99D92CA5A663B834DF882EDF84BA1 /* NMXNSBundleFileHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3415CEEC10516096232A6AAFBD981BD9 /* NSString+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBA7944E9B837D9B712F6AD6FEF9F43 /* NSString+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51D42E49CFA9D0B980FD5BBFCB2FCC20 /* NMXLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 1397EAE490BF7EAA3DC32329D8EB5671 /* NMXLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56B3B309593D2CA2B9BA47E1F988073A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		670D2BEADFEFB3FAF5EE59BB07B2350A /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A8990530B20417EF224547724E5A8E /* NSNumber+NMX.m */; };
-		6C98755120C85ECBD410A5FD0DC125D8 /* NMXUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C2C6FDE35814E5E2CE243D4469C548 /* NMXUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75A68C99F2507DF9CFAF5BEE91199439 /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C9BBF7607EBFCF93D4232F339E023 /* NMXLocalizationHandler.m */; };
-		7A9B9632B83F1780802D05B078EA6255 /* NMXExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 400A8546841B3941A619D3D92A6E4381 /* NMXExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FA2AA7999CBB86A4192039FDD7D207F /* NSDictionary+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = F877219B6ECA22161C2C100BD5AA2934 /* NSDictionary+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85154D7CB44E0BB0B4C6C3DB560929D8 /* NSDate+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = D26BF60A80670282B7E7C18B75131328 /* NSDate+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		884CA32DF826D41A93BE6C8D823F39A3 /* NMXLocalizationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = A851FB955A282D4E63E3201E1E87B50C /* NMXLocalizationHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2860947417B070B2CD24FD4DF1BE3D4 /* NMXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 41405C0BCB8DEC9DD8DB15C5AE6FFF61 /* NMXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE569041DAC055E2ECE169E93EC84283 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BC03A98092199D72D4F86E761BEB03 /* NMXLogging.m */; };
-		C41A5B192DDC1ED569DC4AB3AF20F4E7 /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6182E0DDEEF643DD8DAE4C8B7F2846 /* NSDate+NMX.m */; };
-		C8FFC8351A9006B9BC00680FBAEE8A3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		DDE2BC92E9C42FA55EF05E411C3D1BDF /* Pods-ios-objc-foundation-nmxcore Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A6728B6E42963A5AE26555022B17A /* Pods-ios-objc-foundation-nmxcore Example-dummy.m */; };
-		E46BC4C87F6AC45A37DD28FD3AD65BAB /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 0601A28C455249381009C3996648290C /* NSDictionary+NMX.m */; };
-		E930E5D47309EF4B3841F9743127C55D /* NSNumber+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = AB84FDD731EC6E1E7ABCA36C9FFC98ED /* NSNumber+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECE37F036DD403D0944E245458828CEC /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8328D8C433403A80DE38AE17463C23 /* NSString+NMX.m */; };
-		EE9CE4BAD7A8F4088CBB059C83FEE342 /* NMXCFunctionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = BE0B09CDBEC8AF1135FEF2D1837CB08D /* NMXCFunctionHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF999C7BD7E5E319DFB484911F91D87E /* NMXCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF8460E4942162663CCEBA56CF53B73E /* NMXCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFD9C041A9B3F96A2A01FF18957E1D68 /* NMXCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8397F31AD90DF0BCF091B55887E03179 /* NMXCore-dummy.m */; };
+		0F4C80D8E10DD73E2F9028AFE63D2452 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F254014C14FBCF5CF0F1AF32EB6E055D /* Pods-ios-objc-foundation-nmxcore Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8E681C86366B5361589A4B23B81C68 /* Pods-ios-objc-foundation-nmxcore Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F98670BFB148CC524023E217F71F2453 /* Pods-ios-objc-foundation-nmxcore Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A6728B6E42963A5AE26555022B17A /* Pods-ios-objc-foundation-nmxcore Example-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7127CDA65F528E90A6C0702233522273 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D315EA2352B21499E8785E0B4D2FD742;
-			remoteInfo = NMXCore;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0601A28C455249381009C3996648290C /* NSDictionary+NMX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NMX.m"; sourceTree = "<group>"; };
 		0B8E681C86366B5361589A4B23B81C68 /* Pods-ios-objc-foundation-nmxcore Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ios-objc-foundation-nmxcore Example-umbrella.h"; sourceTree = "<group>"; };
-		0E7C9BBF7607EBFCF93D4232F339E023 /* NMXLocalizationHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NMXLocalizationHandler.m; sourceTree = "<group>"; };
-		12A8990530B20417EF224547724E5A8E /* NSNumber+NMX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+NMX.m"; sourceTree = "<group>"; };
-		1397EAE490BF7EAA3DC32329D8EB5671 /* NMXLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NMXLogging.h; sourceTree = "<group>"; };
 		1E53AEF0AE3540D24C81534051254115 /* Pods-ios-objc-foundation-nmxcore Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ios-objc-foundation-nmxcore Example.debug.xcconfig"; sourceTree = "<group>"; };
-		24C2C6FDE35814E5E2CE243D4469C548 /* NMXUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NMXUtilities.h; sourceTree = "<group>"; };
-		27BC03A98092199D72D4F86E761BEB03 /* NMXLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NMXLogging.m; sourceTree = "<group>"; };
-		33646C96851B6872E21DCBFC93D04466 /* NMXCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMXCore.xcconfig; sourceTree = "<group>"; };
 		39A0F6605EAD00D68CE182BE4683177B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D8328D8C433403A80DE38AE17463C23 /* NSString+NMX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+NMX.m"; sourceTree = "<group>"; };
-		3E6182E0DDEEF643DD8DAE4C8B7F2846 /* NSDate+NMX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NMX.m"; sourceTree = "<group>"; };
-		400A8546841B3941A619D3D92A6E4381 /* NMXExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NMXExtensions.h; sourceTree = "<group>"; };
-		41405C0BCB8DEC9DD8DB15C5AE6FFF61 /* NMXCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMXCore.h; path = Development/NMXCore/NMXCore.h; sourceTree = "<group>"; };
-		4FE8740F558B533EB0A95E7A5502BB6F /* NMXNSBundleFileHandling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NMXNSBundleFileHandling.m; sourceTree = "<group>"; };
+		530BB710AB6F55C742F5B145C3A211B2 /* Pods_ios_objc_foundation_nmxcore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ios_objc_foundation_nmxcore_Example.framework; path = "Pods-ios-objc-foundation-nmxcore Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6825C254EF5D05341D3BB30CEF1E3B8C /* NMXCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NMXCore.modulemap; sourceTree = "<group>"; };
-		6885B8949877FDB0714675D991BC8957 /* NMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NMXCore.framework; path = NMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABE738FD64258643138B98D3D2976C3 /* Pods-ios-objc-foundation-nmxcore Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ios-objc-foundation-nmxcore Example.modulemap"; sourceTree = "<group>"; };
-		6EBA7944E9B837D9B712F6AD6FEF9F43 /* NSString+NMX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+NMX.h"; sourceTree = "<group>"; };
 		7A78C1A2F57117FA15CBB746DD0C5D91 /* Pods-ios-objc-foundation-nmxcore Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ios-objc-foundation-nmxcore Example-frameworks.sh"; sourceTree = "<group>"; };
 		7C8428C10FDA4CD88E06FECDE6E2C2F2 /* Pods-ios-objc-foundation-nmxcore Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ios-objc-foundation-nmxcore Example.release.xcconfig"; sourceTree = "<group>"; };
-		8397F31AD90DF0BCF091B55887E03179 /* NMXCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NMXCore-dummy.m"; sourceTree = "<group>"; };
-		89D99D92CA5A663B834DF882EDF84BA1 /* NMXNSBundleFileHandling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NMXNSBundleFileHandling.h; sourceTree = "<group>"; };
-		90F7DAE90B772122C783946DA5C13D56 /* Pods_ios_objc_foundation_nmxcore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ios_objc_foundation_nmxcore_Example.framework; path = "Pods-ios-objc-foundation-nmxcore Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B3B244A747A00BBD6ECD7BF5B2A45B0 /* Pods-ios-objc-foundation-nmxcore Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ios-objc-foundation-nmxcore Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A851FB955A282D4E63E3201E1E87B50C /* NMXLocalizationHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NMXLocalizationHandler.h; sourceTree = "<group>"; };
-		AB84FDD731EC6E1E7ABCA36C9FFC98ED /* NSNumber+NMX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NMX.h"; sourceTree = "<group>"; };
-		BE0B09CDBEC8AF1135FEF2D1837CB08D /* NMXCFunctionHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NMXCFunctionHelpers.h; sourceTree = "<group>"; };
-		BEFBEB9EAEC2637EC8E58ECD3E777F26 /* NMXCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NMXCore-prefix.pch"; sourceTree = "<group>"; };
-		CD061686FC00244839F5A02D3C69759C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D26BF60A80670282B7E7C18B75131328 /* NSDate+NMX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+NMX.h"; sourceTree = "<group>"; };
-		DF8460E4942162663CCEBA56CF53B73E /* NMXCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NMXCore-umbrella.h"; sourceTree = "<group>"; };
+		C8ECDE9740C98BD009F80AF2BA2F40F7 /* NMXCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMXCore.framework; path = Development/NMXCore.framework; sourceTree = "<group>"; };
 		E213440CAACAB647DD4526D56400CCF1 /* Pods-ios-objc-foundation-nmxcore Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ios-objc-foundation-nmxcore Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F3AF857EE3556EDAAC69A3AA6F8AC0DF /* Pods-ios-objc-foundation-nmxcore Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ios-objc-foundation-nmxcore Example-resources.sh"; sourceTree = "<group>"; };
-		F877219B6ECA22161C2C100BD5AA2934 /* NSDictionary+NMX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NMX.h"; sourceTree = "<group>"; };
 		FB3A6728B6E42963A5AE26555022B17A /* Pods-ios-objc-foundation-nmxcore Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ios-objc-foundation-nmxcore Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7184F03E7EF4C07AB3B8ABDFEF0380A6 /* Frameworks */ = {
+		386B097F4806208BAE45B64DB0AE67D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FFC8351A9006B9BC00680FBAEE8A3E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F533351EF5A0EAD8058CAC08077F43AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				56B3B309593D2CA2B9BA47E1F988073A /* Foundation.framework in Frameworks */,
+				0F4C80D8E10DD73E2F9028AFE63D2452 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,85 +59,30 @@
 			path = "Target Support Files/Pods-ios-objc-foundation-nmxcore Example";
 			sourceTree = "<group>";
 		};
-		451DF41CE78D0358364DD24A1CBE011D /* NMXCore */ = {
+		32A72BD948ABBB7D08BF1CB67D288452 /* NMXCore */ = {
 			isa = PBXGroup;
 			children = (
-				41405C0BCB8DEC9DD8DB15C5AE6FFF61 /* NMXCore.h */,
-				C7C637E4256AC1E27BA86D113F43C256 /* C-Function Helpers */,
-				7E742BF73544E6D68C30A06EC4F0CFDB /* Extensions */,
-				8F85780458DC19BD3D5CB1E8EDC9F305 /* Support Files */,
-				544337BB4841F3FB0894747C553838F5 /* Utilities */,
+				D7792994E28E112A6ABE1043FEC4A4FD /* Frameworks */,
 			);
 			name = NMXCore;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		544337BB4841F3FB0894747C553838F5 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				A851FB955A282D4E63E3201E1E87B50C /* NMXLocalizationHandler.h */,
-				0E7C9BBF7607EBFCF93D4232F339E023 /* NMXLocalizationHandler.m */,
-				24C2C6FDE35814E5E2CE243D4469C548 /* NMXUtilities.h */,
-			);
-			name = Utilities;
-			path = Development/NMXCore/Utilities;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				B7E85BD495BAF08A10EB7E17CBD661AE /* Development Pods */,
+				82437D8115BA802819D12F9B28EA17C1 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8A7B09D4C47828C5161AC12EC01D2B45 /* Products */,
+				D46199D11EEBFBCE18448DCB53271CB1 /* Products */,
 				CE4DACEED411968B9DA9A622AA1C892C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E742BF73544E6D68C30A06EC4F0CFDB /* Extensions */ = {
+		82437D8115BA802819D12F9B28EA17C1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				400A8546841B3941A619D3D92A6E4381 /* NMXExtensions.h */,
-				D26BF60A80670282B7E7C18B75131328 /* NSDate+NMX.h */,
-				3E6182E0DDEEF643DD8DAE4C8B7F2846 /* NSDate+NMX.m */,
-				F877219B6ECA22161C2C100BD5AA2934 /* NSDictionary+NMX.h */,
-				0601A28C455249381009C3996648290C /* NSDictionary+NMX.m */,
-				AB84FDD731EC6E1E7ABCA36C9FFC98ED /* NSNumber+NMX.h */,
-				12A8990530B20417EF224547724E5A8E /* NSNumber+NMX.m */,
-				6EBA7944E9B837D9B712F6AD6FEF9F43 /* NSString+NMX.h */,
-				3D8328D8C433403A80DE38AE17463C23 /* NSString+NMX.m */,
-			);
-			name = Extensions;
-			path = Development/NMXCore/Extensions;
-			sourceTree = "<group>";
-		};
-		8A7B09D4C47828C5161AC12EC01D2B45 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6885B8949877FDB0714675D991BC8957 /* NMXCore.framework */,
-				90F7DAE90B772122C783946DA5C13D56 /* Pods_ios_objc_foundation_nmxcore_Example.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8F85780458DC19BD3D5CB1E8EDC9F305 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD061686FC00244839F5A02D3C69759C /* Info.plist */,
-				6825C254EF5D05341D3BB30CEF1E3B8C /* NMXCore.modulemap */,
-				33646C96851B6872E21DCBFC93D04466 /* NMXCore.xcconfig */,
-				8397F31AD90DF0BCF091B55887E03179 /* NMXCore-dummy.m */,
-				BEFBEB9EAEC2637EC8E58ECD3E777F26 /* NMXCore-prefix.pch */,
-				DF8460E4942162663CCEBA56CF53B73E /* NMXCore-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/NMXCore";
-			sourceTree = "<group>";
-		};
-		B7E85BD495BAF08A10EB7E17CBD661AE /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				451DF41CE78D0358364DD24A1CBE011D /* NMXCore */,
+				32A72BD948ABBB7D08BF1CB67D288452 /* NMXCore */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -211,19 +93,6 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C7C637E4256AC1E27BA86D113F43C256 /* C-Function Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				BE0B09CDBEC8AF1135FEF2D1837CB08D /* NMXCFunctionHelpers.h */,
-				1397EAE490BF7EAA3DC32329D8EB5671 /* NMXLogging.h */,
-				27BC03A98092199D72D4F86E761BEB03 /* NMXLogging.m */,
-				89D99D92CA5A663B834DF882EDF84BA1 /* NMXNSBundleFileHandling.h */,
-				4FE8740F558B533EB0A95E7A5502BB6F /* NMXNSBundleFileHandling.m */,
-			);
-			name = "C-Function Helpers";
-			path = "Development/NMXCore/C-Function Helpers";
 			sourceTree = "<group>";
 		};
 		CE4DACEED411968B9DA9A622AA1C892C /* Targets Support Files */ = {
@@ -242,72 +111,51 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		D46199D11EEBFBCE18448DCB53271CB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				530BB710AB6F55C742F5B145C3A211B2 /* Pods_ios_objc_foundation_nmxcore_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7792994E28E112A6ABE1043FEC4A4FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8ECDE9740C98BD009F80AF2BA2F40F7 /* NMXCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		94E6F01F9FB9F469420F43A81D9075AB /* Headers */ = {
+		1667859553ADDDA3B7929EEA4827394A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBB827F38DDB0787B2048E695B70838 /* Pods-ios-objc-foundation-nmxcore Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C327B053C589D8F9537B45483A736786 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EE9CE4BAD7A8F4088CBB059C83FEE342 /* NMXCFunctionHelpers.h in Headers */,
-				FF999C7BD7E5E319DFB484911F91D87E /* NMXCore-umbrella.h in Headers */,
-				A2860947417B070B2CD24FD4DF1BE3D4 /* NMXCore.h in Headers */,
-				7A9B9632B83F1780802D05B078EA6255 /* NMXExtensions.h in Headers */,
-				884CA32DF826D41A93BE6C8D823F39A3 /* NMXLocalizationHandler.h in Headers */,
-				51D42E49CFA9D0B980FD5BBFCB2FCC20 /* NMXLogging.h in Headers */,
-				2075E53C41519889E11C865C0F7156C9 /* NMXNSBundleFileHandling.h in Headers */,
-				6C98755120C85ECBD410A5FD0DC125D8 /* NMXUtilities.h in Headers */,
-				85154D7CB44E0BB0B4C6C3DB560929D8 /* NSDate+NMX.h in Headers */,
-				7FA2AA7999CBB86A4192039FDD7D207F /* NSDictionary+NMX.h in Headers */,
-				E930E5D47309EF4B3841F9743127C55D /* NSNumber+NMX.h in Headers */,
-				3415CEEC10516096232A6AAFBD981BD9 /* NSString+NMX.h in Headers */,
+				F254014C14FBCF5CF0F1AF32EB6E055D /* Pods-ios-objc-foundation-nmxcore Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		80065EB6EE460628863795EAC15E5B1C /* Pods-ios-objc-foundation-nmxcore Example */ = {
+		940D3FAA41D76CE3E526C70A50759C0C /* Pods-ios-objc-foundation-nmxcore Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B1321C1B2F0229EAD1823340A5F60B6 /* Build configuration list for PBXNativeTarget "Pods-ios-objc-foundation-nmxcore Example" */;
+			buildConfigurationList = 36D6E7A2896DC2364AB566288F214C1A /* Build configuration list for PBXNativeTarget "Pods-ios-objc-foundation-nmxcore Example" */;
 			buildPhases = (
-				0E85374BEB6A4B1FEC731D6A002E748B /* Sources */,
-				7184F03E7EF4C07AB3B8ABDFEF0380A6 /* Frameworks */,
-				94E6F01F9FB9F469420F43A81D9075AB /* Headers */,
+				2B9E14A02FE1674A770D35AAB3E55FF8 /* Sources */,
+				386B097F4806208BAE45B64DB0AE67D2 /* Frameworks */,
+				1667859553ADDDA3B7929EEA4827394A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FC68C613D523477CD1FE4DC4DD3C9FB8 /* PBXTargetDependency */,
 			);
 			name = "Pods-ios-objc-foundation-nmxcore Example";
 			productName = "Pods-ios-objc-foundation-nmxcore Example";
-			productReference = 90F7DAE90B772122C783946DA5C13D56 /* Pods_ios_objc_foundation_nmxcore_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D315EA2352B21499E8785E0B4D2FD742 /* NMXCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A945225B49098C6A2B1FC7D394F66243 /* Build configuration list for PBXNativeTarget "NMXCore" */;
-			buildPhases = (
-				CA377E47CEFBA657948F000632B98BF6 /* Sources */,
-				F533351EF5A0EAD8058CAC08077F43AE /* Frameworks */,
-				C327B053C589D8F9537B45483A736786 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NMXCore;
-			productName = NMXCore;
-			productReference = 6885B8949877FDB0714675D991BC8957 /* NMXCore.framework */;
+			productReference = 530BB710AB6F55C742F5B145C3A211B2 /* Pods_ios_objc_foundation_nmxcore_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -327,50 +175,25 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8A7B09D4C47828C5161AC12EC01D2B45 /* Products */;
+			productRefGroup = D46199D11EEBFBCE18448DCB53271CB1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D315EA2352B21499E8785E0B4D2FD742 /* NMXCore */,
-				80065EB6EE460628863795EAC15E5B1C /* Pods-ios-objc-foundation-nmxcore Example */,
+				940D3FAA41D76CE3E526C70A50759C0C /* Pods-ios-objc-foundation-nmxcore Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0E85374BEB6A4B1FEC731D6A002E748B /* Sources */ = {
+		2B9E14A02FE1674A770D35AAB3E55FF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE2BC92E9C42FA55EF05E411C3D1BDF /* Pods-ios-objc-foundation-nmxcore Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA377E47CEFBA657948F000632B98BF6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FFD9C041A9B3F96A2A01FF18957E1D68 /* NMXCore-dummy.m in Sources */,
-				75A68C99F2507DF9CFAF5BEE91199439 /* NMXLocalizationHandler.m in Sources */,
-				BE569041DAC055E2ECE169E93EC84283 /* NMXLogging.m in Sources */,
-				0D75344276BEBD714D3BC3760F176808 /* NMXNSBundleFileHandling.m in Sources */,
-				C41A5B192DDC1ED569DC4AB3AF20F4E7 /* NSDate+NMX.m in Sources */,
-				E46BC4C87F6AC45A37DD28FD3AD65BAB /* NSDictionary+NMX.m in Sources */,
-				670D2BEADFEFB3FAF5EE59BB07B2350A /* NSNumber+NMX.m in Sources */,
-				ECE37F036DD403D0944E245458828CEC /* NSString+NMX.m in Sources */,
+				F98670BFB148CC524023E217F71F2453 /* Pods-ios-objc-foundation-nmxcore Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FC68C613D523477CD1FE4DC4DD3C9FB8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NMXCore;
-			target = D315EA2352B21499E8785E0B4D2FD742 /* NMXCore */;
-			targetProxy = 7127CDA65F528E90A6C0702233522273 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
@@ -433,9 +256,9 @@
 			};
 			name = Debug;
 		};
-		6B7BBDC7649F9164ECE00818EDF87A87 /* Debug */ = {
+		46EE99F161BFA8DF95C764F7E559A99F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33646C96851B6872E21DCBFC93D04466 /* NMXCore.xcconfig */;
+			baseConfigurationReference = 1E53AEF0AE3540D24C81534051254115 /* Pods-ios-objc-foundation-nmxcore Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -446,16 +269,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NMXCore/NMXCore-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NMXCore/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ios-objc-foundation-nmxcore Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NMXCore/NMXCore.modulemap";
-				PRODUCT_NAME = NMXCore;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ios-objc-foundation-nmxcore Example/Pods-ios-objc-foundation-nmxcore Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ios_objc_foundation_nmxcore_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -517,69 +343,7 @@
 			};
 			name = Release;
 		};
-		82A3A8F1582D282AFCFE23764722EAFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E53AEF0AE3540D24C81534051254115 /* Pods-ios-objc-foundation-nmxcore Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ios-objc-foundation-nmxcore Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ios-objc-foundation-nmxcore Example/Pods-ios-objc-foundation-nmxcore Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ios_objc_foundation_nmxcore_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		83873129C5E43AC22E51F4D5776C049C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33646C96851B6872E21DCBFC93D04466 /* NMXCore.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NMXCore/NMXCore-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NMXCore/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NMXCore/NMXCore.modulemap";
-				PRODUCT_NAME = NMXCore;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D4F89D4277376880AE5633C8B1E983EB /* Release */ = {
+		76BCA6EFAB027DC7D874A157D5B8DB42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C8428C10FDA4CD88E06FECDE6E2C2F2 /* Pods-ios-objc-foundation-nmxcore Example.release.xcconfig */;
 			buildSettings = {
@@ -624,20 +388,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B1321C1B2F0229EAD1823340A5F60B6 /* Build configuration list for PBXNativeTarget "Pods-ios-objc-foundation-nmxcore Example" */ = {
+		36D6E7A2896DC2364AB566288F214C1A /* Build configuration list for PBXNativeTarget "Pods-ios-objc-foundation-nmxcore Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82A3A8F1582D282AFCFE23764722EAFF /* Debug */,
-				D4F89D4277376880AE5633C8B1E983EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A945225B49098C6A2B1FC7D394F66243 /* Build configuration list for PBXNativeTarget "NMXCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B7BBDC7649F9164ECE00818EDF87A87 /* Debug */,
-				83873129C5E43AC22E51F4D5776C049C /* Release */,
+				46EE99F161BFA8DF95C764F7E559A99F /* Debug */,
+				76BCA6EFAB027DC7D874A157D5B8DB42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

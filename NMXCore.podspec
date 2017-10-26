@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name              = "NMXCore"
-  s.version           = "0.2.1"
+  s.version           = "0.3.0"
   s.summary           = "Namics Core Library used for iOS in Objective-C. Shall take care of reusable code. "
   s.documentation_url = 'https://namics.github.io/ios-objc-foundation-nmxcore/'
   s.homepage          = "https://github.com/namics/ios-objc-foundation-nmxcore"
@@ -19,7 +19,9 @@ Pod::Spec.new do |s|
   s.platform              = :ios, '9.0'
   s.license               = { :type => 'MIT' }
 
-  s.source_files 		= 'Development/NMXCore/**/*{a,h,m}'
-  s.public_header_files = 'Development/NMXCore/**/*h'
+  s.ios.vendored_frameworks = 'Development/NMXCore.framework'
+  
+#  s.source_files 		= 'Development/NMXCore/**/*{a,h,m}'
+#  s.public_header_files = 'Development/NMXCore/**/*h'
   s.requires_arc		= true
 end

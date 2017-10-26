@@ -8,14 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2164DEC41F98FB290081CFDD /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
-		2164DECB1F98FB290081CFDD /* NMXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEBD1F98FB290081CFDD /* NMXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2164DF191F98FBBD0081CFDD /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE61F98FB5A0081CFDD /* NMXLogging.m */; };
-		2164DF1A1F98FBBD0081CFDD /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
-		2164DF1B1F98FBBD0081CFDD /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED71F98FB590081CFDD /* NSDate+NMX.m */; };
-		2164DF1C1F98FBBD0081CFDD /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED91F98FB590081CFDD /* NSDictionary+NMX.m */; };
-		2164DF1D1F98FBBD0081CFDD /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDB1F98FB590081CFDD /* NSNumber+NMX.m */; };
-		2164DF1E1F98FBBD0081CFDD /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDD1F98FB590081CFDD /* NSString+NMX.m */; };
-		2164DF1F1F98FBBD0081CFDD /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE01F98FB590081CFDD /* NMXLocalizationHandler.m */; };
 		2164DF201F98FBBD0081CFDD /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE61F98FB5A0081CFDD /* NMXLogging.m */; };
 		2164DF211F98FBBD0081CFDD /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
 		2164DF221F98FBBD0081CFDD /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED71F98FB590081CFDD /* NSDate+NMX.m */; };
@@ -50,6 +42,32 @@
 		2164DF3F1F98FD130081CFDD /* default_de.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF161F98FB980081CFDD /* default_de.plist */; };
 		2164DF401F98FD130081CFDD /* default_en-GB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF171F98FB980081CFDD /* default_en-GB.plist */; };
 		2164DF411F98FD130081CFDD /* default_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2164DF181F98FB980081CFDD /* default_en.plist */; };
+		21D32F6F1FA1C03700479607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F6E1FA1C03700479607 /* AppDelegate.m */; };
+		21D32F721FA1C03700479607 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F711FA1C03700479607 /* ViewController.m */; };
+		21D32F751FA1C03700479607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D32F731FA1C03700479607 /* Main.storyboard */; };
+		21D32F771FA1C03700479607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D32F761FA1C03700479607 /* Assets.xcassets */; };
+		21D32F7A1FA1C03700479607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D32F781FA1C03700479607 /* LaunchScreen.storyboard */; };
+		21D32F7D1FA1C03700479607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32F7C1FA1C03700479607 /* main.m */; };
+		21D32F9A1FA1CAA000479607 /* NMXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEBD1F98FB290081CFDD /* NMXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32F9B1FA1CAA000479607 /* NMXCFunctionHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE41F98FB5A0081CFDD /* NMXCFunctionHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32F9C1FA1CAA000479607 /* NMXLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE51F98FB5A0081CFDD /* NMXLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32F9D1FA1CAA000479607 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE61F98FB5A0081CFDD /* NMXLogging.m */; };
+		21D32F9E1FA1CAA000479607 /* NMXNSBundleFileHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE71F98FB5A0081CFDD /* NMXNSBundleFileHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32F9F1FA1CAA000479607 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
+		21D32FA01FA1CAA000479607 /* NMXExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DED51F98FB590081CFDD /* NMXExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32FA11FA1CAA000479607 /* NSDate+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DED61F98FB590081CFDD /* NSDate+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32FA21FA1CAA000479607 /* NSDate+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED71F98FB590081CFDD /* NSDate+NMX.m */; };
+		21D32FA31FA1CAA000479607 /* NSDictionary+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DED81F98FB590081CFDD /* NSDictionary+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32FA41FA1CAA000479607 /* NSDictionary+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DED91F98FB590081CFDD /* NSDictionary+NMX.m */; };
+		21D32FA51FA1CAA000479607 /* NSNumber+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEDA1F98FB590081CFDD /* NSNumber+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32FA61FA1CAA000479607 /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDB1F98FB590081CFDD /* NSNumber+NMX.m */; };
+		21D32FA71FA1CAA000479607 /* NSString+NMX.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEDC1F98FB590081CFDD /* NSString+NMX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32FA81FA1CAA000479607 /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDD1F98FB590081CFDD /* NSString+NMX.m */; };
+		21D32FA91FA1CAA000479607 /* NMXLocalizationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEDF1F98FB590081CFDD /* NMXLocalizationHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32FAA1FA1CAA000479607 /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE01F98FB590081CFDD /* NMXLocalizationHandler.m */; };
+		21D32FAB1FA1CAA000479607 /* NMXUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2164DEE11F98FB590081CFDD /* NMXUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D32FAC1FA1CE2100479607 /* NMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; };
+		21D32FAD1FA1CE2100479607 /* NMXCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2164DEBA1F98FB290081CFDD /* NMXCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +78,28 @@
 			remoteGlobalIDString = 2164DEB91F98FB290081CFDD;
 			remoteInfo = NMXCore;
 		};
+		21D32FAE1FA1CE2100479607 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2164DEB11F98FB290081CFDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2164DEB91F98FB290081CFDD;
+			remoteInfo = NMXCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21D32F8C1FA1C92300479607 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				21D32FAD1FA1CE2100479607 /* NMXCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2164DEBA1F98FB290081CFDD /* NMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +163,16 @@
 		2164DF161F98FB980081CFDD /* default_de.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_de.plist; sourceTree = "<group>"; };
 		2164DF171F98FB980081CFDD /* default_en-GB.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "default_en-GB.plist"; sourceTree = "<group>"; };
 		2164DF181F98FB980081CFDD /* default_en.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_en.plist; sourceTree = "<group>"; };
+		21D32F6B1FA1C03700479607 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D32F6D1FA1C03700479607 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21D32F6E1FA1C03700479607 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21D32F701FA1C03700479607 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		21D32F711FA1C03700479607 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		21D32F741FA1C03700479607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21D32F761FA1C03700479607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21D32F791FA1C03700479607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21D32F7B1FA1C03700479607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D32F7C1FA1C03700479607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +191,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21D32F681FA1C03700479607 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D32FAC1FA1CE2100479607 /* NMXCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -150,7 +207,9 @@
 			children = (
 				2164DEBC1F98FB290081CFDD /* NMXCore */,
 				2164DEC71F98FB290081CFDD /* NMXCoreTests */,
+				21D32F6C1FA1C03700479607 /* Demo */,
 				2164DEBB1F98FB290081CFDD /* Products */,
+				21D32F861FA1C24500479607 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +218,7 @@
 			children = (
 				2164DEBA1F98FB290081CFDD /* NMXCore.framework */,
 				2164DEC31F98FB290081CFDD /* NMXCoreTests.xctest */,
+				21D32F6B1FA1C03700479607 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -319,6 +379,29 @@
 			path = "Test Files";
 			sourceTree = "<group>";
 		};
+		21D32F6C1FA1C03700479607 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				21D32F6D1FA1C03700479607 /* AppDelegate.h */,
+				21D32F6E1FA1C03700479607 /* AppDelegate.m */,
+				21D32F701FA1C03700479607 /* ViewController.h */,
+				21D32F711FA1C03700479607 /* ViewController.m */,
+				21D32F731FA1C03700479607 /* Main.storyboard */,
+				21D32F761FA1C03700479607 /* Assets.xcassets */,
+				21D32F781FA1C03700479607 /* LaunchScreen.storyboard */,
+				21D32F7B1FA1C03700479607 /* Info.plist */,
+				21D32F7C1FA1C03700479607 /* main.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		21D32F861FA1C24500479607 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -326,7 +409,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2164DECB1F98FB290081CFDD /* NMXCore.h in Headers */,
+				21D32F9B1FA1CAA000479607 /* NMXCFunctionHelpers.h in Headers */,
+				21D32FA11FA1CAA000479607 /* NSDate+NMX.h in Headers */,
+				21D32FA91FA1CAA000479607 /* NMXLocalizationHandler.h in Headers */,
+				21D32FA01FA1CAA000479607 /* NMXExtensions.h in Headers */,
+				21D32F9C1FA1CAA000479607 /* NMXLogging.h in Headers */,
+				21D32FA51FA1CAA000479607 /* NSNumber+NMX.h in Headers */,
+				21D32FAB1FA1CAA000479607 /* NMXUtilities.h in Headers */,
+				21D32F9E1FA1CAA000479607 /* NMXNSBundleFileHandling.h in Headers */,
+				21D32FA31FA1CAA000479607 /* NSDictionary+NMX.h in Headers */,
+				21D32F9A1FA1CAA000479607 /* NMXCore.h in Headers */,
+				21D32FA71FA1CAA000479607 /* NSString+NMX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,12 +462,32 @@
 			productReference = 2164DEC31F98FB290081CFDD /* NMXCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		21D32F6A1FA1C03700479607 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21D32F7E1FA1C03700479607 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				21D32F671FA1C03700479607 /* Sources */,
+				21D32F681FA1C03700479607 /* Frameworks */,
+				21D32F691FA1C03700479607 /* Resources */,
+				21D32F8C1FA1C92300479607 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21D32FAF1FA1CE2100479607 /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 21D32F6B1FA1C03700479607 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2164DEB11F98FB290081CFDD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Namics AG";
 				TargetAttributes = {
@@ -383,6 +496,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					2164DEC21F98FB290081CFDD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					21D32F6A1FA1C03700479607 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -399,6 +516,7 @@
 				"en-GB",
 				"es-MX",
 				fr,
+				Base,
 			);
 			mainGroup = 2164DEB01F98FB290081CFDD;
 			productRefGroup = 2164DEBB1F98FB290081CFDD /* Products */;
@@ -407,6 +525,7 @@
 			targets = (
 				2164DEB91F98FB290081CFDD /* NMXCore */,
 				2164DEC21F98FB290081CFDD /* NMXCoreTests */,
+				21D32F6A1FA1C03700479607 /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -439,6 +558,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21D32F691FA1C03700479607 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D32F7A1FA1C03700479607 /* LaunchScreen.storyboard in Resources */,
+				21D32F771FA1C03700479607 /* Assets.xcassets in Resources */,
+				21D32F751FA1C03700479607 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -446,13 +575,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2164DF191F98FBBD0081CFDD /* NMXLogging.m in Sources */,
-				2164DF1A1F98FBBD0081CFDD /* NMXNSBundleFileHandling.m in Sources */,
-				2164DF1C1F98FBBD0081CFDD /* NSDictionary+NMX.m in Sources */,
-				2164DF1E1F98FBBD0081CFDD /* NSString+NMX.m in Sources */,
-				2164DF1D1F98FBBD0081CFDD /* NSNumber+NMX.m in Sources */,
-				2164DF1F1F98FBBD0081CFDD /* NMXLocalizationHandler.m in Sources */,
-				2164DF1B1F98FBBD0081CFDD /* NSDate+NMX.m in Sources */,
+				21D32F9D1FA1CAA000479607 /* NMXLogging.m in Sources */,
+				21D32F9F1FA1CAA000479607 /* NMXNSBundleFileHandling.m in Sources */,
+				21D32FA41FA1CAA000479607 /* NSDictionary+NMX.m in Sources */,
+				21D32FA81FA1CAA000479607 /* NSString+NMX.m in Sources */,
+				21D32FA61FA1CAA000479607 /* NSNumber+NMX.m in Sources */,
+				21D32FAA1FA1CAA000479607 /* NMXLocalizationHandler.m in Sources */,
+				21D32FA21FA1CAA000479607 /* NSDate+NMX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +613,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		21D32F671FA1C03700479607 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D32F721FA1C03700479607 /* ViewController.m in Sources */,
+				21D32F7D1FA1C03700479607 /* main.m in Sources */,
+				21D32F6F1FA1C03700479607 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -491,6 +630,11 @@
 			isa = PBXTargetDependency;
 			target = 2164DEB91F98FB290081CFDD /* NMXCore */;
 			targetProxy = 2164DEC51F98FB290081CFDD /* PBXContainerItemProxy */;
+		};
+		21D32FAF1FA1CE2100479607 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2164DEB91F98FB290081CFDD /* NMXCore */;
+			targetProxy = 21D32FAE1FA1CE2100479607 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -506,6 +650,22 @@
 				2164DF0D1F98FB980081CFDD /* fr */,
 			);
 			name = File.strings;
+			sourceTree = "<group>";
+		};
+		21D32F731FA1C03700479607 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21D32F741FA1C03700479607 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21D32F781FA1C03700479607 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21D32F791FA1C03700479607 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -638,7 +798,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namics.NMXCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -660,7 +820,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namics.NMXCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -695,6 +855,42 @@
 			};
 			name = Release;
 		};
+		21D32F7F1FA1C03700479607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.namics.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21D32F801FA1C03700479607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.namics.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -721,6 +917,15 @@
 			buildConfigurations = (
 				2164DED21F98FB290081CFDD /* Debug */,
 				2164DED31F98FB290081CFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21D32F7E1FA1C03700479607 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21D32F7F1FA1C03700479607 /* Debug */,
+				21D32F801FA1C03700479607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

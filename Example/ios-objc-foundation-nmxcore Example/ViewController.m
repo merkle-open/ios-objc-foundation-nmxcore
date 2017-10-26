@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "NMXCore.h"
+#import <NMXCore/NMXCore.h>
 
 @interface ViewController ()
 

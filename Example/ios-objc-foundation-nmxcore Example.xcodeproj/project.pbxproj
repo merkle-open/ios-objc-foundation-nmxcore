@@ -215,7 +215,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios-objc-foundation-nmxcore Example/Pods-ios-objc-foundation-nmxcore Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/NMXCore/NMXCore.framework",
+				"${PODS_ROOT}/../../Development/NMXCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
