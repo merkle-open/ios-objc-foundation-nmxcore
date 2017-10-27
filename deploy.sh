@@ -32,6 +32,7 @@ podLibLint2=$(pod lib lint ${podspecDylibFile} 2>&1 | tail -1)
 podSpecLint1=$(pod spec lint ${podspecFile} 2>&1 | tail -2)
 podSpecLint2=$(pod spec lint ${podspecDylibFile} 2>&1 | tail -2)
 
+
 if [ "$version" == "" ]
 then
 version=$currentPodVersionCommand1
@@ -162,15 +163,15 @@ printf ""
 
 
 printf "## Commit and Push following files to git before performing push to cocoapods\n\n"
-printf "${modifiedFiles}"
+printf "${modifiedFiles}\n\n"
 
 while true; do
-read -p "Do you wish to automatically push the changes to git to update the pods? (y/n) " yn
-case $yn in
-[Yy]* ) break;;
-[Nn]* ) exit;;
-* ) echo "Please answer yes (y) or no (n)";;
-esac
+    read -p "Do you wish to automatically push the changes to git to update the pods? (y/n) " yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes (y) or no (n)";;
+    esac
 done
 
 printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\\n"
@@ -191,17 +192,18 @@ printf "## Pod Specification Validation\n"
 if [ "${podSpecLint1#*$libSucceeded}" == "$podSpecLint1" ]
 then
     printf "## Spec Lint failed. Perform\n\tpod spec lint ${podspecFile} --verbose\nfor more information"
+    exit
 else
     printf "${podSpecLint1}"
 fi
 printf ""
 if [ "${podSpecLint2#*$libSucceeded}" == "$podSpecLint2" ]
 then
-printf "## Spec Lint failed. Perform\n\tpod spec lint ${podspecDylibFile} --verbose\nfor more information"
+    printf "## Spec Lint failed. Perform\n\tpod spec lint ${podspecDylibFile} --verbose\nfor more information"
+    exit
 else
-printf "${podSpecLint2}"
+    printf "${podSpecLint2}"
 fi
-printf ""
 printf ""
 
 printf "## ${podspecFile} is being pushed\n"
