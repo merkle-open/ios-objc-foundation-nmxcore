@@ -103,7 +103,7 @@
             <h1 id='ios-objc-foundation-nmxcore' class='heading'>ios-objc-foundation-nmxcore</h1>
 
 <p>Current Version of the NMXCore Library
-0.2.1</p>
+0.3.1</p>
 
 <p>You can find the latest documentation under
 <a href="http://namics.github.io/ios-objc-foundation-nmxcore/">http://namics.github.io/ios-objc-foundation-nmxcore/</a></p>
@@ -140,6 +140,9 @@ pod 'NMXCore', '0.1.0'
 
 end
 </code></pre>
+<h3 id='import-the-nmxheader-header-file-in-your-project' class='heading'>Import the NMXHeader-Header file in your Project:</h3>
+
+<p><code>#include &quot;NMXCoreStatic.h&quot;</code></p>
 <h1 id='documentation' class='heading'>Documentation</h1>
 <h2 id='building-documentation' class='heading'>Building Documentation</h2>
 
@@ -171,7 +174,7 @@ or
 <h2 id='register-add-owners-for-the-cocoapods-repo' class='heading'>Register/Add Owners for the Cocoapods Repo</h2>
 
 <p><a href="https://guides.cocoapods.org/making/getting-setup-with-trunk.html">https://guides.cocoapods.org/making/getting-setup-with-trunk.html</a></p>
-<pre class="highlight plaintext"><code>pod trunk register vorname.nachname@namics.com 'Vorname Nachname' --description='Namics MacBook'
+<pre class="highlight plaintext"><code>pod trunk register tobias.baube@namics.com 'Tobias Baube' --description='Namics MacBook'
 </code></pre>
 
 <p>Add Owners so they can also publish:
@@ -187,14 +190,18 @@ It might require administrator rights for creating code documentation automatica
 
 <ol>
 <li><p>Do your changes:
-Open /Development/NMXLibrary.xcodeproj</p></li>
+Open /Development/NMXCore.xcodeproj</p></li>
+<li><p>Select The dynamic Framework target <code>NMXCore</code> and Archive the Library</p></li>
 <li><p>Go to the main folder from Terminal, where &lsquo;NMXCore.podspec&rsquo; is located, e.g.:</p>
 <pre class="highlight plaintext"><code>cd ~/Documents/ios-objc-foundation-nmxcore/
 </code></pre></li>
 <li><p>Validate the pod lib file in terminal:
-<code>pod lib lint</code></p></li>
-<li><p>Validate the specification in terminal:
-<code>pod spec lint</code></p></li>
+<code>pod lib lint NMXCore.podspec</code>
+<code>pod lib lint NMXCoreDylib.podspec</code></p></li>
+<li><p>Validate the specification in terminal:</p>
+<pre class="highlight plaintext"><code>pod spec lint NMXCore.podspec
+pod spec lint NMXCoreDylib.podspec
+</code></pre></li>
 <li><p>Commit and push your changes in git, note down the tag id (important: the v-Prefix for tags!)</p>
 <pre class="highlight plaintext"><code>git add -A &amp;&amp; git commit -m "Release 0.1.0"
 git tag 'v0.1.0'
