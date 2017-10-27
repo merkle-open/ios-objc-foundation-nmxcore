@@ -187,8 +187,6 @@ git tag "v${version}"
 git push --tags
 git push
 
-exit
-
 printf "## Pod Specification Validation\n"
 if [ "${podSpecLint1#*$libSucceeded}" == "$podSpecLint1" ]
 then
@@ -213,3 +211,4 @@ printf "\n"
 printf "## ${podspecDylibFile} is being pushed\n"
 ${podPushCommand2}
 printf "\n"
+exit
