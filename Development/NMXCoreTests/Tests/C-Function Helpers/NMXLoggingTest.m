@@ -201,8 +201,13 @@ static int stderrSave;
     NMXLogWithPrefix(level, nil, inputString);
     isRecorded = [self recordLogLogged:expectedString];
     [self closeLogging];
+// For static inputs we will run synchronously with the app => can determine the current DEBUG/RELEASE state and also use its related preprocessor macros
+#ifdef NMXCoreStatic
     XCTAssertFalse(isRecorded, @"🔴🔴 No output string expected for release only builds, as we are on debug currently");
-
+#else
+    XCTAssertTrue(isRecorded, @"🔴🔴 In dynamic Library we are always archived => RELEASE, thus we cannot make use of this feature directly here and should always log our output.");
+#endif
+    
     level = all;
     NSString *prefix = @"CUSTOM_PREFIX";
     expectedString = [NSString stringWithFormat:@"%@%@",prefix, inputString];

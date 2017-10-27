@@ -1070,6 +1070,10 @@
 				CURRENT_PROJECT_VERSION = "";
 				DEVELOPMENT_TEAM = B2L5F7GSL7;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NMXCoreStatic=1",
+					"${inherited}",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "${inherited} @executable_path/Frameworks @load_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1092,7 +1096,11 @@
 				CURRENT_PROJECT_VERSION = "";
 				DEVELOPMENT_TEAM = B2L5F7GSL7;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NMXCoreStatic=1",
+					"${inherited}",
+					"RELEASE=1",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "${inherited} @executable_path/Frameworks @load_path/Frameworks";
 				OTHER_LDFLAGS = (

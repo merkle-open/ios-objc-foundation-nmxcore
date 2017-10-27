@@ -73,25 +73,32 @@ void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable 
         }
         
         [s insertString:_logPrefix atIndex:0];
+
+        // If we got a static library, we will know the current preprocessor vars.
+        // If we deployed it as Dynamic Framework, we will always have release => The Wrapper Function would have to handle this
+        #ifdef NMXCoreStatic
+            #ifdef DEBUG
+                if (   _logLevel == none
+                    || _logLevel == debug)
+                {
+                    NSLog(@"%@",s);
+                }
         
-        #if DEBUG
-        if (   _logLevel == none
-            || _logLevel == debug)
-        {
+            // Too bad this destroys our nice test coverage percentage, as this is not defined for testing target :-(
+            #elif RELEASE
+                if (   _logLevel == release)
+                {
+                    NSLog(@"%@",s);
+                }
+            #endif
+        
+            if (_logLevel == all)
+            {
+                NSLog(@"%@",s);
+            }
+        #else
             NSLog(@"%@",s);
-        }
-        // Too bad this destroys our nice test coverage percentage, as this is not defined for testing target :-(
-        #elif RELEASE
-        if (   _logLevel == release)
-        {
-            NSLog(@"%@",s);
-        }
         #endif
-        
-        if (_logLevel == all)
-        {
-            NSLog(@"%@",s);
-        }
     }
 }
 
