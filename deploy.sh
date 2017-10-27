@@ -68,8 +68,8 @@ if [ "$lineNumber" == "" ]
 then
 printf "\n\nCurrent 'Version' in ${readmeFile} could not be updated. Referenced header line:\n\t${readmeVersionHeader}\nwas not found.\nIf you want the current version:\n\t${version}\nbeing noted down, make sure to either add an appropriate abstract containing\n\t'${readmeVersionHeader}'\nor modify the variable\n\t'\$readmeVersionHeader' in 'deploy.sh'\n\n"
 else
-readmeVersionLine=$((lineNumber+1))
-sed -i "" "${readmeVersionLine}s/.*/${version}/" ${readmeFile}
+    readmeVersionLine=$((lineNumber+1))
+    sed -i "" "${readmeVersionLine}s/.*/${version}/" ${readmeFile}
 fi
 fi
 
@@ -126,7 +126,7 @@ fi
 printf "\n"
 
 
-### STATIC Podspec ###
+### Podspec Updates ###
 ## In case one had a specific commit id assigned to podspec, we will update it, too.
 # Get last commit id
 lastCommitID=$(git log --format="%H" -n 1)
@@ -174,7 +174,7 @@ while true; do
     esac
 done
 
-printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\\n"
+printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\n"
 jazzy
 printf "\n"
 
@@ -213,4 +213,3 @@ printf "\n"
 printf "## ${podspecDylibFile} is being pushed\n"
 ${podPushCommand2}
 printf "\n"
-exit
