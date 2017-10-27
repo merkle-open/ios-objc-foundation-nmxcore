@@ -41,6 +41,8 @@ pod 'NMXCore', '0.1.0'
 end
 ```
 
+### Import the NMXHeader-Header file in your Project:
+`#include "NMXCoreStatic.h"`
 
 
 # Documentation
@@ -71,7 +73,7 @@ or
 ## Register/Add Owners for the Cocoapods Repo
 https://guides.cocoapods.org/making/getting-setup-with-trunk.html
 ```
-pod trunk register vorname.nachname@namics.com 'Vorname Nachname' --description='Namics MacBook'
+pod trunk register tobias.baube@namics.com 'Tobias Baube' --description='Namics MacBook'
 ```
 
 Add Owners so they can also publish:

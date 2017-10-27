@@ -4,25 +4,37 @@ readmeFile="README.md"
 podspecFilename="NMXCore"
 readmePodPushHeader="Update cocoapod spec"
 readmeVersionHeader="Current Version of the NMXCore Library"
-podPushCommand="pod trunk push ${podspecFilename}.podspec --verbose"
 version=$1
+
 
 ## constants & commands
 podspecFile="${podspecFilename}.podspec"
+podspecDylibFile="${podspecFilename}Dylib.podspec"
+podPushCommand1="pod trunk push ${podspecFile} --verbose"
+podPushCommand2="pod trunk push ${podspecDylibFile} --verbose"
+
 modifiedFiles=$(git diff --name-only)
 # Escape special characters for sed command
-podPushCommandE=$(printf '%q' "${podPushCommand}")
-podPushCommandE=$(echo ${podPushCommandE})
-currentPodVersionCommand=$(grep ".version" ${podspecFile} -n | sed 's/.*"\(.*\)".*/\1/')
+podPushCommandE1=$(printf '%q' "${podPushCommand1}")
+podPushCommandE1=$(echo ${podPushCommandE1})
+currentPodVersionCommand1=$(grep "s.version " ${podspecFile} -n | sed 's/.*"\(.*\)".*/\1/')
 currentPodCommitIDCommand=$(grep ":commit" ${podspecFile} -n | sed 's/.*"\(.*\)".*/\1/')
+
+podPushCommandE1=$(printf '%q' "${podPushCommand1}")
+podPushCommandE1=$(echo ${podPushCommandE1})
+
+currentPodVersionCommand2=$(grep "s.version " ${podspecDylibFile} -n | sed 's/.*"\(.*\)".*/\1/')
+podPushCommandE2=$(printf '%q' "${podPushCommand2}")
+podPushCommandE2=$(echo ${podPushCommandE2})
 
 if [ "$version" == "" ]
 then
-version=$currentPodVersionCommand
+version=$currentPodVersionCommand1
 fi
 
+
 ## User output
-printf "## Starting Deployment: ${podspecFile} ##\n"
+printf "## Starting Deployment: ${podspecFile} and ${podspecDylibFile}##\n"
 printf "## Validating Filechanges:\n"
 if [ "$modifiedFiles" == "$podspecFile" ]
 then
@@ -38,10 +50,10 @@ then
 lineNumber=$(grep "${readmePodPushHeader}" ${readmeFile} -n -i | sed 's/:.*//')
 if [ "$lineNumber" == "" ]
 then
-printf "\n\n'pod repo push command' in ${readmeFile} could not be updated. Referenced header line:\n\t${readmePodPushHeader}\nwas not found.\nIf you want the following line:\n\t$(printf '%b' "${podPushCommand}")\nbeing noted down, make sure to either add an appropriate abstract containing\n\t'${readmePodPushHeader}'\nor modify the variable\n\t'\$readmePodPushHeader' in 'deploy.sh'\n\n"
+printf "\n\n'pod repo push command' in ${readmeFile} could not be updated. Referenced header line:\n\t${readmePodPushHeader}\nwas not found.\nIf you want the following line:\n\t$(printf '%b' "${podPushCommand1}")\nbeing noted down, make sure to either add an appropriate abstract containing\n\t'${readmePodPushHeader}'\nor modify the variable\n\t'\$readmePodPushHeader' in 'deploy.sh'\n\n"
 else
 readmePodInstruction=$((lineNumber+1))
-sed -i "" "${readmePodInstruction}s/.*/${podPushCommandE}/" ${readmeFile}
+sed -i "" "${readmePodInstruction}s/.*/${podPushCommandE1}/" ${readmeFile}
 fi
 
 # Update current version in README
@@ -55,15 +67,83 @@ sed -i "" "${readmeVersionLine}s/.*/${version}/" ${readmeFile}
 fi
 fi
 
+printf "## Preparing version ${version}\n...\n\n"
+
+
+### Validate the libraries ###
+printf "Running Tests for Static Library\n"
+testStatic=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTestsStatic -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test | tail -2)
+testsSucceeded="Test Suite 'All tests' passed "
+if [ "${testStatic#*$testsSucceeded}" == "$testStatic" ]
+then
+    printf "Deployment failed, because tests don't pass\n"
+    echo "${testStatic}"
+    exit
+else
+    printf "Static tests passed\n"
+fi
+printf "\n"
+
+printf "Running Tests for Dynamic Library\n"
+testDylib=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test | tail -2)
+testsSucceeded="Test Suite 'All tests' passed "
+if [ "${testDylib#*$testsSucceeded}" == "$testDylib" ]
+then
+    printf "Deployment failed, because tests don't pass\n"
+    exit
+else
+    printf "Dylib tests passed\n"
+fi
+printf "\n"
+
+### Archiving Dynamic Lib ###
+printf "Preparing Archive of Dynamic Library"
+archiveCommand=$(xcodebuild -project ./Development/NMXCore.xcodeproj -scheme NMXCore archive 2>&1 | tail -2)
+archiveSucceeded="** ARCHIVE SUCCEEDED **"
+if [ "${archiveCommand#*$archiveSucceeded}" == "$archiveCommand" ]
+then
+printf "Archive Process failed\n"
+exit
+else
+    # Ensure we successfully exported the latest Framework file!
+    frameWorkFile="./Development/NMXCore.framework/Info.plist"
+    dateComparison=$(($(date +%s) - $(stat -t %s -f %m -- "$frameWorkFile")))
+    # Creation Date should not be older than "0" seconds
+    if [ "${dateComparison}" != "0" ]
+    then
+        printf "Archive Process finished, but Framework creation Date was too old\n"
+        exit
+    else
+        printf "Archive Process finished\n"
+    fi
+fi
+printf "\n"
+exit
+
+
+### STATIC Podspec ###
 ## In case one had a specific commit id assigned to podspec, we will update it, too.
 # Get last commit id
 lastCommitID=$(git log --format="%H" -n 1)
-printf "## Updating Commit ID in ${podspecFile} to last id: ${lastCommitID}\n\n"
 # update commit id of .podspec
-sed -i "" "s/${currentPodCommitIDCommand}/${lastCommitID}/g"  ${podspecFile}
+printf "## Updating Commit ID in ${podspecFile} to last id: ${lastCommitID}\n\n"
+sed -i "" "s/${currentPodCommitIDCommand}/${lastCommitID}/g" ${podspecFile}
+printf "## Updating Commit ID in ${podspecDylibFile} to last id: ${lastCommitID}\n\n"
+sed -i "" "s/${currentPodCommitIDCommand}/${lastCommitID}/g" ${podspecFile}
 
-printf "## Pod is being pushed\n"
-${podPushCommand}
+# version of .podspec
+printf "## Updating Version in ${podspecFile} to new version id: ${version}\n\n"
+sed -i "" "s/${currentPodVersionCommand1}/${version}/g" ${podspecFile}
+printf "## Updating Version in ${podspecDylibFile} to new version id: ${version}\n\n"
+sed -i "" "s/${currentPodVersionCommand2}/${version}/g" ${podspecDylibFile}
+
+
+printf "## ${podspecFile} is being pushed\n"
+${podPushCommand1}
+printf "\n"
+
+printf "## ${podspecDylibFile} is being pushed\n"
+${podPushCommand2}
 printf "\n"
 
 printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\\n"

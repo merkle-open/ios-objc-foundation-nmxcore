@@ -18,8 +18,6 @@
   "license": {
     "type": "MIT"
   },
-  "ios": {
-    "vendored_frameworks": "Development/NMXCore.framework"
-  },
+  "source_files": "Development/NMXCore/**/*.{h,m}",
   "requires_arc": true
 }

@@ -18,7 +18,7 @@
 #import "NSDictionary+NMX.h"
 #import "NSNumber+NMX.h"
 #import "NSString+NMX.h"
-#import "NMXCore.h"
+#import "NMXCoreStatic.h"
 #import "NMXLocalizationHandler.h"
 #import "NMXUtilities.h"
 
