@@ -27,6 +27,11 @@ currentPodVersionCommand2=$(grep "s.version " ${podspecDylibFile} -n | sed 's/.*
 podPushCommandE2=$(printf '%q' "${podPushCommand2}")
 podPushCommandE2=$(echo ${podPushCommandE2})
 
+podLibLint1=$(pod lib lint ${podspecFile} 2>&1 | tail -1)
+podLibLint2=$(pod lib lint ${podspecDylibFile} 2>&1 | tail -1)
+podSpecLint1=$(pod spec lint ${podspecFile} 2>&1 | tail -2)
+podSpecLint2=$(pod spec lint ${podspecDylibFile} 2>&1 | tail -2)
+
 if [ "$version" == "" ]
 then
 version=$currentPodVersionCommand1
@@ -72,7 +77,7 @@ printf "## Preparing version ${version}\n...\n\n"
 
 ### Validate the libraries ###
 printf "Running Tests for Static Library\n"
-testStatic=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTestsStatic -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test | tail -2)
+testStatic=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTestsStatic -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test 2>&1 | tail -2)
 testsSucceeded="Test Suite 'All tests' passed "
 if [ "${testStatic#*$testsSucceeded}" == "$testStatic" ]
 then
@@ -85,7 +90,7 @@ fi
 printf "\n"
 
 printf "Running Tests for Dynamic Library\n"
-testDylib=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test | tail -2)
+testDylib=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test 2>&1 | tail -2)
 testsSucceeded="Test Suite 'All tests' passed "
 if [ "${testDylib#*$testsSucceeded}" == "$testDylib" ]
 then
@@ -97,7 +102,7 @@ fi
 printf "\n"
 
 ### Archiving Dynamic Lib ###
-printf "Preparing Archive of Dynamic Library"
+printf "Preparing Archive of Dynamic Library\n"
 archiveCommand=$(xcodebuild -project ./Development/NMXCore.xcodeproj -scheme NMXCore archive 2>&1 | tail -2)
 archiveSucceeded="** ARCHIVE SUCCEEDED **"
 if [ "${archiveCommand#*$archiveSucceeded}" == "$archiveCommand" ]
@@ -118,7 +123,6 @@ else
     fi
 fi
 printf "\n"
-exit
 
 
 ### STATIC Podspec ###
@@ -137,20 +141,27 @@ sed -i "" "s/${currentPodVersionCommand1}/${version}/g" ${podspecFile}
 printf "## Updating Version in ${podspecDylibFile} to new version id: ${version}\n\n"
 sed -i "" "s/${currentPodVersionCommand2}/${version}/g" ${podspecDylibFile}
 
+# Pod lib Library
+printf "## Pod Library Validation\n"
+libSucceeded="passed validation."
+if [ "${podLibLint1#*$libSucceeded}" == "$podLibLint1" ]
+then
+    printf "## Lib Lint failed. Perform\n\tpod lib lint ${podspecFile} --verbose\nfor more information"
+else
+    printf "${podLibLint1}"
+fi
+printf ""
 
-printf "## ${podspecFile} is being pushed\n"
-${podPushCommand1}
-printf "\n"
+if [ "${podLibLint2#*$libSucceeded}" == "$podLibLint2" ]
+then
+    printf "## Lib Lint failed. Perform\n\tpod lib lint ${podspecDylibFile} --verbose\nfor more information"
+else
+    printf "${podLibLint1}"
+fi
+printf ""
 
-printf "## ${podspecDylibFile} is being pushed\n"
-${podPushCommand2}
-printf "\n"
 
-printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\\n"
-jazzy
-printf "\n"
-
-printf "## Commit and Push following files to git\n\n"
+printf "## Commit and Push following files to git before performing push to cocoapods\n\n"
 printf "${modifiedFiles}"
 
 while true; do
@@ -162,6 +173,10 @@ case $yn in
 esac
 done
 
+printf "## Generating Documentation with Jazzy (might require sudo):\nRequires SourceKitten, make sure it is installed: https://github.com/jpsim/SourceKitten\n> brew install sourcekitten>n [sudo] jazzy\\n"
+jazzy
+printf "\n"
+
 #In case one would also like to add new files - for docu it might be helpful...? If so, change $modifiedFiles command
 #git add -A && git commit -m "Your Message"
 
@@ -172,3 +187,29 @@ git tag "v${version}"
 git push --tags
 git push
 
+exit
+
+printf "## Pod Specification Validation\n"
+if [ "${podSpecLint1#*$libSucceeded}" == "$podSpecLint1" ]
+then
+    printf "## Spec Lint failed. Perform\n\tpod spec lint ${podspecFile} --verbose\nfor more information"
+else
+    printf "${podSpecLint1}"
+fi
+printf ""
+if [ "${podSpecLint2#*$libSucceeded}" == "$podSpecLint2" ]
+then
+printf "## Spec Lint failed. Perform\n\tpod spec lint ${podspecDylibFile} --verbose\nfor more information"
+else
+printf "${podSpecLint2}"
+fi
+printf ""
+printf ""
+
+printf "## ${podspecFile} is being pushed\n"
+${podPushCommand1}
+printf "\n"
+
+printf "## ${podspecDylibFile} is being pushed\n"
+${podPushCommand2}
+printf "\n"

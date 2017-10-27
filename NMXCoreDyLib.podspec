@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name              = "NMXCoreDylib"
-  s.version           = "0.3.0"
+  s.version           = "0.3.1"
   s.summary           = "Namics Core Library used for iOS in a Swift project. Shall take care of reusable code. "
   s.documentation_url = 'https://namics.github.io/ios-objc-foundation-nmxcore/'
   s.homepage          = "https://github.com/namics/ios-objc-foundation-nmxcore"
