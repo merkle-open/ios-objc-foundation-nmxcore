@@ -72,6 +72,13 @@
             ReferencedContainer = "container:NMXCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "destination"
+            value = "platform=iOS Simulator,name=iPhone 7,OS=11"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
