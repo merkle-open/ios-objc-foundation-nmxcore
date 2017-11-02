@@ -17,11 +17,6 @@
     [validBundlesArray addObjectsFromArray:[NSBundle allFrameworks]];
     [validBundlesArray addObjectsFromArray:[NSBundle allBundles]];
     [validBundlesArray addObject:[NSBundle mainBundle]];
-    NSBundle *testBundle = [NSBundle bundleWithIdentifier:@"com.namics.library.Namics-Library-Tests"];
-    if (testBundle)
-    {
-        [validBundlesArray addObject:testBundle];
-    }
     return validBundlesArray;
 }
 

@@ -43,7 +43,6 @@
 		21A112BC1FA2314F00C1CD83 /* NSNumber+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDB1F98FB590081CFDD /* NSNumber+NMX.m */; };
 		21A112BD1FA2314F00C1CD83 /* NSString+NMX.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEDD1F98FB590081CFDD /* NSString+NMX.m */; };
 		21A112BE1FA2314F00C1CD83 /* NMXLocalizationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE01F98FB590081CFDD /* NMXLocalizationHandler.m */; };
-		21A112C61FA2322C00C1CD83 /* NMXCoreTestsStatic.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A112C51FA2322C00C1CD83 /* NMXCoreTestsStatic.m */; };
 		21A112C81FA2322C00C1CD83 /* libNMXCoreStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A112AF1FA22FBA00C1CD83 /* libNMXCoreStatic.a */; };
 		21A112CE1FA2324200C1CD83 /* NMXLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D32FB01FA1E76400479607 /* NMXLogging.m */; };
 		21A112CF1FA2324200C1CD83 /* NMXNSBundleFileHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164DEE81F98FB5A0081CFDD /* NMXNSBundleFileHandling.m */; };
@@ -219,7 +218,6 @@
 		21A1127C1FA2107E00C1CD83 /* NMXCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMXCore.framework; sourceTree = "<group>"; };
 		21A112AF1FA22FBA00C1CD83 /* libNMXCoreStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNMXCoreStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A112C31FA2322C00C1CD83 /* NMXCoreTestsStatic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NMXCoreTestsStatic.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		21A112C51FA2322C00C1CD83 /* NMXCoreTestsStatic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXCoreTestsStatic.m; sourceTree = "<group>"; };
 		21A112C71FA2322C00C1CD83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21A112F01FA234FE00C1CD83 /* NMXCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXCore.h; sourceTree = SOURCE_ROOT; };
 		21A112F11FA2350A00C1CD83 /* NMXCoreStatic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMXCoreStatic.h; sourceTree = "<group>"; };
@@ -463,7 +461,6 @@
 		21A112C41FA2322C00C1CD83 /* NMXCoreTestsStatic */ = {
 			isa = PBXGroup;
 			children = (
-				21A112C51FA2322C00C1CD83 /* NMXCoreTestsStatic.m */,
 				21A112C71FA2322C00C1CD83 /* Info.plist */,
 			);
 			path = NMXCoreTestsStatic;
@@ -787,7 +784,6 @@
 				21A112D51FA2325300C1CD83 /* NMXTestDataSource.m in Sources */,
 				21A112E01FA2325D00C1CD83 /* NMXNumberTest.m in Sources */,
 				21A112DC1FA2325D00C1CD83 /* NMXLoggingTest.m in Sources */,
-				21A112C61FA2322C00C1CD83 /* NMXCoreTestsStatic.m in Sources */,
 				21A112DA1FA2325300C1CD83 /* NSString+NMXTest.m in Sources */,
 				21A112CE1FA2324200C1CD83 /* NMXLogging.m in Sources */,
 				21A112D21FA2324200C1CD83 /* NSNumber+NMX.m in Sources */,
