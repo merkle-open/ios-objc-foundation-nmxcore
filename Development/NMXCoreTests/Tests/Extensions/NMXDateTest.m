@@ -8,6 +8,9 @@
 
 #import <XCTest/XCTest.h>
 #import "NMXCore.h"
+#import "NSDate+NMXTest.h"
+#import "NSNumber+NMXTest.h"
+#import "NMXDate+Test.h"
 
 @interface NMXDateTest : XCTestCase
 
@@ -58,6 +61,18 @@ static NSDateFormatter *dateFormatISO8601;
     resultDate = [dateToUse offsetInMonths:-10];
     expectedDate = @"2016-10-21T10:09:25+02:00".dateFormatISO8601;
     XCTAssertTrue([resultDate isEqualToDate:expectedDate]);
+    
+    //invalid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsInvalid])
+    {
+        XCTAssertThrows([date offsetInMonths:1]);
+    }
+    
+    //valid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsValid])
+    {
+        XCTAssertNoThrow([date offsetInMonths:1]);
+    }
 }
 
 - (void)testOffsetInDays
@@ -85,6 +100,18 @@ static NSDateFormatter *dateFormatISO8601;
     resultDate = [dateToUse offsetInDays:-20];
     expectedDate = @"2017-08-01T10:09:25+02:00".dateFormatISO8601;
     XCTAssertTrue([resultDate isEqualToDate:expectedDate]);
+    
+    //invalid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsInvalid])
+    {
+        XCTAssertThrows([date offsetInDays:1]);
+    }
+    
+    //valid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsValid])
+    {
+        XCTAssertNoThrow([date offsetInDays:1]);
+    }
 }
 
 - (void)testOffsetInMinutes
@@ -118,6 +145,18 @@ static NSDateFormatter *dateFormatISO8601;
     resultDate = [dateToUse offsetInMinutes:1450];
     expectedDate = @"2017-08-22T10:19:25+02:00".dateFormatISO8601;
     XCTAssertTrue([resultDate isEqualToDate:expectedDate]);
+    
+    //invalid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsInvalid])
+    {
+        XCTAssertThrows([date offsetInMinutes:1]);
+    }
+    
+    //valid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsValid])
+    {
+        XCTAssertNoThrow([date offsetInMinutes:1]);
+    }
 }
 
 - (void)testOffsetInSeconds
@@ -145,6 +184,18 @@ static NSDateFormatter *dateFormatISO8601;
     resultDate = [dateToUse offsetInSeconds:-40];
     expectedDate = @"2017-08-21T10:08:45+02:00".dateFormatISO8601;
     XCTAssertTrue([resultDate isEqualToDate:expectedDate]);
+    
+    //invalid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsInvalid])
+    {
+        XCTAssertThrows([date offsetInSeconds:1]);
+    }
+    
+    //valid dates
+    for(NSDate *date in [NSDate testObjectTypeParamsValid])
+    {
+        XCTAssertNoThrow([date offsetInSeconds:1]);
+    }
 }
 
 - (void)testOneSecondBeforeEndOfDate
@@ -186,5 +237,57 @@ static NSDateFormatter *dateFormatISO8601;
     //
 }
 
+- (void)testValidDates
+{
+    for (NSDate *obj in [NSDate testObjectTypeParamsValid])
+    {
+        XCTAssertTrue([obj isKindOfClass:[NSDate class]]);
+    }
+}
+
+- (void)testInvalidDates
+{
+    for (NSDate *obj in [NSDate testObjectTypeParamsInvalid])
+    {
+        XCTAssertFalse([obj isKindOfClass:[NSDate class]]);
+    }
+    NSObject *obj = nil;
+    XCTAssertFalse([obj isKindOfClass:[NSDate class]]);
+}
+
+- (void)testInputParams
+{
+    //invalid input params
+    NSDate *dateToUse = @"2017-08-21T10:09:25+02:00".dateFormatISO8601;
+    NSDate *resultDate = [dateToUse offsetInSeconds:nil];
+    XCTAssertTrue([resultDate isEqualToDate:dateToUse], @"🔴🔴 Result was %@, expected the input date %@", resultDate, dateToUse);
+    
+    //valid input params
+    const SEL selectors[] = {@selector(setMonth:), @selector(setDay:), @selector(setMinute:), @selector(setSecond:)};
+    for (int i = 0; i < sizeof(selectors)/sizeof(selectors[0]); i++)
+    {
+        for (NSNumber *number in [NSNumber testObjectTypeParamsValid])
+        {
+            NSException *ex = nil;
+            @try {
+                resultDate = [dateToUse dateWithOffset:[number integerValue] specifiedBySelector:selectors[i]];
+            }
+            @catch (NSException * e) {
+                ex = e;
+                XCTAssertTrue(e.name == NSRangeException, @"🔴🔴 Exception should be an NSRangeException if the offset does not allow to return valid NSDates. Offset was %ld, Exception is %@", (long)[number integerValue], e);
+            }
+            
+            if([number integerValue] == 0)
+            {
+                XCTAssertTrue([resultDate isEqualToDate:dateToUse], @"🔴🔴 Result was %@, should not be different from the dateToUse which was %@. Offset was %ld", resultDate, dateToUse, (long)[number integerValue]);
+                XCTAssertNil(ex, @"🔴🔴 No exception expected if offset == 0, but the exception is %@", ex);
+            }
+            else if(ex == nil)
+            {
+                XCTAssertFalse([resultDate isEqualToDate:dateToUse], @"🔴🔴 Result was %@, should be different from the dateToUse which was %@. Offset was %ld", resultDate, dateToUse, (long)[number integerValue]);
+            }
+        }
+    }
+}
 
 @end

@@ -12,6 +12,7 @@
 #import "NSNumber+NMXTest.h"
 #import "NSString+NMXTest.h"
 #import "NSDictionary+NMXTest.h"
+#import "NSDate+NMXTest.h"
 
 @implementation NMXTestDataSource
 
@@ -26,6 +27,7 @@ static id _combinationsOneCouldThinkOf;
     {
         NSMutableArray *combinationsOneCouldThinkOf = [[NSMutableArray alloc] initWithArray:@[
                                                                                               @(0),
+                                                                                              @(-1),
                                                                                               @(LONG_LONG_MAX),
                                                                                               @"String",
                                                                                               @"123",
@@ -40,6 +42,7 @@ static id _combinationsOneCouldThinkOf;
         [combinationsOneCouldThinkOf addObjectsFromArray:[NSDictionary testObjectTypeParamsValid]];
         [combinationsOneCouldThinkOf addObjectsFromArray:[NSNumber testObjectTypeParamsValid]];
         [combinationsOneCouldThinkOf addObjectsFromArray:[NSString testObjectTypeParamsValid]];
+        [combinationsOneCouldThinkOf addObjectsFromArray:[NSDate testObjectTypeParamsValid]];
         _combinationsOneCouldThinkOf = [NSArray arrayWithArray:combinationsOneCouldThinkOf];
     }
     

@@ -232,6 +232,7 @@
 		21D32F7B1FA1C03700479607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D32F7C1FA1C03700479607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21D32FB01FA1E76400479607 /* NMXLogging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMXLogging.m; sourceTree = "<group>"; };
+		5FC22C941FB1B0D900A3301D /* NMXDate+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NMXDate+Test.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				2164DEFD1F98FB980081CFDD /* NMXDateTest.m */,
+				5FC22C941FB1B0D900A3301D /* NMXDate+Test.h */,
 				2164DEFE1F98FB980081CFDD /* NMXDictionaryTest.m */,
 				2164DEFF1F98FB980081CFDD /* NMXNumberTest.m */,
 				2164DF001F98FB980081CFDD /* NMXStringTest.m */,

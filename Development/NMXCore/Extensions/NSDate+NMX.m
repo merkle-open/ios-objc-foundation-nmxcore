@@ -17,13 +17,19 @@
     {
         return self;
     }
-    NSDateComponents *components = [[NSDateComponents alloc] init];
+    NSDateComponents *components = [NSDateComponents new];
     
     IMP impl = [components methodForSelector:selector];
     void* (*func)(id, SEL, NSInteger) = (void*)impl;
     func(components, selector, offset);
     
     NSDate *nextDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:self options:0];
+    
+    if([self isEqualToDate:nextDate] && offset != 0)
+    {
+        @throw [NSException exceptionWithName:NSRangeException reason:[NSString stringWithFormat:@"Offset (%ld) too small or too large to create a valid NSDate", (long)offset] userInfo:nil];
+    }
+    
     return nextDate;
 }
 

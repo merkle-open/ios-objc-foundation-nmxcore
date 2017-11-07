@@ -18,6 +18,7 @@
  *  - Version: 1.0
  *
  *  @param offsetInMonths - Offset in months. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
  *  @return returns a NSDate instance from self with a given offset. If the offset was invalid, the same date (without offset) will be returned.
  */
 - (NSDate *)offsetInMonths:(NSInteger)offsetInMonths;
@@ -30,6 +31,7 @@
  *  - Version: 1.0
  *
  *  @param offsetInDays - Offset in days. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
  *  @return returns a NSDate instance from self with a given offset in days. If the offset was invalid, the same date (without offset) will be returned.
  */
 - (NSDate *)offsetInDays:(NSInteger)offsetInDays;
@@ -42,6 +44,7 @@
  *  - Version: 1.0
  *
  *  @param offsetInMinutes - Offset in minutes. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
  *  @return returns a NSDate instance from self with a given offset in minutes. If the offset was invalid, the same date (without offset) will be returned.
  */
 - (NSDate *)offsetInMinutes:(NSInteger)offsetInMinutes;
@@ -54,6 +57,7 @@
  *  - Version: 1.0
  *
  *  @param offsetInSeconds - Offset in seconds. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
  *  @return returns a NSDate instance from self with a given offset in seconds. If the offset was invalid, the same date (without offset) will be returned.
  */
 - (NSDate *)offsetInSeconds:(NSInteger)offsetInSeconds;
