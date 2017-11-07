@@ -1,0 +1,24 @@
+#### What does this Pull Request do?
+#### Where should the reviewer start?
+#### How should this be manually tested?
+#### Any background context you want to provide?
+#### What are the relevant tickets/issues?
+#### Screenshots (if appropriate)
+
+#### Overall Developemnt requirements:
+[ ] If you added new Header files, did you update `Header-ios-objc-foundation-nmxcore.h` or related header files, so the code documentation is able to retrieve your new files?
+[ ] Did you write pretty printable code comments for added classes, properties or functions?
+[ ] Did you generate a new documentation file via `jazzy`-command?
+[ ] Did you perform `pod lib lint NMXCore.podspec` and `pod lib lint NMXCoreDylib.podspec`
+[ ] Did you test your code with Unit tests?
+[ ] Did the test coverage increase / did maintain the same level? --> If not, why?
+
+#### Release Management
+[ ] Did you update the README.md with the latest version you are using
+[ ] Did you perform `pod spec lint NMXCore.podspec` and `pod spec lint NMXCoreDylib.podspec`
+[ ] Make the reviewer aware to `pod trunk push NMXCore.podspec --verbose` and `pod trunk push NMXCoreDylib.podspec --verbose` after the review. Or do it yourself.
+
+#### Further Questions
+- Is there a blog post?
+- Does the knowledge base need an update?
+- Does this add new dependencies which need to be added to the podspec file?
