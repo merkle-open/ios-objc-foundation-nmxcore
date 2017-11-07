@@ -43,6 +43,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSDate+NMX.h",
+      "line": 13,
+      "symbol": "NMXErrorDomainNSDate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSDictionary+NMX.h",
       "line": 11,
       "symbol": "NSDictionary(NMX)",

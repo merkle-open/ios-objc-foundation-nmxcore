@@ -14,7 +14,7 @@
     <a title="NSDate(NMX) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NamicsLib Docs</a> (79% documented)</p>
+        <p><a href="../index.html">NamicsLib Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -57,12 +57,15 @@
             <a href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NMXErrorDomainNSDate">NMXErrorDomainNSDate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@NMXLogLevelTypeDescription">NMXLogLevelTypeDescription</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enums</a>
+            <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/NMXLogLevelType.html">NMXLogLevelType</a>
@@ -101,6 +104,79 @@
         <section>
           <section class="section">
             <h1>NSDate(NMX)</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSDate</span><span class="p">(</span><span class="nl">NMX</span><span class="p">)</span>
+
+<span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="k">const</span> <span class="n"><a href="../Constants.html#/c:@NMXErrorDomainNSDate">NMXErrorDomainNSDate</a></span><span class="p">;</span>
+    
+<span class="cm">/**
+ *  Returns the same day, but the time is altered and is 23h 59min 59s. One second before midnight (Uses NSCalendar.currentCalendar)
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ *
+ *  @return returns the same day, but the time is altered and will be 23:59:59. One second before midnight (Uses NSCalendar.currentCalendar). Will return "nil" on error or if unspecified
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">null_unspecified</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">oneSecondBeforeEndOfDay</span><span class="p">;</span>
+    
+<span class="cm">/**
+ *  Constructs a NSDate from self with a given offset in months
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ *
+ *  @param offsetInMonths - Offset in months. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
+ *  @return returns a NSDate instance from self with a given offset. If the offset was invalid, the same date (without offset) will be returned.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInMonths</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMonths</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Constructs a NSDate from self with a given offset in days
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ *
+ *  @param offsetInDays - Offset in days. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
+ *  @return returns a NSDate instance from self with a given offset in days. If the offset was invalid, the same date (without offset) will be returned.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInDays</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInDays</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Constructs a NSDate from self with a given offset in minutes
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ *
+ *  @param offsetInMinutes - Offset in minutes. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
+ *  @return returns a NSDate instance from self with a given offset in minutes. If the offset was invalid, the same date (without offset) will be returned.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInMinutes</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMinutes</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Constructs a NSDate from self with a given offset in seconds
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ *
+ *  @param offsetInSeconds - Offset in seconds. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
+ *  @return returns a NSDate instance from self with a given offset in seconds. If the offset was invalid, the same date (without offset) will be returned.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInSeconds</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInSeconds</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
             <p>Undocumented</p>
 
           </section>
@@ -110,9 +186,55 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NSDate(im)offsetInMonths:"></a>
-                    <a name="//apple_ref/objc/Method/-offsetInMonths:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInMonths:">-offsetInMonths:</a>
+                    <a name="/c:objc(cs)NSDate(py)oneSecondBeforeEndOfDay"></a>
+                    <a name="//apple_ref/objc/Property/oneSecondBeforeEndOfDay" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(py)oneSecondBeforeEndOfDay">oneSecondBeforeEndOfDay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the same day, but the time is altered and is 23h 59min 59s. One second before midnight (Uses NSCalendar.currentCalendar)</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    <p>Adriano Segalada</p>
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    <p>1.0</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">null_unspecified</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">oneSecondBeforeEndOfDay</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">oneSecondBeforeEndOfDay</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>returns the same day, but the time is altered and will be 23:59:59. One second before midnight (Uses NSCalendar.currentCalendar). Will return <q>nil</q> on error or if unspecified</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSDate(im)offsetInMonths:error:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInMonths:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInMonths:error:">-offsetInMonths:error:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -137,12 +259,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInMonths</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMonths</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInMonths</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMonths</span>
+                              <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inMonths</span> <span class="nv">offsetInMonths</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inMonths</span> <span class="nv">offsetInMonths</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span></code></pre>
 
                         </div>
                       </div>
@@ -162,6 +285,18 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain <code>NMXCore.NSDate</code> is assigned</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -175,9 +310,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NSDate(im)offsetInDays:"></a>
-                    <a name="//apple_ref/objc/Method/-offsetInDays:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInDays:">-offsetInDays:</a>
+                    <a name="/c:objc(cs)NSDate(im)offsetInDays:error:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInDays:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInDays:error:">-offsetInDays:error:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -202,12 +337,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInDays</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInDays</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInDays</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInDays</span>
+                            <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inDays</span> <span class="nv">offsetInDays</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inDays</span> <span class="nv">offsetInDays</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span></code></pre>
 
                         </div>
                       </div>
@@ -227,6 +363,18 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain <code>NMXCore.NSDate</code> is assigned</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -240,9 +388,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NSDate(im)offsetInMinutes:"></a>
-                    <a name="//apple_ref/objc/Method/-offsetInMinutes:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInMinutes:">-offsetInMinutes:</a>
+                    <a name="/c:objc(cs)NSDate(im)offsetInMinutes:error:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInMinutes:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInMinutes:error:">-offsetInMinutes:error:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -267,12 +415,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInMinutes</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMinutes</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInMinutes</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMinutes</span>
+                               <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inMinutes</span> <span class="nv">offsetInMinutes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inMinutes</span> <span class="nv">offsetInMinutes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span></code></pre>
 
                         </div>
                       </div>
@@ -292,6 +441,18 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain <code>NMXCore.NSDate</code> is assigned</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -305,9 +466,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NSDate(im)offsetInSeconds:"></a>
-                    <a name="//apple_ref/objc/Method/-offsetInSeconds:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInSeconds:">-offsetInSeconds:</a>
+                    <a name="/c:objc(cs)NSDate(im)offsetInSeconds:error:"></a>
+                    <a name="//apple_ref/objc/Method/-offsetInSeconds:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSDate(im)offsetInSeconds:error:">-offsetInSeconds:error:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -332,12 +493,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInSeconds</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInSeconds</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInSeconds</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInSeconds</span>
+                               <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inSeconds</span> <span class="nv">offsetInSeconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">offset</span><span class="p">(</span><span class="n">inSeconds</span> <span class="nv">offsetInSeconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Date</span></code></pre>
 
                         </div>
                       </div>
@@ -357,6 +519,18 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>- if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain <code>NMXCore.NSDate</code> is assigned</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -367,55 +541,13 @@
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSDate(py)oneSecondBeforeEndOfDate"></a>
-                    <a name="//apple_ref/objc/Property/oneSecondBeforeEndOfDate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSDate(py)oneSecondBeforeEndOfDate">oneSecondBeforeEndOfDate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the same day, but the time is altered and is 23h 59min 59s. One second before midnight)</p>
-<div class="aside aside-author">
-    <p class="aside-title">Author</p>
-    <p>Adriano Segalada</p>
-
-</div>
-<div class="aside aside-version">
-    <p class="aside-title">Version</p>
-    <p>1.0</p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">oneSecondBeforeEndOfDate</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">oneSecondBeforeEndOf</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
           <p>2016-present © Namics AG</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -1,6 +1,6 @@
 # ios-objc-foundation-nmxcore
 Current Version of the NMXCore Library
-0.3.1
+0.3.2
 
 You can find the latest documentation under
 http://namics.github.io/ios-objc-foundation-nmxcore/

@@ -10,54 +10,72 @@
 
 @implementation NSDate(NMX)
 
-#pragma mark - returns a date with a given offset in units specified by the selector
-- (NSDate *)dateWithOffset:(NSInteger )offset specifiedBySelector:(SEL)selector
+NSString *const NMXErrorDomainNSDate = @"NMXCore.NSDate";
+
+    
+- (NSDate *)oneSecondBeforeEndOfDay
+{
+    NSDate *date = [[NSCalendar currentCalendar] startOfDayForDate:self];
+    NSError *error = nil;
+    date = [date dateWithOffset:1 specifiedBySelector:@selector(setDay:) error:&error];
+    if (!error)
+    {
+        date = [date dateWithOffset:-1 specifiedBySelector:@selector(setSecond:) error:&error];
+        if (!error)
+        {
+            return date;
+        }
+    }
+    return nil;
+}
+    
+- (NSDate *)dateWithOffset:(NSInteger )offset specifiedBySelector:(SEL)selector error:(NSError **)error
 {
     if (offset == 0)
     {
         return self;
     }
-    NSDateComponents *components = [[NSDateComponents alloc] init];
+    NSDateComponents *components = [NSDateComponents new];
     
     IMP impl = [components methodForSelector:selector];
     void* (*func)(id, SEL, NSInteger) = (void*)impl;
     func(components, selector, offset);
     
     NSDate *nextDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:self options:0];
+    
+    if([self isEqualToDate:nextDate] && offset != 0)
+    {
+        NSString *errorDescription = [NSString stringWithFormat:@"Offset (%ld) too small or too large to create a valid NSDate", (long)offset];
+        NSDictionary *userInfo = @{
+                                   NSLocalizedDescriptionKey: errorDescription
+                                   };
+        NSError *invalidError = [NSError errorWithDomain:NMXErrorDomainNSDate code:-1 userInfo:userInfo];
+        *error = invalidError;
+        return nil;
+    }
+    
     return nextDate;
 }
 
-#pragma mark - returns a date with a given offset in months
-- (NSDate *)offsetInMonths:(NSInteger)offsetInMonths
+- (NSDate *)offsetInMonths:(NSInteger)offsetInMonths error:(NSError **)error
 {
-    return [self dateWithOffset:offsetInMonths specifiedBySelector:@selector(setMonth:)];
+    return [self dateWithOffset:offsetInMonths specifiedBySelector:@selector(setMonth:) error:error];
 }
 
-#pragma mark - returns a date with a given offset in days
-- (NSDate *)offsetInDays:(NSInteger)offsetInDays
+- (NSDate *)offsetInDays:(NSInteger)offsetInDays error:(NSError **)error
 {
-    return [self dateWithOffset:offsetInDays specifiedBySelector:@selector(setDay:)];
+    return [self dateWithOffset:offsetInDays specifiedBySelector:@selector(setDay:) error:error];
 }
 
-#pragma mark - returns a date with a given offset in minutes
-- (NSDate *)offsetInMinutes:(NSInteger)offsetInMinutes
+- (NSDate *)offsetInMinutes:(NSInteger)offsetInMinutes error:(NSError **)error
 {
-    return [self dateWithOffset:offsetInMinutes specifiedBySelector:@selector(setMinute:)];
+    return [self dateWithOffset:offsetInMinutes specifiedBySelector:@selector(setMinute:) error:error];
 }
 
-#pragma mark - returns a date with a given offset in seconds
-- (NSDate *)offsetInSeconds:(NSInteger)offsetInSeconds
+- (NSDate *)offsetInSeconds:(NSInteger)offsetInSeconds error:(NSError **)error
 {
-    return [self dateWithOffset:offsetInSeconds specifiedBySelector:@selector(setSecond:)];
+    return [self dateWithOffset:offsetInSeconds specifiedBySelector:@selector(setSecond:) error:error];
 }
 
-#pragma mark - returns the date that is just before the end of the day
-- (NSDate *)oneSecondBeforeEndOfDate
-{
-    NSDate *date = [[NSCalendar currentCalendar] startOfDayForDate:self];
-    date = [date dateWithOffset:1 specifiedBySelector:@selector(setDay:)];
-    date = [date dateWithOffset:-1 specifiedBySelector:@selector(setSecond:)];
-    return date;
-}
 
 @end

@@ -14,7 +14,7 @@
     <a title="NSString(NMX) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NamicsLib Docs</a> (79% documented)</p>
+        <p><a href="../index.html">NamicsLib Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -57,12 +57,15 @@
             <a href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NMXErrorDomainNSDate">NMXErrorDomainNSDate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Constants.html#/c:@NMXLogLevelTypeDescription">NMXLogLevelTypeDescription</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enums</a>
+            <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/NMXLogLevelType.html">NMXLogLevelType</a>
@@ -101,6 +104,105 @@
         <section>
           <section class="section">
             <h1>NSString(NMX)</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSString</span> <span class="p">(</span><span class="nl">NMX</span><span class="p">)</span>
+
+<span class="cm">/**
+ *  checks, whether the string is convertible to NSURL and/or custom scheme - anything would be valid, empty string are considered being invalid
+ *
+ *  - Author: Tobias Baube
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isUrlFormat</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  escapes a string and its special characters like ("/" or "+" etc.), which would mess up in an url and escapes these, like a browser would do for example.
+ *
+ *  - Author: Tobias Baube
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">urlEncoded</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  if string is in the following date format: "yyyy-MM-dd'T'HH:mm:ssZZZZZ", returns a NSDate Object
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateFormatISO8601</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  returns true, if string is in the following date format: "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isDateFormatISO8601</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  if string is in the following date format: "yyyy-MM-dd", returns a NSDate Object
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateFormatFourDigitYearMonthDay</span><span class="p">;</span>
+    
+<span class="cm">/**
+ *  returns true, if string is in the following date format: "yyyy-MM-dd"
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isDateFormatFourDigitYearMonthDay</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  if string is in the following date format: "HH:mm:ss", returns a NSDate Object
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateFormatLeadingZeroHoursMinutesSeconds</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  returns true, if string is in the following date format: "HH:mm:ss"
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isDateFormatLeadingZeroHoursMinutesSeconds</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Returns a string without non alphanumeric characters
+ *
+ *  - Author: Thomas Bopst
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">stripNonAlphanumericChars</span><span class="p">;</span>
+
+
+<span class="cm">/**
+ *  Returns a string with printable ASCII characters in range [32, 126] only
+ *
+ *  - Author: Thomas Bopst
+ *
+ *  - Version: 1.0
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">stripNonAsciiChars</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
             <p>Undocumented</p>
 
           </section>
@@ -533,7 +635,7 @@
         </section>
         <section id="footer">
           <p>2016-present © Namics AG</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

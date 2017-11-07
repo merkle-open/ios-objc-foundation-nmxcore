@@ -15,6 +15,8 @@
 {
     NSMutableArray *dates = [[NSMutableArray alloc] initWithArray:@[
                                                                     [NSDate date],
+                                                                    [NSDate distantFuture],
+                                                                    [NSDate distantPast]
                                                                     ]];
     return dates;
 }

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ## Configuration
 readmeFile="README.md"
 podspecFilename="NMXCore"
@@ -78,7 +78,8 @@ printf "## Preparing version ${version}\n...\n\n"
 
 ### Validate the libraries ###
 printf "Running Tests for Static Library\n"
-testStatic=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTestsStatic -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test 2>&1 | tail -2)
+#xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTestsStatic -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.1' test
+testStatic=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTestsStatic -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.1' test 2>&1 | tail -2)
 testsSucceeded="Test Suite 'All tests' passed "
 if [ "${testStatic#*$testsSucceeded}" == "$testStatic" ]
 then
@@ -91,7 +92,8 @@ fi
 printf "\n"
 
 printf "Running Tests for Dynamic Library\n"
-testDylib=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' test 2>&1 | tail -2)
+#xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.1' test
+testDylib=$(xcodebuild -project Development/NMXCore.xcodeproj -scheme NMXCoreTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.1' test 2>&1 | tail -2)
 testsSucceeded="Test Suite 'All tests' passed "
 if [ "${testDylib#*$testsSucceeded}" == "$testDylib" ]
 then
