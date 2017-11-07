@@ -8,6 +8,8 @@
 #### Overall Developemnt requirements:
 [ ] If you added new Header files, did you update `Header-ios-objc-foundation-nmxcore.h` or related header files, so the code documentation is able to retrieve your new files?
 [ ] Did you write pretty printable code comments for added classes, properties or functions?
+[ ] If you added properties, did you Nullability annotations? --> `_Nullable`, `_Nonnull`
+[ ] If you added functions, did you Nullability annotations? --> `nullable`, `nonnull`, `null_resettable`, `null_unspecified`
 [ ] Did you generate a new documentation file via `jazzy`-command?
 [ ] Did you perform `pod lib lint NMXCore.podspec` and `pod lib lint NMXCoreDylib.podspec`
 [ ] Did you test your code with Unit tests?
