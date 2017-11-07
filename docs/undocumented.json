@@ -1,75 +1,82 @@
 {
   "warnings": [
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
       "line": 23,
       "symbol": "NMXLogLevelType.none",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
       "line": 24,
       "symbol": "NMXLogLevelType.debug",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
       "line": 25,
       "symbol": "NMXLogLevelType.release",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
       "line": 26,
       "symbol": "NMXLogLevelType.all",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/C-Function Helpers/NMXLogging.h",
       "line": 28,
       "symbol": "NMXLogLevelTypeDescription",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSDate+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSDate+NMX.h",
       "line": 11,
       "symbol": "NSDate(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSDictionary+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSDate+NMX.h",
+      "line": 13,
+      "symbol": "NMXErrorDomainNSDate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSDictionary+NMX.h",
       "line": 11,
       "symbol": "NSDictionary(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSNumber+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSNumber+NMX.h",
       "line": 11,
       "symbol": "NSNumber(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSString+NMX.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Extensions/NSString+NMX.h",
       "line": 11,
       "symbol": "NSString(NMX)",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore/Development/NMXCore/Utilities/NMXLocalizationHandler.h",
+      "file": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore/Development/NMXCore/Utilities/NMXLocalizationHandler.h",
       "line": 11,
       "symbol": "NMXLocalizationHandler",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/asegalada/Documents/Development/ios-objc-foundation-nmxcore"
+  "source_directory": "/Users/tbaube/Documents/ios-objc-foundation-nmxcore"
 }

@@ -13,7 +13,7 @@
     <a title="Categories  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NamicsLib Docs</a> (79% documented)</p>
+        <p><a href="index.html">NamicsLib Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -55,6 +55,9 @@
           <li class="nav-group-name">
             <a href="Constants.html">Constants</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@NMXErrorDomainNSDate">NMXErrorDomainNSDate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@NMXLogLevelTypeDescription">NMXLogLevelTypeDescription</a>
               </li>
@@ -129,6 +132,19 @@
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">NSDate</span><span class="p">(</span><span class="nl">NMX</span><span class="p">)</span>
 
+<span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="k">const</span> <span class="n"><a href="Constants.html#/c:@NMXErrorDomainNSDate">NMXErrorDomainNSDate</a></span><span class="p">;</span>
+    
+<span class="cm">/**
+ *  Returns the same day, but the time is altered and is 23h 59min 59s. One second before midnight (Uses NSCalendar.currentCalendar)
+ *
+ *  - Author: Adriano Segalada
+ *
+ *  - Version: 1.0
+ *
+ *  @return returns the same day, but the time is altered and will be 23:59:59. One second before midnight (Uses NSCalendar.currentCalendar). Will return "nil" on error or if unspecified
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">null_unspecified</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">oneSecondBeforeEndOfDay</span><span class="p">;</span>
+    
 <span class="cm">/**
  *  Constructs a NSDate from self with a given offset in months
  *
@@ -137,10 +153,10 @@
  *  - Version: 1.0
  *
  *  @param offsetInMonths - Offset in months. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
- *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
  *  @return returns a NSDate instance from self with a given offset. If the offset was invalid, the same date (without offset) will be returned.
  */</span>
-<span class="err">-</span> <span class="err">(</span><span class="nc">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="n">offsetInMonths</span><span class="o">:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">offsetInMonths</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInMonths</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMonths</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
 
 <span class="cm">/**
  *  Constructs a NSDate from self with a given offset in days
@@ -150,10 +166,10 @@
  *  - Version: 1.0
  *
  *  @param offsetInDays - Offset in days. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
- *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
  *  @return returns a NSDate instance from self with a given offset in days. If the offset was invalid, the same date (without offset) will be returned.
  */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInDays</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInDays</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInDays</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInDays</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
 
 <span class="cm">/**
  *  Constructs a NSDate from self with a given offset in minutes
@@ -163,10 +179,10 @@
  *  - Version: 1.0
  *
  *  @param offsetInMinutes - Offset in minutes. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
- *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
  *  @return returns a NSDate instance from self with a given offset in minutes. If the offset was invalid, the same date (without offset) will be returned.
  */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInMinutes</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMinutes</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInMinutes</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInMinutes</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
 
 <span class="cm">/**
  *  Constructs a NSDate from self with a given offset in seconds
@@ -176,20 +192,10 @@
  *  - Version: 1.0
  *
  *  @param offsetInSeconds - Offset in seconds. Negative integers go back in time, positive numbers return dates in the future. If this parameter is nil, the same date (without offset) will be returned.
- *  @throws NSRangeException if the given offset does not allow to create a valid NSDate
+ *  @param error - if the given offset does not allow to create a valid NSDate, a NSError with ErrorDomain `NMXCore.NSDate` is assigned
  *  @return returns a NSDate instance from self with a given offset in seconds. If the offset was invalid, the same date (without offset) will be returned.
  */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nf">offsetInSeconds</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInSeconds</span><span class="p">;</span>
-
-<span class="cm">/**
- *  Returns the same day, but the time is altered and is 23h 59min 59s. One second before midnight)
- *
- *  - Author: Adriano Segalada
- *
- *  - Version: 1.0
- *
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">oneSecondBeforeEndOfDate</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">offsetInSeconds</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">offsetInSeconds</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -238,7 +244,7 @@
  *  @param bundle - specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used
  *  @return returns a NSDictionary instance from a given plist-file. If the file was not found or input parameters are invalid, nil is being returned
  */</span>
-<span class="err">+</span> <span class="err">(</span><span class="nc">instancetype</span> <span class="n">__nullable</span><span class="p">)</span><span class="n">dictionaryWithPlistFile</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">__nonnull</span><span class="p">)</span><span class="n">fileName</span> <span class="n">bundle</span><span class="o">:</span><span class="p">(</span><span class="n">NSBundle</span> <span class="o">*</span> <span class="n">__nullable</span><span class="p">)</span><span class="n">bundle</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">__nullable</span><span class="p">)</span><span class="nf">dictionaryWithPlistFile</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">__nonnull</span><span class="p">)</span><span class="nv">fileName</span> <span class="nf">bundle</span><span class="p">:(</span><span class="n">NSBundle</span> <span class="o">*</span> <span class="n">__nullable</span><span class="p">)</span><span class="nv">bundle</span><span class="p">;</span>
 
 <span class="cm">/**
  *  Constructs an NSDictionary from a given json filename in the given bundle
@@ -297,7 +303,7 @@
  *
  *  - Version: 1.0
  */</span>
-<span class="err">@</span><span class="nc">property</span> <span class="p">(</span><span class="nl">readonly</span><span class="p">)</span> <span class="nc">BOOL</span> <span class="n">isPositive</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isPositive</span><span class="p">;</span>
 
 <span class="cm">/**
  *  true, if object &gt;= 0
@@ -349,7 +355,7 @@
  *
  *  - Version: 1.0
  */</span>
-<span class="err">@</span><span class="nc">property</span> <span class="p">(</span><span class="nl">readonly</span><span class="p">)</span> <span class="nc">BOOL</span> <span class="n">isUrlFormat</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isUrlFormat</span><span class="p">;</span>
 
 <span class="cm">/**
  *  escapes a string and its special characters like ("/" or "+" etc.), which would mess up in an url and escapes these, like a browser would do for example.

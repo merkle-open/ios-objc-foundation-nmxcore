@@ -14,7 +14,7 @@
     <a title="NSDictionary(NMX) Category Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NamicsLib Docs</a> (79% documented)</p>
+        <p><a href="../index.html">NamicsLib Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://git.namics.com/namics/namics-core-library-ios-objective-c/"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -56,6 +56,9 @@
           <li class="nav-group-name">
             <a href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@NMXErrorDomainNSDate">NMXErrorDomainNSDate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Constants.html#/c:@NMXLogLevelTypeDescription">NMXLogLevelTypeDescription</a>
               </li>
@@ -118,7 +121,7 @@
  *  @param bundle - specifies the bundle, in which the lookup is being performed. If this value is nil, the default bundle [NSBundle mainBundle] is used
  *  @return returns a NSDictionary instance from a given plist-file. If the file was not found or input parameters are invalid, nil is being returned
  */</span>
-<span class="err">+</span> <span class="err">(</span><span class="nc">instancetype</span> <span class="n">__nullable</span><span class="p">)</span><span class="n">dictionaryWithPlistFile</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">__nonnull</span><span class="p">)</span><span class="n">fileName</span> <span class="n">bundle</span><span class="o">:</span><span class="p">(</span><span class="n">NSBundle</span> <span class="o">*</span> <span class="n">__nullable</span><span class="p">)</span><span class="n">bundle</span><span class="p">;</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span> <span class="n">__nullable</span><span class="p">)</span><span class="nf">dictionaryWithPlistFile</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span> <span class="n">__nonnull</span><span class="p">)</span><span class="nv">fileName</span> <span class="nf">bundle</span><span class="p">:(</span><span class="n">NSBundle</span> <span class="o">*</span> <span class="n">__nullable</span><span class="p">)</span><span class="nv">bundle</span><span class="p">;</span>
 
 <span class="cm">/**
  *  Constructs an NSDictionary from a given json filename in the given bundle
