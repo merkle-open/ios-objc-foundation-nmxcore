@@ -1,1 +1,1 @@
-xcodebuild clean build -sdk iphonesimulator -project Development/NMXCore.xcodeproj -scheme NMXCore CODE_SIGNING_REQUIRED=NO test
+xcodebuild clean build -sdk iphonesimulator -project Development/NMXCore.xcodeproj -scheme NMXCore CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.1' test
