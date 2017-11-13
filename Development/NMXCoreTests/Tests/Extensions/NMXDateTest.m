@@ -203,32 +203,45 @@ static NSDateFormatter *dateFormatISO8601;
     //summertime
     //
     NSString *dateToUse = @"2017-06-08T14:31:25+02:00";
-    NSString *expectedResult = @"2017-06-08T23:59:59+02:00";
     NSDate *resultDate = dateToUse.dateFormatISO8601.oneSecondBeforeEndOfDay;
-    XCTAssertTrue([resultDate isEqualToDate:expectedResult.dateFormatISO8601], @"🔴🔴 Result was %@, expected result is %@", resultDate, expectedResult);
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components: NSCalendarUnitSecond | NSCalendarUnitMinute | NSCalendarUnitHour | NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:dateToUse.dateFormatISO8601];
+    [components setHour:23];
+    [components setMinute:59];
+    [components setSecond:59];
+    [components setTimeZone:[NSTimeZone localTimeZone]];
+    NSDate *expectedResultDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+    
+    XCTAssertTrue([resultDate isEqualToDate:expectedResultDate], @"🔴🔴 Result was %@, expected result is %@", resultDate, expectedResultDate);
     //
     //end summertime
     //
-    
-    
+
     //
     //start wintertime
     //
-    dateToUse = @"2017-02-02T10:05:25+02:00";
-    //one hour less because of summer/winter time
-    expectedResult = @"2017-02-03T00:59:59+02:00";
-    resultDate = dateToUse.dateFormatISO8601.oneSecondBeforeEndOfDay;
-    XCTAssertTrue([resultDate isEqualToDate:expectedResult.dateFormatISO8601], @"🔴🔴 Result was %@, expected result is %@", resultDate, expectedResult);
     
     dateToUse = @"2017-01-01T10:05:25+02:00";
-    expectedResult = @"2017-01-02T00:59:59+02:00";
+    //one hour less because of summer/winter time
     resultDate = dateToUse.dateFormatISO8601.oneSecondBeforeEndOfDay;
-    XCTAssertTrue([resultDate isEqualToDate:expectedResult.dateFormatISO8601], @"🔴🔴 Result was %@, expected result is %@", resultDate, expectedResult);
+    components = [[NSCalendar currentCalendar] components: NSCalendarUnitSecond | NSCalendarUnitMinute | NSCalendarUnitHour | NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:dateToUse.dateFormatISO8601];
+    [components setHour:23];
+    [components setMinute:59];
+    [components setSecond:59];
+    [components setTimeZone:[NSTimeZone localTimeZone]];
+    expectedResultDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+    XCTAssertTrue([resultDate isEqualToDate:expectedResultDate], @"🔴🔴 Result was %@, expected result is %@", resultDate, expectedResultDate);
     
     dateToUse = @"2016-12-31T10:05:25+02:00";
-    expectedResult = @"2017-01-01T00:59:59+02:00";
+    //one hour less because of summer/winter time
     resultDate = dateToUse.dateFormatISO8601.oneSecondBeforeEndOfDay;
-    XCTAssertTrue([resultDate isEqualToDate:expectedResult.dateFormatISO8601], @"🔴🔴 Result was %@, expected result is %@", resultDate, expectedResult);
+    components = [[NSCalendar currentCalendar] components: NSCalendarUnitSecond | NSCalendarUnitMinute | NSCalendarUnitHour | NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:dateToUse.dateFormatISO8601];
+    [components setHour:23];
+    [components setMinute:59];
+    [components setSecond:59];
+    [components setTimeZone:[NSTimeZone localTimeZone]];
+    expectedResultDate = [[NSCalendar currentCalendar] dateFromComponents:components];
+    XCTAssertTrue([resultDate isEqualToDate:expectedResultDate], @"🔴🔴 Result was %@, expected result is %@", resultDate, expectedResultDate);
 }
 
 - (void)testValidDates
