@@ -413,8 +413,8 @@
 		2164DEFC1F98FB980081CFDD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2164DEFD1F98FB980081CFDD /* NMXDateTest.m */,
 				5FC22C941FB1B0D900A3301D /* NMXDate+Test.h */,
+				2164DEFD1F98FB980081CFDD /* NMXDateTest.m */,
 				2164DEFE1F98FB980081CFDD /* NMXDictionaryTest.m */,
 				2164DEFF1F98FB980081CFDD /* NMXNumberTest.m */,
 				2164DF001F98FB980081CFDD /* NMXStringTest.m */,
@@ -1034,6 +1034,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"TEST=1",
+				);
 				INFOPLIST_FILE = NMXCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namics.NMXCoreTests;
@@ -1119,6 +1123,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2L5F7GSL7;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"TEST=1",
+					"NMXCoreStatic=1",
+				);
 				INFOPLIST_FILE = NMXCoreTestsStatic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namics.NMXCoreTestsStatic;

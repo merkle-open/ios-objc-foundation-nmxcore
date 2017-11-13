@@ -1,6 +1,8 @@
 [![Version](https://img.shields.io/cocoapods/v/NMXCore.svg?style=flat)](https://cocoapods.org/pods/NMXCore)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/namics/ios-objc-foundation-nmxcore/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/NMXCore.svg?style=flat)](https://cocoapods.org/pods/NMXCore)
+[![Travis](https://img.shields.io/travis/namics/ios-objc-foundation-nmxcore.svg?style=flat)](https://travis-ci.org/namics/ios-objc-foundation-nmxcore)
+
 # ios-objc-foundation-nmxcore
 Current Version of the NMXCore Library
 0.3.2

@@ -16,7 +16,11 @@
     NSString *filePath = filePathForFile(fileName, @"plist", bundle);
     if (!filePath)
     {
-        NSLog(@"NMXLibrary: Couldn't retrieve a file with filename: [ \"%@\" ] in Bundle: [ \"%@\" ]. Will return nil",fileName, bundle);
+        #ifdef NMXCoreStatic
+        #ifndef TEST
+            NSLog(@"NMXLibrary: Couldn't retrieve a file with filename: [ \"%@\" ] in Bundle: [ \"%@\" ]. Will return nil",fileName, bundle);
+        #endif
+        #endif
         return nil;
     }
 
@@ -29,7 +33,11 @@
     NSString *filePath = filePathForFile(fileName, @"json", bundle);
     if (!filePath)
     {
-        NSLog(@"NMXLibrary: Couldn't retrieve a file with filename: [ \"%@\" ] in Bundle: [ \"%@\" ]. Will return nil",fileName, bundle);
+        #ifdef NMXCoreStatic
+        #ifndef TEST
+            NSLog(@"NMXLibrary: Couldn't retrieve a file with filename: [ \"%@\" ] in Bundle: [ \"%@\" ]. Will return nil",fileName, bundle);
+        #endif
+        #endif
         return nil;
     }
     
