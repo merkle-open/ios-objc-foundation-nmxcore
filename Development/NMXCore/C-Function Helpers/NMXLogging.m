@@ -21,7 +21,7 @@ NSString* const NMXLogLevelTypeDescription[] =
 static NSString *const kStringFromatSpecifiers =
 @"%(?:\\d+\\$)?[+-]?(?:[lh]{0,2})(?:[qLztj])?(?:[ 0]|'.{1})?\\d*(?:\\.\\d+)?[@dDiuUxXoOfeEgGcCsSpaAFn]";
 
-void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, __strong NSString* _Nonnull format, va_list arguments)
+void NMXLogWithPrefixAndArguments(NMXLogLevelType logLevel, NSString* _Nullable logPrefix, __strong NSString* _Nonnull format, va_list _Nullable arguments)
 {
     // Evaluate input parameters
     if (format != nil && [format isKindOfClass:[NSString class]])
