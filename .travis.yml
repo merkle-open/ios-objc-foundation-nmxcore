@@ -4,3 +4,6 @@ osx_image: xcode9.1
 xcode_project: Development/NMXCore.xcodeproj
 xcode_scheme: [NMXCoreTests,NMXCoreTestsStatic]
 script: ./build.sh
+before_install:
+- gem install slather -N
+after_success: slather
