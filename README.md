@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/namics/ios-objc-foundation-nmxcore/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/NMXCore.svg?style=flat)](https://cocoapods.org/pods/NMXCore)
 [![Travis](https://img.shields.io/travis/namics/ios-objc-foundation-nmxcore.svg?style=flat)](https://travis-ci.org/namics/ios-objc-foundation-nmxcore)
-[![Coverage Status](https://coveralls.io/repos/github/namics/ios-objc-foundation-nmxcore/badge.svg?branch=coveralls)](https://coveralls.io/github/namics/ios-objc-foundation-nmxcore?branch=coveralls)
+[![Coverage Status](https://coveralls.io/repos/github/namics/ios-objc-foundation-nmxcore/badge.svg?branch=master)](https://coveralls.io/github/namics/ios-objc-foundation-nmxcore?branch=master)
 
 # ios-objc-foundation-nmxcore
 Current Version of the NMXCore Library
