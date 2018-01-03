@@ -77,7 +77,7 @@ github "namics/ios-objc-foundation-nmxcore" # GitHub.com
 
 Still in the project root, run
 ```
-carthage update
+carthage update --platform iOS
 ```
 This will fetch the Namics Core Library and put it into a Carthage/Checkouts folder.
 
