@@ -1,7 +1,6 @@
 [![Version](https://img.shields.io/cocoapods/v/NMXCore.svg?style=flat)](https://cocoapods.org/pods/NMXCore)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/namics/ios-objc-foundation-nmxcore/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/NMXCore.svg?style=flat)](https://cocoapods.org/pods/NMXCore)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Travis](https://img.shields.io/travis/namics/ios-objc-foundation-nmxcore.svg?style=flat)](https://travis-ci.org/namics/ios-objc-foundation-nmxcore)
 [![Coverage Status](https://coveralls.io/repos/github/namics/ios-objc-foundation-nmxcore/badge.svg?branch=master)](https://coveralls.io/github/namics/ios-objc-foundation-nmxcore?branch=master)
 
@@ -51,6 +50,55 @@ end
 ### Import the NMXHeader-Header file in your Project:
 `#include "NMXCoreStatic.h"`
 
+## Carthage
+[Carthage](https://github.com/Carthage/Carthage) is supported as well.
+
+### Carthage Installation
+Run:
+```
+brew update
+
+brew install carthage
+```
+Navigate to the root directory of your .xcodeproj file.
+If you don't have a "Cartfile" created yet, open your terminal and cd to your .xcodeproj-file.
+Run:
+```
+touch Cartfile
+```
+
+### Download the dependency (Namics Core Library)
+
+Add the following line to the Cartfile:
+```
+github "namics/ios-objc-foundation-nmxcore" # GitHub.com
+```
+
+Still in the project root, run
+```
+carthage update
+```
+This will fetch the Namics Core Library and put it into a Carthage/Checkouts folder.
+
+### XCode configuration
+1. On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop ”NMXCore.framework” from the Carthage/Build/iOS folder on disk.
+
+2. On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script in which you specify your shell (ex: /bin/sh), add the following contents to the script area below the shell:
+```
+/usr/local/bin/carthage copy-frameworks
+```
+3. Add the paths to the Namics Library under “Input Files”, e.g.:
+```
+$(SRCROOT)/Carthage/Build/iOS/NMXCore.framework
+```
+4. Add the paths to the copied frameworks to the “Output Files”, e.g.:
+```
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NMXCore.framework
+```
+5. Make sure that 'Cartfile.resolved' is under version control
+
+### Import the NMXCore
+`@import NMXCore;`
 
 # Documentation
 ## Building Documentation
